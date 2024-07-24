@@ -2,8 +2,12 @@
     margin:0;
     padding: 0;
     list-style: none;
+    text-align: center;
 }
 
+body{
+    
+}
 ul li,ol li{
     
     
@@ -64,6 +68,9 @@ nav *{
 
 
 /*통합*/
+section{
+    padding:100px;
+}
 /* .container{
     padding-left:100px;
     padding-right:100px;
@@ -85,6 +92,7 @@ nav *{
     position: relative;
     /* max-width:; 슬라이더 최대 너비 설정 */
     margin-left:100px ;
+    overflow-x: hidden;
 }
 
 .your-slider img {
@@ -190,3 +198,11 @@ nav *{
     
 }
 
+/*컨텐츠 바로가기 */
+.content_linkArea li div{
+    margin-bottom: 10px;
+}
+.content_linkArea li img{
+    /* border-radius: 30px;
+    box-shadow: 0 0 10px #aaa; */
+}
