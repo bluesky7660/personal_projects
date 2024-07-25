@@ -4,6 +4,12 @@
     list-style: none;
     text-align: center;
 }
+h3{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    /* margin-bottom: 1.5rem; */
+}
 
 body{
     
@@ -69,7 +75,50 @@ nav *{
 
 /*통합*/
 section{
-    padding:100px;
+    padding:100px 150px;
+    overflow: hidden;
+}
+.navbar_pc{
+    padding:0 150px;
+}
+.img-box{
+    margin-bottom: 10px;
+}
+.area-head{
+    margin-bottom: 1.5rem;
+}
+.tabs ul{
+    height: 100%;
+}
+.book-type{
+    color: #333;
+    margin-bottom: 10px;
+}
+.author,.book-type{
+   display: inline-block; 
+}
+.banners >div>div{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.flex-auto li img{
+    /* flex: 0 0 auto; */
+    width: 100%;
+    height: auto;
+}
+.left-box{
+    position: relative;
+}
+.left-box *{
+    white-space: nowrap;
+}
+/* .flex-auto li *{
+    text-align: left;
+} */
+.author{
+    
+    color: #aaa;
+    margin-top: 10px;
 }
 /* .container{
     padding-left:100px;
@@ -88,16 +137,28 @@ section{
 
 /* styles.css */
 
+.main-slider-wrapper .slider-container {
+
+    margin-left:150px ;
+
+}
 .slider-container {
+    /* width: 100vw; */
     position: relative;
-    /* max-width:; 슬라이더 최대 너비 설정 */
-    margin-left:100px ;
     overflow-x: hidden;
 }
 
-.your-slider img {
+
+/* .your-slider img {
     width: 100%;
     height: auto;
+} */
+.slick-slider {
+    width: 100%; /* 슬라이더가 부모 컨테이너의 너비를 채우도록 설정 */
+}
+.slick-slide>div{
+    width: fit-content;
+    border: 1px solid #000;
 }
 
 /* 슬라이더 컨트롤러 스타일 */
@@ -205,4 +266,51 @@ section{
 .content_linkArea li img{
     /* border-radius: 30px;
     box-shadow: 0 0 10px #aaa; */
+}
+
+/*day pick*/
+.contentArea{
+    position: relative;
+    width: 100%;
+}
+
+/*mostview*/
+.swiper-slide,.swiper-slide div{
+    overflow: hidden;
+}
+.swiper-slide div img{
+    width: 100%;
+}
+.swiper-button{
+    width: 84px;
+    height: 84px;
+    padding:20px;
+    border-radius: 50%;
+    border: 1px solid #777;
+    transform: scale(0.5);
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left:-100px;   
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right:-100px;
+}
+
+/*picks*/
+.picks{
+    background-color: rgba(77, 172, 39, 0.06)
+}
+.picks .right-box ul li{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 20px;
+}
+.right-box img{
+    /* width: 100%; */
+    max-height: 175px;
+}
+.pick-type{
+    font-weight: bold;
+    margin-bottom: 20px;
 }
