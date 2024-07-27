@@ -37,55 +37,48 @@
             </div>
             <div>
                 <form>
-                    <div class="user-login">
-                        <input class="form-control" type="text" placeholder="아이디를 입력해주세요.">
-                        <div class="password_box">
-                            <input id="login_password" class="form-control" type="password" placeholder="비밀번호를 입력해주세요.">
-                            <span class="toggle-button" id="togglePassword"></span>
-                        </div>
+                    <div class="type_tab">
+                        <div class="individual_tab"></div>
+                        <div class="corporate_tab"></div>
                     </div>
-                    <div class="login-btn">
-                        <button class="btn w-100 mt-0">로그인</button>
-                    </div>
-                    <div class="etc_box d-flex justify-content-between">
-                        <div class="save_id_chk_box form-check">
-                            <input class="form-check-input" type="checkbox" name="" id="saveId" checked>
-                            <label class="form-check-label" for="saveId">아이디 저장</label>
+                    <div class="contentArea">
+                        <div class="individual_member">
+                            <div class="signup_btn">
+                                <button class="btn btn-blue w-100">회원가입</button>
+                            </div>
+                            <ul class="">
+                                <li>
+                                    <a href="javascript:void(0);"><img src="./assets/images/ico_sns_naver@2x.png" alt=""></a>
+                                </li>
+                            </ul>
+                            <div class="new_incentives">
+                                <p>신규회원 특별 혜택</p>
+                                <ul>
+                                    <li>
+                                        <img src="" alt="">
+                                    </li>
+                                </ul>
+                                <p>본인인증 추가 혜택</p>
+                                <ul>
+                                    <li>
+                                        <img src="" alt="">
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="search d-flex align-items-center gap-2">
-                            <a href="javascript:void(0);"><span>아이디 찾기</span></a>
-                            <span class="gap_line">|</span>
-                            <a href="javascript:void(0);"><span>비밀번호 찾기</span></a>
+                        <div class="corporate_member">
+                            <div class="signup_btn">
+                                <button class="btn btn-blue w-100">회원가입</button>
+                            </div>
+                            <ul class="">
+                                <li>
+                                    <a href="javascript:void(0);"><img src="./assets/images/ico_sns_naver@2x.png" alt=""></a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="sns_login">
-                        <ul class="d-flex gap-3">
-                            <li class="naver_login">
-                                <a href="javascript:void(0);">
-                                    <img src="./assets/images/ico_sns_naver@2x.png" alt="">
-                                </a>
-                            </li>
-                            <li class="kakao_login">
-                                <a href="javascript:void(0);">
-                                    <img src="./assets/images/ico_sns_kakao@2x.png" alt="">
-                                </a>
-                            </li>
-                            <li class="google_login">
-                                <a href="javascript:void(0);">
-                                    <img src="./assets/images/ico_sns_google@2x.png" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                        <p>
-                            개인정보 보호를 위해 공용 PC에서 사용 시 SNS계정의 로그아웃
-                            <br>상태를 꼭 확인해 주세요.
-                        </p>
                     </div>
                 </form>
-                <div class="etc_buttons">
-                    <button class="btn btn-blue w-100" onclick="window.location.href='signup.html'">회원가입</button>
-                    <button class="btn btn-gray w-100">비회원 조문조회</button>
-                </div>
+                
             </div>
         </div>
         <footer>
