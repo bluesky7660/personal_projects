@@ -1,0 +1,82 @@
+*{
+    text-align: left;
+}
+
+.contentArea{
+    max-width: 340px;
+    margin:  auto;
+    padding: 3rem 0 150px;
+    /* text-align: center; */
+    /* background-color: blue; */
+    
+}
+
+.logo{
+    margin: 0 auto 50px;
+    cursor: pointer;
+}
+footer{
+    border-top: 1px solid #eee;
+    padding:20px 150px;
+
+}
+.btn{
+    font-weight: bold;
+    padding-top:15px;
+    padding-bottom:15px;
+    background-color: #474c98;
+    color: #fff;
+}
+.btn:hover {
+
+    background-color: #313364;
+    color: #fff;
+
+}
+li a{
+    display: inline-block;
+    height: fit-content;
+}
+li a img{
+    width: 50px;
+}
+
+form>*{
+    margin-bottom: 20px;
+}
+.tab_button{
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    padding:15px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #ccc;
+    border-bottom-color: #474c98;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.tab_button.active{
+    border-color: #474c98;
+    opacity: 1;
+    border-bottom: 0;
+}
+
+.tab_contents>*:not(.active){
+    display: none;
+}
+
+.tab_contents>*>*{
+    margin-bottom: 20px;
+}
+
+.simple_Signup li{
+    /* width: fit-content; */
+    text-align: center;
+    flex-basis: calc(100%/4);
+}
+.new_incentives{
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}

@@ -25,7 +25,6 @@ footer{
     padding-top:15px;
     padding-bottom:15px;
     border: 1px solid #ccc;
-
     margin-top: 20px;
 }
 .btn:hover {
@@ -34,6 +33,15 @@ footer{
     color: #fff;
 
 }
+li a{
+    display: inline-block;
+    height: fit-content;
+}
+li a img{
+    width: 50px;
+}
+
+
 .gap_line{
     font-size: 10px !important;
     

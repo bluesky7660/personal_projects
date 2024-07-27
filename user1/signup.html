@@ -25,7 +25,7 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/signup.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
@@ -37,20 +37,71 @@
             </div>
             <div>
                 <form>
-                    <div class="type_tab">
-                        <div class="individual_tab"></div>
-                        <div class="corporate_tab"></div>
+                    <div class="type_tab d-flex justify-content-between">
+                        <div class="individual_tab tab_button" data-target="individual_member">
+                            <span>개인회원</span>
+                        </div>
+                        <div class="corporate_tab tab_button" data-target="corporate_member">
+                            <span>법인회원</span>
+                        </div>
                     </div>
-                    <div class="contentArea">
-                        <div class="individual_member">
+                    <div class="tab_contents">
+                        <div class="tab_content active" id="individual_member">
                             <div class="signup_btn">
                                 <button class="btn btn-blue w-100">회원가입</button>
                             </div>
-                            <ul class="">
+                            <ul class="simple_Signup flex-wrap d-flex justify-content-center gap-3">
                                 <li>
                                     <a href="javascript:void(0);"><img src="./assets/images/ico_sns_naver@2x.png" alt=""></a>
                                 </li>
+                                <li>
+                                    <a href="javascript:void(0);"><img src="./assets/images/ico_sns_kakao@2x.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><img src="./assets/images/ico_sns_google@2x.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><img src="./assets/images/ico_sns_phone@2x.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><img src="./assets/images/ico_sns_mail@2x.png" alt=""></a>
+                                </li>
                             </ul>
+                            <div class="new_incentives">
+                                <p>신규회원 특별 혜택</p>
+                                <ul>
+                                    <li>
+                                        <div class="coupon_inner">
+                                            <span class="left_box">
+                                                <span class="coupon_logo">
+                                                    <img src="https://contents.kyobobook.co.kr/resources/fo/images/common/ink/img_coupon_logo_kyobo_xs@2x.png" alt="KYOBO 교보문고">
+                                                </span>
+                                                <span class="coupon_val">1,000<span class="unit">원</span></span>
+                                            </span>
+                                            <span class="right_box"></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p>본인인증 추가 혜택</p>
+                                <ul>
+                                    <li>
+                                        <img src="" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab_content" id="corporate_member">
+                            <div class="business_number">
+                                <label for="">사업자번호</label>
+                                <input type="text" placeholder="사업자번호를 입력해 주세요.">
+                            </div>
+                            <div>
+                                <label for="">법인명</label>
+                                <input type="text" placeholder="법인명을 입력해 주세요.">
+                            </div>
+                            <div class="signup_btn">
+                                <button class="btn btn-blue w-100">인증하기</button>
+                            </div>
                             <div class="new_incentives">
                                 <p>신규회원 특별 혜택</p>
                                 <ul>
@@ -65,16 +116,16 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="corporate_member">
-                            <div class="signup_btn">
-                                <button class="btn btn-blue w-100">회원가입</button>
+                            <div class="signup_desc">
+                                <div>
+                                    <p></p>
+                                </div>
+                                <ul>
+                                    <li><span>FAX 접수 : 02-2122-5040로 사업자등록증 1부, 연락처 기재</span></li>
+                                    <li><span>사업자 구매회원 사업자등록 <a href="javascript:void(0);">바로 가기 ></a></span></li>
+                                    <li><span>NICE평가정보 <a href="javascript:void(0);">바로 가기 ></a> (1600-1522)</span></li>
+                                </ul>
                             </div>
-                            <ul class="">
-                                <li>
-                                    <a href="javascript:void(0);"><img src="./assets/images/ico_sns_naver@2x.png" alt=""></a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </form>
@@ -102,19 +153,32 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const togglePassword = document.getElementById('togglePassword');
-            const passwordInput = document.getElementById('login_password');
+            const tabButtons = document.querySelectorAll('.tab_button');
+            const tabContents = document.querySelectorAll('.tab_content');
 
-            togglePassword.addEventListener('click', function () {
-                // 현재 입력 필드의 type 속성 값을 확인하고, toggle
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                
-                // 버튼 아이콘 변경
-                this.style.backgroundImage = type === 'password' 
-                    ? "url('./assets/images/ico_eye@2x.png')" 
-                    : "url('./assets/images/ico_eye_active@2x.png')";
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // 모든 탭 버튼에서 'active' 클래스를 제거
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // 모든 탭 콘텐츠에서 'active' 클래스를 제거
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // 클릭된 버튼에 'active' 클래스를 추가
+                    this.classList.add('active');
+
+                    // 해당 콘텐츠를 표시
+                    const target = this.getAttribute('data-target');
+                    document.getElementById(target).classList.add('active');
+                });
             });
+
+            // 기본적으로 첫 번째 탭과 콘텐츠를 활성화
+            if (tabButtons.length > 0) {
+                tabButtons[0].classList.add('active');
+                tabContents[0].classList.add('active');
+            }
+            
         });
 
     </script>
