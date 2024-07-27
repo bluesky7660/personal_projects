@@ -5,7 +5,7 @@
 .contentArea{
     max-width: 340px;
     margin:  auto;
-    padding: 100px 0 150px;
+    padding: 3rem 0 150px;
     /* text-align: center; */
     /* background-color: blue; */
     
@@ -16,19 +16,42 @@
     cursor: pointer;
 }
 footer{
+    border-top: 1px solid #eee;
     padding:20px 150px;
-    background-color: red;
+
 }
 .btn{
-    padding-top:10px;
-    padding-bottom:10px;
+    font-weight: bold;
+    padding-top:15px;
+    padding-bottom:15px;
+    border: 1px solid #ccc;
+
+    margin-top: 20px;
 }
-.btn{
-    
+.btn:hover {
+
+    background-color: #555;
+    color: #fff;
+
 }
 .gap_line{
     font-size: 10px !important;
     
+}
+.btn-blue{
+
+    border-color: #474c98;
+    color: #474c98;
+}
+.btn-blue:hover{
+    background: #efeff8;
+    border-color: #474c98;
+    color: #474c98;
+}
+.btn-gray:hover{
+    background: #f2f2f2;
+    border-color: #ccc;
+    color: #212529;
 }
 
 
@@ -36,15 +59,42 @@ footer{
 .user-login{
     margin-bottom: 20px;
 }
-.user-login input[type="text"]{
+.user-login>input[type="text"]{
     border-radius: 6px 6px 0 0;
 }
-.user-login input[type="password"]{
+.user-login .password_box input{
     border-radius:0 0 6px 6px;
 }
 .user-login input{
+    font-size: 14px;
+    /* padding-top:15px;
+    padding-bottom:15px; */
+    line-height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-color: #ccc;
     border-collapse: collapse;
+}
+.password_box {
+    position: relative;
+}
+
+.password_box .form-control {
+    padding-right: 40px; /* 버튼 크기와 위치를 고려한 여백 */
+}
+
+.toggle-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url('../images/ico_eye@2x.png'); /* 비밀번호 표시/숨기기 버튼의 배경 이미지 */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
 }
 
 /*로그인 버튼*/
@@ -56,18 +106,21 @@ footer{
     color:#fff;
 }
 /*save_id_chk_box*/
+.etc_box *{
+    font-size: 14px;
+}
 .save_id_chk_box{
     line-height: 24px;
 }
 /*search box*/
 .search span{
     color:#777;
-    font-size: 14px;
+    /* font-size: 14px; */
 }
 
 /*sns버튼*/
 .sns_login {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .sns_login ul{
     width: fit-content;
@@ -85,7 +138,10 @@ footer{
 }
 
 /*etc button*/
+.etc_buttons button:first{
+    border-color: #474c98;
+}
+
 .etc_buttons button{
-    border: 1px solid #ccc;
-    margin-top: 20px;
+    
 }
