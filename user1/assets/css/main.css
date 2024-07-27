@@ -75,6 +75,9 @@ section{
     padding:100px 150px;
     overflow: hidden;
 }
+.logo{
+    width: 200px;
+}
 .navbar_pc{
     padding:0 150px;
 }
