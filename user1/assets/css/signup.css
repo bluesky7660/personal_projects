@@ -80,3 +80,22 @@ form>*{
     border-radius: 10px;
     padding: 20px;
 }
+.new_incentives p{
+    margin: 20px 0;
+}
+.input_box input{
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-color: #ccc;
+}
+.signup_desc *{
+    margin-bottom: 5px;
+    color:#aaa;
+    font-size: 13px;
+    letter-spacing: -1px;
+}
