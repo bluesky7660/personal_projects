@@ -120,7 +120,7 @@
                 <div class="scrolltable">
                     <div class="gnb_search d-flex justify-content-between">
                         <div class=" d-flex">
-                            <div class="logo">
+                            <div class="logo" onclick="window.location.href='index.html'">
                                 <img src="./assets/images/img_logo_kyobo_member@2x.png" alt="">
                             </div>
                             <div class="search_box">검색</div>
@@ -198,9 +198,9 @@
             </div> -->
         </header>
         <main>
-            <div>
+            <div class="content_wrapper">
                 <div class="right-box">
-                    <div class="view_options">
+                    <div class="view_options d-flex justify-content-end">
                         <div>
                             <select name="" id="view_sort" >
                                 <option value="">최신순</option>
@@ -229,12 +229,50 @@
                                     <input class="form-check-input" type="checkbox" name="" id="select_all">
                                     <label class="form-check-label" for="select_all">전체선택</label>
                                 </div>
+                                <div>
+                                    <button>하트</button>
+                                    <button>장바구니</button>
+                                </div>
+                                <div>
+                                    <button>Excel다운로드</button>
+                                </div>
                             </div>
                         </div>
-                        <ul></ul>
+                        <ul class="contents">
+                            <li>
+                                <div>
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <div>
+                                    <div class="img-box">
+                                        <img src="./assets/images/emty-img.jpg" alt="">
+                                    </div>
+                                    <button>새창보기</button>
+                                </div>
+                                <div class="content_info_box">
+                                    <p class="prod_title">예약판매 하늘나라 극락과 천국(상)</p>
+                                    <p class="prod_author">조창조 · 신아출판사 · 2024.07.25</p>
+                                    <p class="prod_price"><span class="saleP">10%</span><span class="sale_price">13,500</span>원<span class="regular_price">15,000원</span> <span class="point">750p</span> </p>
+                                    <p class="prod_intro"></p>
+                                    <p class="prod_review">0.0</p>
+                                </div>
+                                <div class="shipping_date"q q       74\>
+                                    <p><strong>7/29(월)</strong></p>
+                                    <p>출고예정</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="left-box"></div>
+                <div class="left-box">
+                    <div>
+                        <ul>
+                            <li>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </main>
         <footer>
