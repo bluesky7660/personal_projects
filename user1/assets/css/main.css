@@ -56,8 +56,8 @@ header a{
 }
 
 nav *{
-    background-color: red;
-    border: 1px solid #000;
+    /* background-color: red;
+    border: 1px solid #000; */
 }
 
 .top_banner{
@@ -144,6 +144,9 @@ section{
     background: #555;
     border-color: #555;
     color: #fff;
+}
+.breadcrumb_wrapper{
+    padding:50px 150px;
 }
 /* .flex-auto li *{
     text-align: left;

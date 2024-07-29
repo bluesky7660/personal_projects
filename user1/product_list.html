@@ -199,110 +199,132 @@
             </div> -->
         </header>
         <main>
+            <div class="breadcrumb_wrapper">
+                <!-- Breadcrumb start -->
+                <ol class="breadcrumb d-md-flex d-none">
+                    <li class="breadcrumb-item">
+                        <i class="bi bi-house"></i>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">국내도서</li>
+                    <li class="breadcrumb-item">소설</li>
+                    <li class="breadcrumb-item">한국소설</li>
+                    <li class="breadcrumb-item breadcrumb-active" aria-current="page">전체</li>
+                </ol>
+                <!-- Breadcrumb end -->
+            </div>
             <div class="content_wrapper">
-                <div class="right-box">
-                    <div class="view_options d-flex justify-content-end">
+                <div class="d-flex">
+                    <div class="left-box">
                         <div>
-                            <select name="" id="view_sort" >
-                                <option value="">최신순</option>
-                                <option value="">판매량</option>
-                            </select>
-                        </div>
-                        <div>
-                            <select name="" id="views_number" >
-                                <option value="20">20개씩 보기</option>
-                                <option value="50">50개씩 보기</option>
-                            </select>
-                        </div>
-                        <div class="view_type">
-                            <div class="list_type"></div>
-                            <div class="grid-type"></div>
+                            <div>국내도서</div>
+                            <div>한국소설</div>
+                            <ul>
+                                <li>
+                                    한국소설일반
+                                </li>
+                                <li>
+                                    고전소설/문학선
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    
-
-                    </div>
-                    <div class="contentArea">
-                        <div class="mt-5 mb-3 d-flex justify-content-between">
-                            <div class="pagination-wrapper">
-                                <div class="dataTable-bottom">
-                                    <nav class="dataTable-pagination" aria-label="dataTable-pagination">
-                                        <ul class="dataTable-pagination-list pagination pagination-primary justify-content-center">
-                                            <li class="paginate_button previous page-item" id="previousPage">
-                                                <a class="page-link" href="#">
-                                                    <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
-                                                </a>
-                                            </li>
-                                            <li class="active paginate_button page-item"><a href="#" data-page="1" class="page-link">1</a></li>
-                                            <li class="paginate_button page-item"><a href="#" data-page="2" class="page-link">2</a></li>
-                                            <li class="paginate_button page-item"><a href="#" data-page="3" class="page-link">3</a></li>
-                                            <li class="paginate_button page-item"><a href="#" data-page="4" class="page-link">4</a></li>
-                                            <li class="paginate_button page-item"><a href="#" data-page="5" class="page-link">5</a></li>
-                                            <li class="paginate_button next page-item" id="nextPage">
-                                                <a class="page-link" href="#">
-                                                    <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
+                    <div class="right-box">
+                        <div class="view_options d-flex justify-content-end">
+                            <div>
+                                <select name="" id="view_sort" >
+                                    <option value="">최신순</option>
+                                    <option value="">판매량</option>
+                                </select>
                             </div>
-                            <div class="d-flex gap-3">
-                                <div class="d-flex align-items-center gap-1">
-                                    <input class="form-check-input" type="checkbox" name="" id="select_all">
-                                    <label class="form-check-label" for="select_all">전체선택</label>
-                                </div>
-                                <div>
-                                    <button class="btn">하트</button>
-                                    <button class="btn">장바구니</button>
-                                </div>
-                                <div>
-                                    <button class="btn">Excel다운로드</button>
-                                </div>
+                            <div>
+                                <select name="" id="views_number" >
+                                    <option value="20">20개씩 보기</option>
+                                    <option value="50">50개씩 보기</option>
+                                </select>
+                            </div>
+                            <div class="view_type">
+                                <div class="list_type"></div>
+                                <div class="grid-type"></div>
                             </div>
                         </div>
-                        <ul class="contents">
-                            <li class="d-flex justify-content-between gap-3">
-                                <div>
-                                    <input type="checkbox" name="" id="">
-                                </div>
-                                <div class="prod_img">
-                                    <div class="img-box">
-                                        <img src="./assets/images/emty-img.jpg" alt="">
+                        <div class="contentArea">
+                            <div class="list_result mt-5 mb-3 d-flex justify-content-between">
+                                <div class="pagination-wrapper">
+                                    <div class="dataTable-bottom">
+                                        <nav class="dataTable-pagination" aria-label="dataTable-pagination">
+                                            <ul class="dataTable-pagination-list pagination pagination-primary justify-content-center">
+                                                <li class="paginate_button previous page-item" id="previousPage">
+                                                    <a class="page-link" href="#">
+                                                        <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
+                                                    </a>
+                                                </li>
+                                                <li class="active paginate_button page-item"><a href="#" data-page="1" class="page-link">1</a></li>
+                                                <li class="paginate_button page-item"><a href="#" data-page="2" class="page-link">2</a></li>
+                                                <li class="paginate_button page-item"><a href="#" data-page="3" class="page-link">3</a></li>
+                                                <li class="paginate_button page-item"><a href="#" data-page="4" class="page-link">4</a></li>
+                                                <li class="paginate_button page-item"><a href="#" data-page="5" class="page-link">5</a></li>
+                                                <li class="paginate_button next page-item" id="nextPage">
+                                                    <a class="page-link" href="#">
+                                                        <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
                                     </div>
-                                    <button>새창보기</button>
                                 </div>
-                                <div class="content_info_box d-flex flex-column gap-2">
-                                    <p class="prod_title">예약판매 하늘나라 극락과 천국(상)</p>
-                                    <p class="prod_author">조창조 · 신아출판사 · 2024.07.25</p>
-                                    <p class="prod_price"><span class="saleP">10%</span><span class="sale_price">13,500</span>원<span class="regular_price">15,000원</span> <span class="point">750p</span> </p>
-                                    <p class="prod_intro"></p>
-                                    <p class="prod_review">0.0</p>
-                                </div>
-                                <div class="shipping_date">
-                                    <p><strong>7/29(월)</strong></p>
-                                    <p>출고예정</p>
-                                </div>
-                                <div class="button_box d-flex flex-column gap-2">
+                                <div class="d-flex gap-3">
+                                    <div class="d-flex align-items-center gap-1">
+                                        <input class="form-check-input" type="checkbox" name="" id="select_all">
+                                        <label class="form-check-label" for="select_all">전체선택</label>
+                                    </div>
                                     <div>
-                                        <img src="" alt="">
+                                        <button class="btn">하트</button>
+                                        <button class="btn">장바구니</button>
                                     </div>
-                                    <button class="btn btn-gray">장바구니</button>
-                                    <button class="btn btn-blue">바로구매</button>
+                                    <div>
+                                        <button class="btn">Excel다운로드</button>
+                                    </div>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                            <ul class="contents">
+                                <li class="d-flex justify-content-between gap-3">
+                                    <div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="prod_img">
+                                        <div class="img-box">
+                                            <img src="./assets/images/emty-img.jpg" alt="">
+                                        </div>
+                                        <button class="btn">새창보기</button>
+                                    </div>
+                                    <div class="content_info_box ">
+                                        <div class="d-flex flex-column gap-2">
+                                            <p class="prod_title">예약판매 하늘나라 극락과 천국(상)</p>
+                                            <p class="prod_author">조창조 · 신아출판사 · 2024.07.25</p>
+                                            <p class="prod_price d-flex gap-1"><strong class="saleP">10%</strong><span class="sale_price"><strong>13,500</strong>원</span><span class="regular_price">15,000원</span> <span class="point">750p</span> </p>
+                                            <p class="prod_intro"></p>
+                                            <p class="prod_review">
+                                                <img src="" alt="">0.0
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="shipping_date d-flex flex-column gap-2">
+                                        <p><strong>7/29(월)</strong></p>
+                                        <p>출고예정</p>
+                                    </div>
+                                    <div class="button_box d-flex flex-column gap-2">
+                                        <div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <button class="btn btn-gray">장바구니</button>
+                                        <button class="btn btn-blue">바로구매</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="left-box">
-                    <div>
-                        <ul>
-                            <li>
-
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                </div> 
             </div>
         </main>
         <footer>
