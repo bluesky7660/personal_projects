@@ -25,30 +25,24 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 <body>
     <div class="page-wrapper">
         <header>
-            <div class="top_banner">
+            <!-- <div class="top_banner">
                 <div>
                     <img src="./assets/images/top-banner01.jpg" alt="">
                 </div>
-            </div>
+            </div> -->
             
             <div class="navbar_pc">
-                <div class="d-flex justify-content-between">
-                    <div class="direct_links">
+                <div class="customer_service_area d-flex justify-content-end p-3">
+                    <!-- <div class="direct_links">
                         <ul class="d-flex flex-nowrap">
-                            <!-- <li class="col">
-                                <a href="javascript:void(0);">
-                                    <span>교보문고</span>
-                                    <svg width="135" height="33" viewBox="0 0 135 33">
-                                        <path d="M15554.024,14599H15465.7a31.705,31.705,0,0,1-7.591-.784,19.97,19.97,0,0,1-6.663-2.94c-4.358-2.979-8.145-8.021-11.917-15.869a22.677,22.677,0,0,0-10.844-11,25.517,25.517,0,0,0-9.656-2.386h87.267c.091-.006.332-.018.707-.018a25.341,25.341,0,0,1,9.538,1.979,22.538,22.538,0,0,1,6.329,4.017,23.756,23.756,0,0,1,5.453,7.405c3.767,7.848,7.552,12.89,11.911,15.869a19.969,19.969,0,0,0,6.661,2.94,30.976,30.976,0,0,0,7.134.782Z" transform="translate(-15419.024 -14566.001)" />
-                                    </svg>
-                                </a>
-                            </li> -->
+                            
                             <li >
                                 <a href="product_list.html">교보문고</a>
                             </li>
@@ -93,7 +87,7 @@
                                 </select>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div class="customer_service_box d-flex  align-items-center">
                         <ul class="d-flex gap-3">
                             <li class="">
@@ -103,36 +97,50 @@
                                 <a href="login.html">로그인</a>
                             </li>
                             <li class="">
-                                <a href="javascript:void(0);">회원가입</a>
+                                <a href="javascript:void(0);">회원혜택</a>
                             </li>
                             <li class="">
-                                <a href="javascript:void(0);">회원가입</a>
+                                <a href="javascript:void(0);">주문배송</a>
                             </li>
                             <li class="">
-                                <a href="javascript:void(0);">회원가입</a>
+                                <a href="javascript:void(0);">매장안내</a>
                             </li>
                             <li class="">
-                                <a href="javascript:void(0);">회원가입</a>
+                                <a href="javascript:void(0);">고객센터</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="scrolltable">
-                    <div class="gnb_search d-flex justify-content-between">
-                        <div class=" d-flex">
+                    <div class="gnb_search d-flex justify-content-between gap-5">
+                        <div class="search_wrapper d-flex align-items-center  gap-5">
                             <div class="logo" onclick="window.location.href='index.html'">
                                 <img src="./assets/images/img_logo_kyobo_member@2x.png" alt="">
                             </div>
-                            <div class="search_box">검색</div>
+                            <div class="search_area w-100">
+                                <div class="search_box d-flex align-items-center gap-3">
+                                    <input type="text" class="input-search">
+                                    <button class="search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </div>
+                            </div>
                         </div>
-                        <div class=" d-flex">
-                            <div class="cart">카트</div>
-                            <div class="user_my">유저</div>
+                        <div class="user_box d-flex align-items-center gap-4">
+                            <div class="cart">
+                                <img src="./assets/images/btn_header_cart@2x.png" alt="">
+                            </div>
+                            <div class="user_my">
+                                <img src="./assets/images/btn_header_my@2x.png" alt="">
+                            </div>
                         </div>
                     </div>
                     <nav class="gnb_list d-flex justify-content-between">
-                        <div class="gnb_wrap">
-                            <button><i class="fa-solid fa-bars"></i></button>
+                        <div class="gnb_wrapper d-flex align-items-center gap-5">
+                            <button class="circle_btn"><i class="fa-solid fa-bars"></i></button>
+                            <ul class="gnb_link d-flex gap-5">
+                                <li onclick="window.location.href='product_list.html'">베스트</li>  
+                                <li>신상품</li>
+                                <li>이벤트</li>
+                            </ul>
                             <div class="wrap_area">
                                 <div class="gnbtab-list">
                                     <ul>
@@ -155,22 +163,22 @@
                                     </div>
                                     <div class="CategoryKyobo">
                                         <ul >
-
+    
                                         </ul>
                                     </div>
                                     <div class="CategoryeBook">
                                         <ul class="">
-
+    
                                         </ul>
                                     </div>
                                     <div class="Categorysam">
                                         <ul class="">
-
+    
                                         </ul>
                                     </div>
                                     <div class="CategoryHotTracks">
                                         <ul class="">
-
+    
                                         </ul>
                                     </div>
                                     
@@ -180,15 +188,6 @@
                                 </div>
                             </div>
                         </div>
-                        <ul class="d-flex">
-                            <li>메뉴1</li>  
-                            <li>메뉴1</li>
-                            <li>메뉴1</li>
-                            <li>메뉴1</li>
-                            <li>메뉴1</li>
-                            <li>메뉴1</li>
-                            <li>메뉴1</li>
-                        </ul>
                     </nav>
                 </div>
                 

@@ -1,108 +1,76 @@
-*,ul {
-    margin:0;
-    padding: 0;
-    list-style: none;
+/*공통*/
+.circle_btn{
+    border-radius: 50%;
 }
 
-ul li,ol li{
-    
-    
+/**/
+.customer_service_area{
+    background-color: #ddd;
 }
-li a{
-    
-    position: relative;
-}
-.wrap_area{
-    display: none;
-}
-.direct_links li{
-    width: fit-content;
-    height: fit-content;
-    padding: 0;
-}
-.direct_links li a{
-    /* margin-left: -48px; */
-    /* margin-left: -28px; */
-    background-color: red;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-    
-    height: 32px;
-    line-height: 32px;
-    /* clip-path:path("M15554.024,14599H15465.7a31.705,31.705,0,0,1-7.591-.784,19.97,19.97,0,0,1-6.663-2.94c-4.358-2.979-8.145-8.021-11.917-15.869a22.677,22.677,0,0,0-10.844-11,25.517,25.517,0,0,0-9.656-2.386h87.267c.091-.006.332-.018.707-.018a25.341,25.341,0,0,1,9.538,1.979,22.538,22.538,0,0,1,6.329,4.017,23.756,23.756,0,0,1,5.453,7.405c3.767,7.848,7.552,12.89,11.911,15.869a19.969,19.969,0,0,0,6.661,2.94,30.976,30.976,0,0,0,7.134.782Z"); */
-}
-svg{
-    position: absolute;
-    left: 0;
-    fill: red;
-    z-index: -1;
+.customer_service_box ul li a{
+    font-size: 14px;
 }
 
-header a{
-    text-decoration: none;
-    color: #000;
-}
 
-nav *{
-    background-color: red;
-    border: 1px solid #000;
-}
+.scrolltable>*{
+    padding:30px 0;
 
-.top_banner{
-    background-color: #f4f4f4;
-    text-align: center;
 }
-.top_banner img{
-    max-width:100%;
+.gnb_search .logo{
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px;
     height:auto;
 }
-.customer_service_box li{
-    width: fit-content;
-    flex: none;
+.search_wrapper{
+    width: calc(100% - 300px);
+    max-width: 700px;
 }
 
-
-/*통합*/
-/* main>div{
-    padding-left:100px;
-    padding-right:100px;
-} */
-
-/*메인슬라이더*/
-.hero-area .hero-slider .single-slider {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 500px;
-    position: relative;
+.search_box{
+    border: 1px solid #aaa ;
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    min-width:240px;
+    padding:10px 30px;
+}
+.search_box input{
+    width: 100%;
+    min-width: 180px;
+    border-color: transparent;
+}
+.search_box input:focus-visible {
+    outline: none; /* outline 속성을 제거합니다 */
+    box-shadow: none; /* 추가적으로 box-shadow도 제거할 수 있습니다 */
+}
+.search_btn{
+    border: none;
+    background-color: transparent;
 }
 
-/* .tns-nav button {
-
-    background: blue;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
+/*user box*/
+.user_box>div{
+    width: 40px;
     cursor: pointer;
 }
-.tns-nav .tns-prev::before {
-    content: '\f053'; 
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
+
+.user_my{
+    box-shadow: 0 0 10px 5px #ddd;
+    border-radius: 50%;
 }
-.tns-nav .tns-next::before {
-    content: '\f054';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
+
+/*gnb wrap*/
+.gnb_wrapper .gnb_link li{
+    font-size: 18px;
+    cursor: pointer;
 }
-.tns-outer {
-    position: relative;
-  }
-.tns-outer .tns-nav {
-    position: absolute;
-    bottom: 0; 
-    left: 200px;
-    text-align: center;
-    z-index: 1;
-} */
+.gnb_wrapper .circle_btn{
+    width: 50px;
+    height:50px;
+    border: 1px solid #aaa;
+    background-color: transparent;
+}
+.gnb_wrapper .circle_btn i{
+    font-size: 18px;
+}

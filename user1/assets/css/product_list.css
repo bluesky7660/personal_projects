@@ -1,7 +1,64 @@
 .left-box,.right-box{
     flex-basis:100%;
 }
+.left-box{
+    flex-basis: content;
+}
+.gray_color{
+    color:#555;
+}
+.regular_price{
+    text-decoration-line: line-through;
+}
+.sale_price strong{
+    font-size: 15px;
+}
 
+
+/*왼쪽*/
+.left-box li{
+    color:#555;
+}
+.left-box i{
+    display: flex;
+    align-items: center;
+}
+
+/*오른쪽*/
+.view_options{
+    border-radius: 10px;
+    padding: 20px;
+    
+    background-color: #eee;
+}
+.view_type>*{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-color: #aaa;
+}
+
+.view_type>*:hover{
+    background-color: #eee;
+    border-color: #aaa;
+}
+.view_type>*.active{
+    background-color: #eee;
+    border-color: #aaa;
+    
+}
+.view_type>* img{
+    opacity: 0.2;
+}
+.view_type>*.active img{
+    opacity: 1;
+}
+.view_type>* img{
+    width: 15px;
+    height: auto;
+}
 
 .prod_img img{
     width: 150px;
@@ -19,6 +76,17 @@
 .contents .btn{
     width: 120px;
 }
+.button_box{
+    text-align: right;
+}
+.contents .heart_icon{
+    width: fit-content;
+    margin-left: auto;
+    cursor: pointer;
+}
+.heart_icon:hover img{
+    filter: invert(24%) sepia(94%) saturate(7470%) hue-rotate(-8deg) brightness(96%) contrast(104%);
+}
 .form-check-input{
     margin: 0;
 }
@@ -34,6 +102,22 @@
 .content_info_box>div{
     padding:20px 0;
 }
+.content_info_box >div>*:not(.prod_title){
+    font-size: 13px;
+    color:#555;
+}
+
+
+.heart_icon{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.heart_icon img,.icon_box{
+    width: 16px;
+}
+
 
 .shipping_date{
     align-self: center;
@@ -48,5 +132,6 @@
 
 .saleP{
     color: #4dac27;
+    font-size: 15px;
     font-weight: bold;
 }

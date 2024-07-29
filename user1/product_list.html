@@ -214,38 +214,87 @@
                 <!-- Breadcrumb end -->
             </div>
             <div class="content_wrapper">
-                <div class="d-flex">
+                <div class="d-flex gap-5">
                     <div class="left-box">
                         <div>
-                            <div>국내도서</div>
-                            <div>한국소설</div>
-                            <ul>
+                            <div class="mb-4"><h3>국내도서</h3></div>
+                            <div class="mb-4 d-flex gap-1">
+                                <i class="fa-solid fa-chevron-left"></i>
+                                <h4>한국소설</h4>
+                            </div>
+                            <!-- <ul class="d-flex flex-column gap-3">
                                 <li>
                                     한국소설일반
                                 </li>
                                 <li>
                                     고전소설/문학선
                                 </li>
+                                <li>
+                                    공포/호러소설
+                                </li>
+                                <li>
+                                    미스터리/스릴러소설
+                                </li>
+                                <li>
+                                    역사/대하소설
+                                </li>
+                                <li>
+                                    라이트노벨
+                                </li>
+                                <li>
+                                    SF/과학소설
+                                </li>
+                                <li>
+                                    판타지소설
+                                </li>
+                                <li>
+                                    로맨스소설
+                                </li>
+                                <li>
+                                    무협소설
+                                </li>
+                                <li>
+                                    청소년소설
+                                </li>
+                                <li>
+                                    웹소설
+                                </li>
+                                <li>
+                                    드라마/영화소설
+                                </li>
+                            </ul> -->
+                            <ul class="d-flex flex-column gap-3">
+                                <li>전체보기</li>
+                                <li>베스트셀러</li>
+                                <li>신상품</li>
+                                <li>회원리뷰</li>
+                                <li>CASTing</li>
                             </ul>
                         </div>
                     </div>
                     <div class="right-box">
-                        <div class="view_options d-flex justify-content-end">
+                        <div class="view_options d-flex justify-content-end gap-3">
                             <div>
-                                <select name="" id="view_sort" >
+                                <select name="" class="form-select" id="view_sort" >
                                     <option value="">최신순</option>
                                     <option value="">판매량</option>
+                                    <option value="">높은 가격순</option>
+                                    <option value="">낮은 가격순</option>
                                 </select>
                             </div>
                             <div>
-                                <select name="" id="views_number" >
+                                <select name="" class="form-select" id="views_number" >
                                     <option value="20">20개씩 보기</option>
                                     <option value="50">50개씩 보기</option>
                                 </select>
                             </div>
-                            <div class="view_type">
-                                <div class="list_type"></div>
-                                <div class="grid-type"></div>
+                            <div class="view_type d-flex gap-1">
+                                <button class="list_type btn active">
+                                    <img src="./assets/images/ico_view_list_active@2x.png" alt="">
+                                </button>
+                                <button class="grid-type btn">
+                                    <img src="./assets/images/ico_view_img_active@2x.png" alt="">
+                                </button>
                             </div>
                         </div>
                         <div class="contentArea">
@@ -278,8 +327,10 @@
                                         <input class="form-check-input" type="checkbox" name="" id="select_all">
                                         <label class="form-check-label" for="select_all">전체선택</label>
                                     </div>
-                                    <div>
-                                        <button class="btn">하트</button>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn heart_icon">
+                                            <img src="./assets/images/ico_heart_h18@2x.png" alt="">
+                                        </button>
                                         <button class="btn">장바구니</button>
                                     </div>
                                     <div>
@@ -288,7 +339,7 @@
                                 </div>
                             </div>
                             <ul class="contents">
-                                <li class="d-flex justify-content-between gap-3">
+                                <li class="contents_items d-flex justify-content-between gap-3">
                                     <div>
                                         <input type="checkbox" name="" id="">
                                     </div>
@@ -299,14 +350,17 @@
                                         <button class="btn">새창보기</button>
                                     </div>
                                     <div class="content_info_box ">
-                                        <div class="d-flex flex-column gap-2">
-                                            <p class="prod_title">예약판매 하늘나라 극락과 천국(상)</p>
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="prod_title"><span class="gray_color">예약판매</span> <strong>하늘나라 극락과 천국(상)</strong></p>
                                             <p class="prod_author">조창조 · 신아출판사 · 2024.07.25</p>
                                             <p class="prod_price d-flex gap-1"><strong class="saleP">10%</strong><span class="sale_price"><strong>13,500</strong>원</span><span class="regular_price">15,000원</span> <span class="point">750p</span> </p>
                                             <p class="prod_intro"></p>
-                                            <p class="prod_review">
-                                                <img src="" alt="">0.0
-                                            </p>
+                                            <div class="prod_review d-flex gap-1">
+                                                <span class="icon_box">
+                                                    <img src="./assets/images/ico_klover_sm@2x.png" alt=""> 
+                                                </span>
+                                                <strong class="review_num">0.0</strong> 
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="shipping_date d-flex flex-column gap-2">
@@ -314,9 +368,191 @@
                                         <p>출고예정</p>
                                     </div>
                                     <div class="button_box d-flex flex-column gap-2">
-                                        <div>
-                                            <img src="" alt="">
+                                        <span class="heart_icon">
+                                            <img src="./assets/images/ico_heart_h18@2x.png" alt="">
+                                        </span>
+                                        <button class="btn btn-gray">장바구니</button>
+                                        <button class="btn btn-blue">바로구매</button>
+                                    </div>
+                                </li>
+                                <li class="contents_items d-flex justify-content-between gap-3">
+                                    <div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="prod_img">
+                                        <div class="img-box">
+                                            <img src="./assets/images/emty-img.jpg" alt="">
                                         </div>
+                                        <button class="btn">새창보기</button>
+                                    </div>
+                                    <div class="content_info_box ">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="prod_title"><span class="gray_color"></span> <strong>아직 덜 마른 장작</strong></p>
+                                            <p class="prod_author">이지혜 · 이바구 · 2024.08.20</p>
+                                            <p class="prod_price d-flex gap-1"><strong class="saleP">10%</strong><span class="sale_price"><strong>18,000</strong>원</span><span class="regular_price">20,000원</span> <span class="point">1,000p</span> </p>
+                                            <p class="prod_intro">
+                                                『아직 덜 마른 장작』은 이지혜 소설가의 첫 장편소설집이다. 소설가 스스로 “모든 이의 공통점은 누군가를 사랑한다는 점이다. 아직은 탈 준비가 되지 않은 그들은 모두 덜 마른 장작들이다. 이 작품 속 인물 중에서 제대로 탈 준비가 된 사람은 한 명도 없다. 미성숙하고 불완전하지만, 주어진 삶을 포기하지 않고 어떻게든 오늘의 삶을 살아 내는 사람들에게 조금 미스가 있다고 해서 과연 누가 돌을 던질 수 있을까? 법의 규율로 인해 돌을 맞는 이에게조차 주인공은 화해의 손길을 내민다.”라며 강조한다.
+                                            </p>
+                                            <div class="prod_review d-flex gap-1">
+                                                <span class="icon_box">
+                                                    <img src="./assets/images/ico_klover_sm@2x.png" alt=""> 
+                                                </span>
+                                                <strong class="review_num">0.0</strong> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shipping_date d-flex flex-column gap-2">
+                                        <p><strong>7/29(월)</strong></p>
+                                        <p>출고예정</p>
+                                    </div>
+                                    <div class="button_box d-flex flex-column gap-2">
+                                        <span class="heart_icon">
+                                            <img src="./assets/images/ico_heart_h18@2x.png" alt="">
+                                        </span>
+                                        <button class="btn btn-gray">장바구니</button>
+                                        <button class="btn btn-blue">바로구매</button>
+                                    </div>
+                                </li>
+                                <li class="contents_items d-flex justify-content-between gap-3">
+                                    <div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="prod_img">
+                                        <div class="img-box">
+                                            <img src="./assets/images/emty-img.jpg" alt="">
+                                        </div>
+                                        <button class="btn">새창보기</button>
+                                    </div>
+                                    <div class="content_info_box ">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="prod_title"><span class="gray_color">예약판매</span> <strong>하늘나라 극락과 천국(상)</strong></p>
+                                            <p class="prod_author">조창조 · 신아출판사 · 2024.07.25</p>
+                                            <p class="prod_price d-flex gap-1"><strong class="saleP">10%</strong><span class="sale_price"><strong>13,500</strong>원</span><span class="regular_price">15,000원</span> <span class="point">750p</span> </p>
+                                            <p class="prod_intro"></p>
+                                            <div class="prod_review d-flex gap-1">
+                                                <span class="icon_box">
+                                                    <img src="./assets/images/ico_klover_sm@2x.png" alt=""> 
+                                                </span>
+                                                <strong class="review_num">0.0</strong> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shipping_date d-flex flex-column gap-2">
+                                        <p><strong>7/29(월)</strong></p>
+                                        <p>출고예정</p>
+                                    </div>
+                                    <div class="button_box d-flex flex-column gap-2">
+                                        <span class="heart_icon">
+                                            <img src="./assets/images/ico_heart_h18@2x.png" alt="">
+                                        </span>
+                                        <button class="btn btn-gray">장바구니</button>
+                                        <button class="btn btn-blue">바로구매</button>
+                                    </div>
+                                </li>
+                                <li class="contents_items d-flex justify-content-between gap-3">
+                                    <div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="prod_img">
+                                        <div class="img-box">
+                                            <img src="./assets/images/emty-img.jpg" alt="">
+                                        </div>
+                                        <button class="btn">새창보기</button>
+                                    </div>
+                                    <div class="content_info_box ">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="prod_title"><span class="gray_color">예약판매</span> <strong>하늘나라 극락과 천국(상)</strong></p>
+                                            <p class="prod_author">조창조 · 신아출판사 · 2024.07.25</p>
+                                            <p class="prod_price d-flex gap-1"><strong class="saleP">10%</strong><span class="sale_price"><strong>13,500</strong>원</span><span class="regular_price">15,000원</span> <span class="point">750p</span> </p>
+                                            <p class="prod_intro"></p>
+                                            <div class="prod_review d-flex gap-1">
+                                                <span class="icon_box">
+                                                    <img src="./assets/images/ico_klover_sm@2x.png" alt=""> 
+                                                </span>
+                                                <strong class="review_num">0.0</strong> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shipping_date d-flex flex-column gap-2">
+                                        <p><strong>7/29(월)</strong></p>
+                                        <p>출고예정</p>
+                                    </div>
+                                    <div class="button_box d-flex flex-column gap-2">
+                                        <span class="heart_icon">
+                                            <img src="./assets/images/ico_heart_h18@2x.png" alt="">
+                                        </span>
+                                        <button class="btn btn-gray">장바구니</button>
+                                        <button class="btn btn-blue">바로구매</button>
+                                    </div>
+                                </li>
+                                <li class="contents_items d-flex justify-content-between gap-3">
+                                    <div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="prod_img">
+                                        <div class="img-box">
+                                            <img src="./assets/images/emty-img.jpg" alt="">
+                                        </div>
+                                        <button class="btn">새창보기</button>
+                                    </div>
+                                    <div class="content_info_box ">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="prod_title"><span class="gray_color">예약판매</span> <strong>하늘나라 극락과 천국(상)</strong></p>
+                                            <p class="prod_author">조창조 · 신아출판사 · 2024.07.25</p>
+                                            <p class="prod_price d-flex gap-1"><strong class="saleP">10%</strong><span class="sale_price"><strong>13,500</strong>원</span><span class="regular_price">15,000원</span> <span class="point">750p</span> </p>
+                                            <p class="prod_intro"></p>
+                                            <div class="prod_review d-flex gap-1">
+                                                <span class="icon_box">
+                                                    <img src="./assets/images/ico_klover_sm@2x.png" alt=""> 
+                                                </span>
+                                                <strong class="review_num">0.0</strong> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shipping_date d-flex flex-column gap-2">
+                                        <p><strong>7/29(월)</strong></p>
+                                        <p>출고예정</p>
+                                    </div>
+                                    <div class="button_box d-flex flex-column gap-2">
+                                        <span class="heart_icon">
+                                            <img src="./assets/images/ico_heart_h18@2x.png" alt="">
+                                        </span>
+                                        <button class="btn btn-gray">장바구니</button>
+                                        <button class="btn btn-blue">바로구매</button>
+                                    </div>
+                                </li>
+                                <li class="contents_items d-flex justify-content-between gap-3">
+                                    <div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <div class="prod_img">
+                                        <div class="img-box">
+                                            <img src="./assets/images/emty-img.jpg" alt="">
+                                        </div>
+                                        <button class="btn">새창보기</button>
+                                    </div>
+                                    <div class="content_info_box ">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="prod_title"><span class="gray_color">예약판매</span> <strong>하늘나라 극락과 천국(상)</strong></p>
+                                            <p class="prod_author">조창조 · 신아출판사 · 2024.07.25</p>
+                                            <p class="prod_price d-flex gap-1"><strong class="saleP">10%</strong><span class="sale_price"><strong>13,500</strong>원</span><span class="regular_price">15,000원</span> <span class="point">750p</span> </p>
+                                            <p class="prod_intro"></p>
+                                            <div class="prod_review d-flex gap-1">
+                                                <span class="icon_box">
+                                                    <img src="./assets/images/ico_klover_sm@2x.png" alt=""> 
+                                                </span>
+                                                <strong class="review_num">0.0</strong> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shipping_date d-flex flex-column gap-2">
+                                        <p><strong>7/29(월)</strong></p>
+                                        <p>출고예정</p>
+                                    </div>
+                                    <div class="button_box d-flex flex-column gap-2">
+                                        <span class="heart_icon">
+                                            <img src="./assets/images/ico_heart_h18@2x.png" alt="">
+                                        </span>
                                         <button class="btn btn-gray">장바구니</button>
                                         <button class="btn btn-blue">바로구매</button>
                                     </div>
