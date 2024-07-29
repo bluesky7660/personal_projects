@@ -25,6 +25,7 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/product_list.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
@@ -222,43 +223,72 @@
 
                     </div>
                     <div class="contentArea">
-                        <div class="">
-                            <div class="pagination-wrapper"></div>
-                            <div>
-                                <div>
+                        <div class="mt-5 mb-3 d-flex justify-content-between">
+                            <div class="pagination-wrapper">
+                                <div class="dataTable-bottom">
+                                    <nav class="dataTable-pagination" aria-label="dataTable-pagination">
+                                        <ul class="dataTable-pagination-list pagination pagination-primary justify-content-center">
+                                            <li class="paginate_button previous page-item" id="previousPage">
+                                                <a class="page-link" href="#">
+                                                    <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
+                                                </a>
+                                            </li>
+                                            <li class="active paginate_button page-item"><a href="#" data-page="1" class="page-link">1</a></li>
+                                            <li class="paginate_button page-item"><a href="#" data-page="2" class="page-link">2</a></li>
+                                            <li class="paginate_button page-item"><a href="#" data-page="3" class="page-link">3</a></li>
+                                            <li class="paginate_button page-item"><a href="#" data-page="4" class="page-link">4</a></li>
+                                            <li class="paginate_button page-item"><a href="#" data-page="5" class="page-link">5</a></li>
+                                            <li class="paginate_button next page-item" id="nextPage">
+                                                <a class="page-link" href="#">
+                                                    <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <div class="d-flex align-items-center gap-1">
                                     <input class="form-check-input" type="checkbox" name="" id="select_all">
                                     <label class="form-check-label" for="select_all">전체선택</label>
                                 </div>
                                 <div>
-                                    <button>하트</button>
-                                    <button>장바구니</button>
+                                    <button class="btn">하트</button>
+                                    <button class="btn">장바구니</button>
                                 </div>
                                 <div>
-                                    <button>Excel다운로드</button>
+                                    <button class="btn">Excel다운로드</button>
                                 </div>
                             </div>
                         </div>
                         <ul class="contents">
-                            <li>
+                            <li class="d-flex justify-content-between gap-3">
                                 <div>
                                     <input type="checkbox" name="" id="">
                                 </div>
-                                <div>
+                                <div class="prod_img">
                                     <div class="img-box">
                                         <img src="./assets/images/emty-img.jpg" alt="">
                                     </div>
                                     <button>새창보기</button>
                                 </div>
-                                <div class="content_info_box">
+                                <div class="content_info_box d-flex flex-column gap-2">
                                     <p class="prod_title">예약판매 하늘나라 극락과 천국(상)</p>
                                     <p class="prod_author">조창조 · 신아출판사 · 2024.07.25</p>
                                     <p class="prod_price"><span class="saleP">10%</span><span class="sale_price">13,500</span>원<span class="regular_price">15,000원</span> <span class="point">750p</span> </p>
                                     <p class="prod_intro"></p>
                                     <p class="prod_review">0.0</p>
                                 </div>
-                                <div class="shipping_date"q q       74\>
+                                <div class="shipping_date">
                                     <p><strong>7/29(월)</strong></p>
                                     <p>출고예정</p>
+                                </div>
+                                <div class="button_box d-flex flex-column gap-2">
+                                    <div>
+                                        <img src="" alt="">
+                                    </div>
+                                    <button class="btn btn-gray">장바구니</button>
+                                    <button class="btn btn-blue">바로구매</button>
                                 </div>
                             </li>
                         </ul>

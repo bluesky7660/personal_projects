@@ -1,0 +1,17 @@
+.prod_img img{
+    width: 150px;
+}
+
+.contents li>div{
+    padding:30px 0;
+}
+.contents .btn{
+    width: 120px;
+}
+.form-check-input{
+    margin: 0;
+}
+
+.content_info_box{
+    flex-basis: 100%;
+}
