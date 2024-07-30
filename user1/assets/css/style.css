@@ -25,6 +25,15 @@
     cursor: pointer;
 }
 
+/*blank_icon*/
+.blank_icon{
+    display: inline-block;
+    width: 12px;
+    height: 18px;
+    background-size: 12px 18px;
+    background-image: url(../images/ico_blank_link@2x.png);
+}
+
 /*공통*/
 *,ul {
     margin:0;
@@ -104,6 +113,11 @@ section{
     width: 100%;
     height: 100%;
     margin-bottom: 10px;
+}
+a.img-box{
+    display: inline-block;
+    /* width: fit-content;
+    height: fit-content; */
 }
 .area-head{
     margin-bottom: 1.5rem;

@@ -94,6 +94,10 @@
     text-align: center;
     height: fit-content;
 }
+.prod_img a[target="_blank"] span{
+    margin-right: 5px;
+}
+
 
 .content_info_box{
     flex-basis: 100%;
@@ -102,9 +106,22 @@
 .content_info_box>div{
     padding:20px 0;
 }
+.prod_title a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
 .content_info_box >div>*:not(.prod_title){
     font-size: 13px;
     color:#555;
+}
+.prod_intro{
+    line-height: 20px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 
