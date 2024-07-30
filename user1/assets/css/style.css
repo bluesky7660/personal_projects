@@ -2,6 +2,10 @@
 .form-check-input{
     margin-top: 0;
 }
+.badge{
+    border:1px solid #aaa;
+    color:#313364
+}
 
 /*비밀번호on/off*/
 .password_box {
@@ -34,7 +38,19 @@
     background-image: url(../images/ico_blank_link@2x.png);
 }
 
+/*가격css*/
+.saleP{
+    color: #4dac27;
+    font-size: 15px;
+    font-weight: bold;
+}
+.regular_price{
+    text-decoration-line: line-through;
+    color:#777;
+}
+
 /*공통*/
+
 *,ul {
     margin:0;
     padding: 0;
@@ -99,6 +115,7 @@ section{
     padding:100px 150px;
     overflow: hidden;
 }
+
 .content_wrapper{
     padding:50px 150px 100px;
 }
@@ -199,7 +216,12 @@ a.img-box{
     color:#aaa;
     margin:0 20px;
 }
-
+.gray_color{
+    color:#555;
+}
+.green_color{
+    color:#4dac27;;
+}
 
 /**/
 .customer_service_area{

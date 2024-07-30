@@ -4,12 +4,9 @@
 .left-box{
     flex-basis: content;
 }
-.gray_color{
-    color:#555;
-}
-.regular_price{
-    text-decoration-line: line-through;
-}
+
+
+
 .sale_price strong{
     font-size: 15px;
 }
@@ -147,8 +144,4 @@
     font-size: 14px;
 }
 
-.saleP{
-    color: #4dac27;
-    font-size: 15px;
-    font-weight: bold;
-}
+
