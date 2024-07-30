@@ -1,25 +1,225 @@
+/*부트스트랩*/
+.form-check-input{
+    margin-top: 0;
+}
+
+/*비밀번호on/off*/
+.password_box {
+    position: relative;
+}
+
+.password_box .form-control {
+    padding-right: 40px; /* 버튼 크기와 위치를 고려한 여백 */
+}
+.toggle-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url('../images/ico_eye@2x.png'); /* 비밀번호 표시/숨기기 버튼의 배경 이미지 */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+
 /*공통*/
+*,ul {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    /* text-align: center; */
+}
+h3{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    /* margin-bottom: 1.5rem; */
+}
+footer{
+    border-top: 1px solid #ccc;
+    margin-top: 150px;
+    padding-bottom: 50px;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+li a{
+    
+    position: relative;
+}
+.wrap_area{
+    display: none;
+}
+svg{
+    position: absolute;
+    left: 0;
+    fill: red;
+    z-index: -1;
+}
+
+header a{
+    text-decoration: none;
+    color: #000;
+}
+
+nav *{
+    /* background-color: red;
+    border: 1px solid #000; */
+}
+
+.top_banner{
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.top_banner img{
+    max-width:100%;
+    height:auto;
+}
+.customer_service_box li{
+    width: fit-content;
+    flex: none;
+}
+
+
+/*통합*/
+section{
+    padding:100px 150px;
+    overflow: hidden;
+}
+.content_wrapper{
+    padding:50px 150px 100px;
+}
+.logo{
+    width: 200px;
+}
+.navbar_pc{
+    padding:0 150px;
+}
+.img-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.area-head{
+    margin-bottom: 1.5rem;
+}
+.tabs ul{
+    height: 100%;
+}
+.book-type{
+    color: #333;
+    margin-bottom: 10px;
+}
+.author,.book-type{
+   display: inline-block; 
+}
+.banners >div>div{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.flex-auto li img{
+    /* flex: 0 0 auto; */
+    width: 100%;
+    height: auto;
+}
+.left-box{
+    position: relative;
+}
+.left-box *{
+    white-space: nowrap;
+}
+
+.btn{
+    border: 1px solid #aaa;
+    font-weight: bold;
+    padding-top:6px;
+    padding-bottom:6px;
+    color: #000;
+}
+.btn:active{
+    
+}
+.btn-gray{
+    background-color: #777;
+    border-color: #777;
+    color: #fff;
+}
+.btn-blue{
+    /* background-color: #474c98; */
+    background-color: #545bb3;
+    border-color: #545bb3;
+    color: #fff;
+}
+.btn-blue:hover,.btn:first-child:active{
+    background-color: #313364;
+    border-color: #313364;
+    color: #fff;
+}
+.btn-gray:hover{
+    background-color: #555;
+    border-color: #555;
+    color: #fff;
+}
+.breadcrumb_wrapper{
+    padding:50px 150px;
+}
+/* .flex-auto li *{
+    text-align: left;
+} */
+.author{
+    
+    color: #aaa;
+    margin-top: 10px;
+}
 .circle_btn{
     border-radius: 50%;
 }
+.line_space{
+    display: inline-block;
+    font-size: 13px;
+    color:#aaa;
+    margin:0 20px;
+}
+
 
 /**/
 .customer_service_area{
     background-color: #ddd;
+    margin-bottom: 20px;
 }
 .customer_service_box ul li a{
     font-size: 14px;
 }
 
-
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    background-color: #fff;
+}
+main{
+    padding-top: 225px;
+}
+.navbar_pc{
+    border-bottom: 1px solid #ccc;
+}
 .scrolltable>*{
-    padding:30px 0;
-
+    /* padding:20px 0; */
+    padding-bottom: 20px;
+    
 }
 .gnb_search .logo{
-    width: 200px;
-    max-width: 200px;
-    min-width: 200px;
+    width: 180px;
+    
+    max-width: 180px;
+    min-width: 180px;
     height:auto;
 }
 .search_wrapper{
@@ -73,4 +273,63 @@
 }
 .gnb_wrapper .circle_btn i{
     font-size: 18px;
+}
+
+
+/*footer*/
+
+footer>*{
+    padding:0 150px;
+}
+footer .img-box{
+    width: 50px;
+}
+footer .notice{
+    padding:30px 150px;
+}
+footer .notice>div>div{
+    width: 50%;
+}
+.notice_text{
+    font-size: 13.5px;
+}
+.notice_more::after{
+    content:"+";
+    
+}
+footer .sitemap{
+    padding:50px 150px;
+    background-color: #f3f3f3;
+}
+footer .sitemap *{
+    font-size: 14px;
+}
+footer .sitemap>ul>li{
+    flex-basis: 100%
+}
+footer .sitemap>ul>li:not(:last-child){
+    border-right: 1px solid #ddd;
+}
+footer .sitemap li li{
+    margin-bottom: 15px;
+
+}
+footer .sitemap li div strong{
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+footer .left-box *{
+    white-space: nowrap;
+    font-size: 13.5px;
+}
+.footer_info_box li{
+    font-size: 12px;
+}
+footer .right-box{
+    
+}
+footer .right-box *{
+    white-space: nowrap;
+    font-size: 12.5px;
 }

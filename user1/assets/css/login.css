@@ -84,27 +84,9 @@ li a img{
     border-color: #ccc;
     border-collapse: collapse;
 }
-.password_box {
-    position: relative;
-}
 
-.password_box .form-control {
-    padding-right: 40px; /* 버튼 크기와 위치를 고려한 여백 */
-}
 
-.toggle-button {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background-image: url('../images/ico_eye@2x.png'); /* 비밀번호 표시/숨기기 버튼의 배경 이미지 */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    cursor: pointer;
-}
+
 
 /*로그인 버튼*/
 .login-btn{

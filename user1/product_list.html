@@ -24,7 +24,7 @@
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/product_list.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -32,69 +32,8 @@
 <body>
     <div class="page-wrapper">
         <header>
-            <div class="top_banner">
-                <div>
-                    <img src="./assets/images/top-banner01.jpg" alt="">
-                </div>
-            </div>
-            
             <div class="navbar_pc">
-                <div class="d-flex justify-content-between">
-                    <div class="direct_links">
-                        <ul class="d-flex flex-nowrap">
-                            <!-- <li class="col">
-                                <a href="javascript:void(0);">
-                                    <span>교보문고</span>
-                                    <svg width="135" height="33" viewBox="0 0 135 33">
-                                        <path d="M15554.024,14599H15465.7a31.705,31.705,0,0,1-7.591-.784,19.97,19.97,0,0,1-6.663-2.94c-4.358-2.979-8.145-8.021-11.917-15.869a22.677,22.677,0,0,0-10.844-11,25.517,25.517,0,0,0-9.656-2.386h87.267c.091-.006.332-.018.707-.018a25.341,25.341,0,0,1,9.538,1.979,22.538,22.538,0,0,1,6.329,4.017,23.756,23.756,0,0,1,5.453,7.405c3.767,7.848,7.552,12.89,11.911,15.869a19.969,19.969,0,0,0,6.661,2.94,30.976,30.976,0,0,0,7.134.782Z" transform="translate(-15419.024 -14566.001)" />
-                                    </svg>
-                                </a>
-                            </li> -->
-                            <li >
-                                <a href="javascript:void(0);" style="">교보문고</a>
-                            </li>
-                            <li >
-                                <a href="javascript:void(0);">
-                                    <span>eBook</span>
-                                    <svg width="135" height="33" viewBox="0 0 135 33">
-                                        <path d="M15554.024,14599H15465.7a31.705,31.705,0,0,1-7.591-.784,19.97,19.97,0,0,1-6.663-2.94c-4.358-2.979-8.145-8.021-11.917-15.869a22.677,22.677,0,0,0-10.844-11,25.517,25.517,0,0,0-9.656-2.386h87.267c.091-.006.332-.018.707-.018a25.341,25.341,0,0,1,9.538,1.979,22.538,22.538,0,0,1,6.329,4.017,23.756,23.756,0,0,1,5.453,7.405c3.767,7.848,7.552,12.89,11.911,15.869a19.969,19.969,0,0,0,6.661,2.94,30.976,30.976,0,0,0,7.134.782Z" transform="translate(-15419.024 -14566.001)" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li >
-                                <a href="javascript:void(0);">
-                                    <span>sam</span>
-                                    <svg width="135" height="33" viewBox="0 0 135 33">
-                                        <path d="M15554.024,14599H15465.7a31.705,31.705,0,0,1-7.591-.784,19.97,19.97,0,0,1-6.663-2.94c-4.358-2.979-8.145-8.021-11.917-15.869a22.677,22.677,0,0,0-10.844-11,25.517,25.517,0,0,0-9.656-2.386h87.267c.091-.006.332-.018.707-.018a25.341,25.341,0,0,1,9.538,1.979,22.538,22.538,0,0,1,6.329,4.017,23.756,23.756,0,0,1,5.453,7.405c3.767,7.848,7.552,12.89,11.911,15.869a19.969,19.969,0,0,0,6.661,2.94,30.976,30.976,0,0,0,7.134.782Z" transform="translate(-15419.024 -14566.001)" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li >
-                                <a href="javascript:void(0);">
-                                    <span>핫트랙스</span>
-                                    <svg width="135" height="33" viewBox="0 0 135 33">
-                                        <path d="M15554.024,14599H15465.7a31.705,31.705,0,0,1-7.591-.784,19.97,19.97,0,0,1-6.663-2.94c-4.358-2.979-8.145-8.021-11.917-15.869a22.677,22.677,0,0,0-10.844-11,25.517,25.517,0,0,0-9.656-2.386h87.267c.091-.006.332-.018.707-.018a25.341,25.341,0,0,1,9.538,1.979,22.538,22.538,0,0,1,6.329,4.017,23.756,23.756,0,0,1,5.453,7.405c3.767,7.848,7.552,12.89,11.911,15.869a19.969,19.969,0,0,0,6.661,2.94,30.976,30.976,0,0,0,7.134.782Z" transform="translate(-15419.024 -14566.001)" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);">
-                                    <span>스토리</span>
-                                    <svg width="135" height="33" viewBox="0 0 135 33">
-                                        <path d="M15554.024,14599H15465.7a31.705,31.705,0,0,1-7.591-.784,19.97,19.97,0,0,1-6.663-2.94c-4.358-2.979-8.145-8.021-11.917-15.869a22.677,22.677,0,0,0-10.844-11,25.517,25.517,0,0,0-9.656-2.386h87.267c.091-.006.332-.018.707-.018a25.341,25.341,0,0,1,9.538,1.979,22.538,22.538,0,0,1,6.329,4.017,23.756,23.756,0,0,1,5.453,7.405c3.767,7.848,7.552,12.89,11.911,15.869a19.969,19.969,0,0,0,6.661,2.94,30.976,30.976,0,0,0,7.134.782Z" transform="translate(-15419.024 -14566.001)" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <select class="selectpicker" title="브랜드 더보기 ">
-                                    <option value="index.html">바로출판</option>
-                                    <option value="">리드로그</option>
-                                    <option value="">창작날씨</option>
-                                    <option value="">꾸밍</option>
-                                </select>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="customer_service_area d-flex justify-content-end p-3">
                     <div class="customer_service_box d-flex  align-items-center">
                         <ul class="d-flex gap-3">
                             <li class="">
@@ -104,36 +43,50 @@
                                 <a href="login.html">로그인</a>
                             </li>
                             <li class="">
-                                <a href="javascript:void(0);">회원가입</a>
+                                <a href="javascript:void(0);">회원혜택</a>
                             </li>
                             <li class="">
-                                <a href="javascript:void(0);">회원가입</a>
+                                <a href="javascript:void(0);">주문배송</a>
                             </li>
                             <li class="">
-                                <a href="javascript:void(0);">회원가입</a>
+                                <a href="javascript:void(0);">매장안내</a>
                             </li>
                             <li class="">
-                                <a href="javascript:void(0);">회원가입</a>
+                                <a href="javascript:void(0);">고객센터</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="scrolltable">
-                    <div class="gnb_search d-flex justify-content-between">
-                        <div class=" d-flex">
+                    <div class="gnb_search d-flex justify-content-between gap-5">
+                        <div class="search_wrapper d-flex align-items-center  gap-5">
                             <div class="logo" onclick="window.location.href='index.html'">
-                                <img src="./assets/images/img_logo_kyobo_member@2x.png" alt="">
+                                <img src="./assets/images/logo_book.svg" alt="">
                             </div>
-                            <div class="search_box">검색</div>
+                            <div class="search_area w-100">
+                                <div class="search_box d-flex align-items-center gap-3">
+                                    <input type="text" class="input-search">
+                                    <button class="search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </div>
+                            </div>
                         </div>
-                        <div class=" d-flex">
-                            <div class="cart">카트</div>
-                            <div class="user_my">유저</div>
+                        <div class="user_box d-flex align-items-center gap-4">
+                            <div class="cart">
+                                <img src="./assets/images/btn_header_cart@2x.png" alt="">
+                            </div>
+                            <div class="user_my">
+                                <img src="./assets/images/btn_header_my@2x.png" alt="">
+                            </div>
                         </div>
                     </div>
                     <nav class="gnb_list d-flex justify-content-between">
-                        <div class="gnb_wrap">
-                            <button><i class="fa-solid fa-bars"></i></button>
+                        <div class="gnb_wrapper d-flex align-items-center gap-5">
+                            <button class="circle_btn"><i class="fa-solid fa-bars"></i></button>
+                            <ul class="gnb_link d-flex gap-5">
+                                <li onclick="window.location.href='product_list.html'">베스트</li>  
+                                <li>신상품</li>
+                                <li>이벤트</li>
+                            </ul>
                             <div class="wrap_area">
                                 <div class="gnbtab-list">
                                     <ul>
@@ -156,22 +109,22 @@
                                     </div>
                                     <div class="CategoryKyobo">
                                         <ul >
-
+    
                                         </ul>
                                     </div>
                                     <div class="CategoryeBook">
                                         <ul class="">
-
+    
                                         </ul>
                                     </div>
                                     <div class="Categorysam">
                                         <ul class="">
-
+    
                                         </ul>
                                     </div>
                                     <div class="CategoryHotTracks">
                                         <ul class="">
-
+    
                                         </ul>
                                     </div>
                                     
@@ -181,26 +134,12 @@
                                 </div>
                             </div>
                         </div>
-                        <ul class="d-flex">
-                            <li>메뉴1</li>  
-                            <li>메뉴1</li>
-                            <li>메뉴1</li>
-                            <li>메뉴1</li>
-                            <li>메뉴1</li>
-                            <li>메뉴1</li>
-                            <li>메뉴1</li>
-                        </ul>
                     </nav>
                 </div>
-                
             </div>
-            <!-- <div class="mobile_ver">
-                <nav></nav>
-            </div> -->
         </header>
         <main>
-            <div class="breadcrumb_wrapper">
-                <!-- Breadcrumb start -->
+            <!-- <div class="breadcrumb_wrapper">
                 <ol class="breadcrumb d-md-flex d-none">
                     <li class="breadcrumb-item">
                         <i class="bi bi-house"></i>
@@ -211,8 +150,7 @@
                     <li class="breadcrumb-item">한국소설</li>
                     <li class="breadcrumb-item breadcrumb-active" aria-current="page">전체</li>
                 </ol>
-                <!-- Breadcrumb end -->
-            </div>
+            </div> -->
             <div class="content_wrapper">
                 <div class="d-flex gap-5">
                     <div class="left-box">
@@ -298,30 +236,7 @@
                             </div>
                         </div>
                         <div class="contentArea">
-                            <div class="list_result mt-5 mb-3 d-flex justify-content-between">
-                                <div class="pagination-wrapper">
-                                    <div class="dataTable-bottom">
-                                        <nav class="dataTable-pagination" aria-label="dataTable-pagination">
-                                            <ul class="dataTable-pagination-list pagination pagination-primary justify-content-center">
-                                                <li class="paginate_button previous page-item" id="previousPage">
-                                                    <a class="page-link" href="#">
-                                                        <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
-                                                    </a>
-                                                </li>
-                                                <li class="active paginate_button page-item"><a href="#" data-page="1" class="page-link">1</a></li>
-                                                <li class="paginate_button page-item"><a href="#" data-page="2" class="page-link">2</a></li>
-                                                <li class="paginate_button page-item"><a href="#" data-page="3" class="page-link">3</a></li>
-                                                <li class="paginate_button page-item"><a href="#" data-page="4" class="page-link">4</a></li>
-                                                <li class="paginate_button page-item"><a href="#" data-page="5" class="page-link">5</a></li>
-                                                <li class="paginate_button next page-item" id="nextPage">
-                                                    <a class="page-link" href="#">
-                                                        <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
+                            <div class="list_result mt-5 mb-3 d-flex justify-content-end">
                                 <div class="d-flex gap-3">
                                     <div class="d-flex align-items-center gap-1">
                                         <input class="form-check-input" type="checkbox" name="" id="select_all">
@@ -558,6 +473,31 @@
                                     </div>
                                 </li>
                             </ul>
+                            <div class="pagination-container mt-5">
+                                <div class="pagination-wrapper">
+                                    <div class="dataTable-bottom">
+                                        <nav class="dataTable-pagination" aria-label="dataTable-pagination">
+                                            <ul class="dataTable-pagination-list pagination pagination-primary justify-content-center">
+                                                <li class="paginate_button previous page-item" id="previousPage">
+                                                    <a class="page-link" href="#">
+                                                        <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
+                                                    </a>
+                                                </li>
+                                                <li class="active paginate_button page-item"><a href="#" data-page="1" class="page-link">1</a></li>
+                                                <li class="paginate_button page-item"><a href="#" data-page="2" class="page-link">2</a></li>
+                                                <li class="paginate_button page-item"><a href="#" data-page="3" class="page-link">3</a></li>
+                                                <li class="paginate_button page-item"><a href="#" data-page="4" class="page-link">4</a></li>
+                                                <li class="paginate_button page-item"><a href="#" data-page="5" class="page-link">5</a></li>
+                                                <li class="paginate_button next page-item" id="nextPage">
+                                                    <a class="page-link" href="#">
+                                                        <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div> 
@@ -565,13 +505,34 @@
         </main>
         <footer>
             <div class="notice">
-
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex gap-3">
+                            <strong>공지사항</strong>
+                            <span class="notice_text">
+                                상품권(해피머니, 컬쳐캐쉬) 사용 일시 중지 안내
+                            </span>
+                        </div>
+                        <strong class="notice_more">더보기</strong>
+                    </div>
+                    <span class="line_space">|</span>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex gap-3">
+                            <strong>당첨자발표</strong>
+                            <span class="notice_text">
+                                [로맨스/BL소설][24년 7/5] 먼슬리 교보💰캐시DREAM 당첨자 발표
+                            </span>
+                        </div>
+                        <strong class="notice_more">더보기</strong>
+                    </div>
+                    
+                </div>
             </div>
             <div class="sitemap">
-                <ul>
+                <ul class="d-flex justify-content-between gap-5">
                     <li>
                         <div>
-                            <p>회원혜택</p>
+                            <strong>회원혜택</strong>
                         </div>
                         <ul>
                             <li>교보북클럽</li>
@@ -581,7 +542,7 @@
                     </li>
                     <li>
                         <div>
-                            <p>회원혜택</p>
+                            <strong>회원혜택</strong>
                         </div>
                         <ul>
                             <li>교보북클럽</li>
@@ -591,7 +552,7 @@
                     </li>
                     <li>
                         <div>
-                            <p>회원혜택</p>
+                            <strong>회원혜택</strong>
                         </div>
                         <ul>
                             <li>교보북클럽</li>
@@ -601,7 +562,7 @@
                     </li>
                     <li>
                         <div>
-                            <p>회원혜택</p>
+                            <strong>회원혜택</strong>
                         </div>
                         <ul>
                             <li>교보북클럽</li>
@@ -611,7 +572,7 @@
                     </li>
                     <li>
                         <div>
-                            <p>회원혜택</p>
+                            <strong>회원혜택</strong>
                         </div>
                         <ul>
                             <li>교보북클럽</li>
@@ -621,25 +582,25 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer">
-                <div class="footer-top">
+            <div class="footer mt-3">
+                <div class="footer-top d-flex justify-content-between">
                     <div class="logo">
-                        <img src="" alt="">
+                        <img src="./assets/images/img_logo_kyobo_member@2x.png" alt="">
                     </div>
-                    <div>
-                        <select name="" id="">
-                            <option value=""></option>
+                    <div class="d-flex gap-3 align-items-center">
+                        <select class="form-select" name="" id="">
+                            <option value="">Family Site</option>
                         </select>
-                        <div class="icons">
-                            <div class="icon-box"><img src="" alt=""></div>
-                            <div class="icon-box"><img src="" alt=""></div>
-                            <div class="icon-box"><img src="" alt=""></div>
+                        <div class="icons d-flex gap-3">
+                            <div class="icon-box"><img src="./assets/images/btn_footer_sns_youtube_v2@2x.png" alt=""></div>
+                            <div class="icon-box"><img src="./assets/images/btn_footer_sns_fb_v2@2x.png" alt=""></div>
+                            <div class="icon-box"><img src="./assets/images/btn_footer_sns_insta_v2@2x.png" alt=""></div>
                         </div>
                     </div>
                 </div>
-                <div class="footer-bottom">
+                <div class="footer-bottom d-flex mt-3 gap-2">
                     <div class="left-box">
-                        <ul class="footer_menu_list">
+                        <ul class="footer_menu_list d-flex gap-3">
                             <li>회사소개</li>
                             <li>이용약관</li>
                             <li>개인정보처리방침</li>
@@ -649,7 +610,7 @@
                             <li>채용정보</li>
                             <li>광고소개</li>
                         </ul>
-                        <ul class="footer_info_box">
+                        <ul class="footer_info_box d-flex flex-wrap gap-1 mt-3">
                             <li>대표이사 : 안병현, 김상훈</li>
                             <li>서울특별시 종로구 종로 1</li>
                             <li>사업자등록번호 : 102-81-11670</li>
@@ -658,21 +619,24 @@
                             <li>서울특별시 통신판매업신고번호 : 제 653호</li>
                             <li class="btn_footer">사업자정보확인</li>
                         </ul>
+                        <div class="copyright"></div>
                     </div>
                     <div class="right-box">
                         <div>
-                            <span>토스페이먼츠 구매안전서비스</span>
-                            <span class="btn_footer">서비스 가입 확인</span>
+                            <p>
+                                <span>토스페이먼츠 구매안전서비스</span>
+                                <span class="btn_footer">서비스 가입 확인</span>
+                            </p>
                             <span>
-                                고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한
+                                고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한<br>
                                 토스페이먼츠의 구매안전서비스를 이용하실 수 있습니다.
                             </span>
                         </div>
 
-                        <div>
-                            <div>
+                        <div class="d-flex mt-3 gap-3">
+                            <div class="d-flex gap-2">
                                 <div class="img-box">
-                                    <img src="" alt="">
+                                    <img src="./assets/images/img_mark_isms@2x.png" alt="">
                                 </div>
                                 <p>
                                     정보보호관리체계<br>ISMS 인증획득
@@ -680,7 +644,7 @@
                             </div>
                             <div>
                                 <p>
-                                    [인증범위] 인터넷 교보문고 및 브랜드 서비스 운영
+                                    [인증범위] 인터넷 교보문고 및 브랜드 서비스 운영<br>
                                     [유효기간] 2023.11.15 ~ 2026.11.14
                                 </p>
                             </div>

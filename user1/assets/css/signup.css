@@ -20,19 +20,7 @@ footer{
     padding:20px 150px;
 
 }
-.btn{
-    font-weight: bold;
-    padding-top:15px;
-    padding-bottom:15px;
-    background-color: #474c98;
-    color: #fff;
-}
-.btn:hover {
 
-    background-color: #313364;
-    color: #fff;
-
-}
 li a{
     display: inline-block;
     height: fit-content;
@@ -83,19 +71,29 @@ form>*{
 .new_incentives p{
     margin: 20px 0;
 }
-.input_box input{
+.input_area li>label{
+    margin-bottom: 20px;
+}
+.input_box input:not(input[type="radio"]){
     display: inline-block;
     width: 100%;
-    margin-top: 20px;
+    /*  */
     font-size: 13px;
     line-height: 30px;
     padding-left: 15px;
     padding-right: 15px;
     border-color: #ccc;
 }
-.signup_desc *{
+.verify_desc *{
     margin-bottom: 5px;
     color:#aaa;
     font-size: 13px;
     letter-spacing: -1px;
 }
+.input_area li{
+    margin-bottom: 20px;
+}
+/* .input_area li>label{
+    display: inline-block;
+    margin-bottom: 20px;
+} */

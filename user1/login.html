@@ -24,7 +24,7 @@
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/login.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -40,12 +40,12 @@
                     <div class="user-login">
                         <input class="form-control" type="text" placeholder="아이디를 입력해주세요.">
                         <div class="password_box">
-                            <input id="login_password" class="form-control" type="password" placeholder="비밀번호를 입력해주세요.">
-                            <span class="toggle-button" id="togglePassword"></span>
+                            <input id="login_password" class="login_password form-control" type="password" placeholder="비밀번호를 입력해주세요.">
+                            <span class="toggle-button toggle-password" id="togglePassword"></span>
                         </div>
                     </div>
                     <div class="login-btn">
-                        <button class="btn w-100 mt-0">로그인</button>
+                        <button class="btn w-100 mt-0" type="button">로그인</button>
                     </div>
                     <div class="etc_box d-flex justify-content-between">
                         <div class="save_id_chk_box form-check">
@@ -108,22 +108,9 @@
     <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const togglePassword = document.getElementById('togglePassword');
-            const passwordInput = document.getElementById('login_password');
-
-            togglePassword.addEventListener('click', function () {
-                // 현재 입력 필드의 type 속성 값을 확인하고, toggle
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                
-                // 버튼 아이콘 변경
-                this.style.backgroundImage = type === 'password' 
-                    ? "url('./assets/images/ico_eye@2x.png')" 
-                    : "url('./assets/images/ico_eye_active@2x.png')";
-            });
-        });
+        
 
     </script>
+    <script src="./assets/js/custom.js"></script>
 </body>
 </html>
