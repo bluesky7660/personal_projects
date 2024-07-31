@@ -47,5 +47,142 @@ document.addEventListener('DOMContentLoaded', function () {
         tabContents[0].classList.add('active');
     }
 
+    /*스크롤 헤더*/
+    var prevScrollpos = window.scrollY; 
+    console.log(window.scrollY); 
+    if(prevScrollpos > 0){
+        document.querySelector(".customer_service_area").style.top = "-48px";
+        document.querySelector(".customer_service_area").style.maxHeight ="0";
+        document.querySelector(".customer_service_area").style.position = "absolute";
+    }
+    if(prevScrollpos >= 225){
+        document.querySelector(".top_btn").style.display = "flex";
+    }else{
+        document.querySelector(".top_btn").style.display = "none";
+    }
+
+    window.onscroll = function() { 
+        var currentScrollpos = window.scrollY;
+        
+        
+        if (prevScrollpos > currentScrollpos) { 
+            // 네비가 보임
+            document.querySelector("header").style.top = "0"; 
+            // document.querySelector(".customer_service_area").style.display = "none";
+            // document.querySelector(".customer_service_area").classList.remove("d-flex"); 
+            // 좌표가 위에서 아래로 변경됬다면 펄스
+            //prev가 current보다 작으면 false, 스크롤을 내리면 false
+        } else { 
+            // 네비가 안보임
+            document.querySelector("header").style.top = "-225px"; 
+            // document.querySelector(".customer_service_area").style.display = "flex"; 
+            // document.querySelector(".customer_service_area").classList.add("d-flex"); 
+        }
+        
+        
+        if(currentScrollpos <= 50){
+            document.querySelector(".customer_service_area").style.position = "relative";
+            document.querySelector(".customer_service_area").style.top ="0";
+            document.querySelector(".customer_service_area").style.maxHeight ="none";
+            
+        } else{
+            document.querySelector(".customer_service_area").style.top = "-48px";
+            document.querySelector(".customer_service_area").style.maxHeight ="0";
+            document.querySelector(".customer_service_area").style.position = "absolute";
+        }
+        if(currentScrollpos >= 225){
+            document.querySelector(".top_btn").style.display = "flex";
+        }else{
+            document.querySelector(".top_btn").style.display = "none";
+        }
+        prevScrollpos = currentScrollpos; 
+    }
+
+    document.querySelector(".top_btn").addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+      
+    //접고 펼치키
+    const toggleButtons = document.querySelectorAll('.collapse_btn');
+    const contents = document.querySelectorAll('.info_text');
+    console.log(toggleButtons);
+    console.log(contents);
+    
+    contents.forEach((content) => {
+        content.classList.add('hidden');
+    });
+    toggleButtons.forEach((btuton) => {
+        btuton.classList.add('hidden');
+    });
+
+    toggleButtons.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            const content = contents[index];
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                button.classList.remove('hidden');
+                button.textContent = '접기';
+                
+            } else {
+                content.classList.add('hidden');
+                button.classList.add('hidden');
+                button.textContent = '펼치기';
+            }
+        });
+    });
+
+
+    /*탭 선택시 영역으로 화면 스크롤 */
+    let tabs = document.querySelectorAll(".detail_tabs");
+    let review = document.querySelector(".book_review");
+    let information = document.querySelector(".prod_detail_info_wrap");
+    // let qna = document.querySelector(".qna");
+    // let exchange = document.querySelector(".exchange");
+    let scrollElementOffsetTop;
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener('click', () => {
+            switch (i) {
+                case 0:
+                    scrollElementOffsetTop = information.offsetTop;
+                    console.log(this);
+                    // tabs[0].classList.add("active");
+                    // tabs[1].classList.remove("active");
+                    // tabs[2].classList.remove("active");
+                    // tabs[3].classList.remove("active");
+                    break;
+                case 1:
+                    scrollElementOffsetTop = review.offsetTop;
+                    // tabs[0].classList.remove("active");
+                    // tabs[1].classList.add("active");
+                    // tabs[2].classList.remove("active");
+                    // tabs[3].classList.remove("active");
+                    break;
+                case 2:
+                    scrollElementOffsetTop = qna.offsetTop;
+                    // tabs[0].classList.remove("active");
+                    // tabs[1].classList.remove("active");
+                    // tabs[2].classList.add("active");
+                    // tabs[3].classList.remove("active");
+                    break;
+                case 3:
+                    scrollElementOffsetTop = exchange.offsetTop;
+                    // tabs[0].classList.remove("active");
+                    // tabs[1].classList.remove("active");
+                    // tabs[2].classList.remove("active");
+                    // tabs[3].classList.add("active");
+                    break;
+            }
+            scrollElementOffsetTop = scrollElementOffsetTop - 150;
+            window.scrollTo({
+                top: scrollElementOffsetTop,
+                behavior: 'smooth'
+            });
+        });   
+    }
+
 
 });

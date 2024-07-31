@@ -63,11 +63,7 @@ h3{
     text-align: left;
     /* margin-bottom: 1.5rem; */
 }
-footer{
-    border-top: 1px solid #ccc;
-    margin-top: 150px;
-    padding-bottom: 50px;
-}
+
 img{
     width: 100%;
     height: auto;
@@ -222,26 +218,35 @@ a.img-box{
 .green_color{
     color:#4dac27;;
 }
-
+.prod_title{
+    margin-bottom: 20px;
+}
+.box_title{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
 /**/
 .customer_service_area{
     background-color: #ddd;
     margin-bottom: 20px;
+    position: relative;
+    transition: all .3s;
 }
 .customer_service_box ul li a{
     font-size: 14px;
 }
 
 header{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
     z-index: 11;
     background-color: #fff;
+    transition: all .3s;
 }
 main{
-    padding-top: 225px;
+    /* padding-top: 225px; */
 }
 .navbar_pc{
     border-bottom: 1px solid #ccc;
@@ -311,8 +316,32 @@ main{
     font-size: 18px;
 }
 
+/*탑버튼*/
+.top_btn{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    bottom: 100px;
+    right: 100px;
+    margin-left: auto;
+    margin-bottom: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    box-shadow: 0 0 10px 10px #aaa;
+    background-color: #fff;
+    cursor: pointer;
+    z-index: 12;
+}
 
 /*footer*/
+footer{
+    border-top: 1px solid #ccc;
+
+    padding-bottom: 50px;
+}
 
 footer>*{
     padding:0 150px;
