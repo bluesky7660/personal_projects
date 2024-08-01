@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커스텀 별점 평가 시스템</title>
+    
+    <!-- Bootstrap 5.x CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+
+    <!-- Krajee Star Rating CSS -->
+    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css" rel="stylesheet">
+    
+    <style>
+        .rating-stars .empty-stars .krajee-icon::before{
+            background: url('./assets/images/ico_klover_sm@2x.png') no-repeat;
+            background-size: contain;
+            content: "";
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            opacity: 0.3;
+
+        }
+        .rating-stars .filled-stars .krajee-icon::before {
+            background: url('./assets/images/ico_klover_sm@2x.png') no-repeat;
+            background-size: contain;
+            content: "";
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            opacity: 1;
+
+        }
+        /*.rating-container .filled-stars .star .glyphicon-star:before{
+            background: url('./assets/images/ico_klover_sm@2x.png') no-repeat;
+            background-size: contain;
+            width: 28px;
+            height: 28px;
+        }
+        .rating-container.rating-lg .empty-stars .star .glyphicon-star-empty:before{
+            background: url('./assets/images/ico_klover_sm@2x.png') no-repeat;
+            background-size: contain;
+            width: 28px;
+            height: 28px;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>별점 평가</h2>
+        <input id="rating-input" name="rating" class="custom-star" value="3" />
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap 5.x JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Krajee Star Rating JS -->
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.js"></script>
+
+    <script>
+        // if ($('.form_rating').length <= 0) return false;
+
+        // $('.form_rating').each(function(){
+            /*var that = $("#rating-input");
+
+            that.rating({
+                language: 'ko',
+                theme: 'krajee-gly',
+                clearCaption: '10점 중 0점<span class="val" aria-hidden="true">0</span><span class="total" aria-hidden="true">10</span></span>',
+                stars: 4,
+                min: 0,
+                max: 10,
+                step: 2.5,
+                starCaptions: function (rating) {
+                    var strCaption;
+                    strCaption = '10점 중 ' + rating + '점';
+                    if(that.data('caption') !== undefined) {
+                        strCaption += '<span class="val" aria-hidden="true">' + rating + '</span>' + '<span class="total" aria-hidden="true">' + 10 + '</span>';
+                    }else{
+                        // return rating + ' / 10';
+                    }
+                    return strCaption;
+                }
+            });*/
+            // that.on('rating:change', function(event, value, caption) {
+            // 	console.log(`${value}/10`);
+            // });
+
+            // if(that.data('caption') !== undefined) {
+            //     that.prev('.rating-container').addClass('has_caption');
+            // }
+        // });
+        $(document).ready(function () {
+            $("#rating-input").rating({
+                min: 0,
+                max: 5,
+                step: 1,
+                size: 'md',
+                showClear: false,
+                showCaption: false,
+                stars: 5,
+                hoverEnabled: true,
+                hoverOnClear: true,
+                theme: 'krajee-gly',
+                // filledStar: '<span></span>', // 커스텀 아이콘 사용
+                // emptyStar: '<span></span>'   // 커스텀 아이콘 사용
+            });
+        });
+    </script>
+</body>
+</html>

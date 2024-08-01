@@ -48,56 +48,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /*스크롤 헤더*/
+    /*탑버튼 */
     var prevScrollpos = window.scrollY; 
-    console.log(window.scrollY); 
-    if(prevScrollpos > 0){
-        document.querySelector(".customer_service_area").style.top = "-48px";
-        document.querySelector(".customer_service_area").style.maxHeight ="0";
-        document.querySelector(".customer_service_area").style.position = "absolute";
-    }
+    // console.log(window.scrollY); 
     if(prevScrollpos >= 225){
         document.querySelector(".top_btn").style.display = "flex";
     }else{
         document.querySelector(".top_btn").style.display = "none";
     }
 
-    window.onscroll = function() { 
+    window.addEventListener('scroll',  function() { 
         var currentScrollpos = window.scrollY;
-        
-        
-        if (prevScrollpos > currentScrollpos) { 
-            // 네비가 보임
-            document.querySelector("header").style.top = "0"; 
-            // document.querySelector(".customer_service_area").style.display = "none";
-            // document.querySelector(".customer_service_area").classList.remove("d-flex"); 
-            // 좌표가 위에서 아래로 변경됬다면 펄스
-            //prev가 current보다 작으면 false, 스크롤을 내리면 false
-        } else { 
-            // 네비가 안보임
-            document.querySelector("header").style.top = "-225px"; 
-            // document.querySelector(".customer_service_area").style.display = "flex"; 
-            // document.querySelector(".customer_service_area").classList.add("d-flex"); 
-        }
-        
-        
-        if(currentScrollpos <= 50){
-            document.querySelector(".customer_service_area").style.position = "relative";
-            document.querySelector(".customer_service_area").style.top ="0";
-            document.querySelector(".customer_service_area").style.maxHeight ="none";
-            
-        } else{
-            document.querySelector(".customer_service_area").style.top = "-48px";
-            document.querySelector(".customer_service_area").style.maxHeight ="0";
-            document.querySelector(".customer_service_area").style.position = "absolute";
-        }
-        if(currentScrollpos >= 225){
+        // console.log("sksksksks" + currentScrollpos);
+        if(currentScrollpos >= 225| prevScrollpos >= 225){
             document.querySelector(".top_btn").style.display = "flex";
         }else{
             document.querySelector(".top_btn").style.display = "none";
         }
         prevScrollpos = currentScrollpos; 
-    }
-
+    });
     document.querySelector(".top_btn").addEventListener('click', function() {
         window.scrollTo({
             top: 0,
@@ -183,6 +152,5 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });   
     }
-
 
 });

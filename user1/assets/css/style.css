@@ -6,6 +6,9 @@
     border:1px solid #aaa;
     color:#313364
 }
+textarea.form-control{
+    padding:10px 15px;
+}
 
 /*비밀번호on/off*/
 .password_box {
@@ -216,7 +219,7 @@ a.img-box{
     color:#555;
 }
 .green_color{
-    color:#4dac27;;
+    color:#4dac27;
 }
 .prod_title{
     margin-bottom: 20px;
@@ -228,7 +231,9 @@ a.img-box{
 /**/
 .customer_service_area{
     background-color: #ddd;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    right: 0;
+    left: 0;
     position: relative;
     transition: all .3s;
 }
@@ -237,7 +242,7 @@ a.img-box{
 }
 
 header{
-    position: sticky;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -249,12 +254,16 @@ main{
     /* padding-top: 225px; */
 }
 .navbar_pc{
+    position: relative;
     border-bottom: 1px solid #ccc;
 }
 .scrolltable>*{
     /* padding:20px 0; */
     padding-bottom: 20px;
     
+}
+.gnb_search{
+    padding-top: 20px;
 }
 .gnb_search .logo{
     width: 180px;
@@ -316,6 +325,28 @@ main{
     font-size: 18px;
 }
 
+/*리뷰별점*/
+.rating-stars .empty-stars .krajee-icon::before{
+    background: url('../images/ico_klover_sm@2x.png') no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    opacity: 0.3;
+
+}
+.rating-stars .filled-stars .krajee-icon::before {
+    background: url('../images/ico_klover_sm@2x.png') no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    opacity: 1;
+
+}
+
 /*탑버튼*/
 .top_btn{
     text-align: center;
@@ -323,11 +354,11 @@ main{
     justify-content: center;
     position: sticky;
     bottom: 100px;
-    right: 100px;
+    right: 30px;
     margin-left: auto;
     margin-bottom: 50px;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 1px solid #aaa;
     box-shadow: 0 0 10px 10px #aaa;

@@ -1,0 +1,52 @@
+document.addEventListener('DOMContentLoaded', function () {
+
+    /*스크롤 헤더*/
+    var prevScrollpos = window.scrollY; 
+     
+    if(prevScrollpos > 0){
+        document.querySelector(".customer_service_area").style.top = "-48px";
+        document.querySelector(".customer_service_area").style.maxHeight ="0";
+        document.querySelector(".customer_service_area").style.position = "absolute";
+        document.querySelector("header").style.position = "sticky";
+    } 
+
+
+    window.onscroll = function() { 
+        var currentScrollpos = window.scrollY;
+        
+        
+        if (prevScrollpos > currentScrollpos) { 
+            // 네비가 보임
+            document.querySelector("header").style.top = "0"; 
+            // document.querySelector("header").style.paddingTop = "20px"; 
+            console.log(window.scrollY);
+        } else { 
+            // 네비가 안보임
+            document.querySelector("header").style.top = "-225px"; 
+        }
+        
+        if(currentScrollpos <= 0){
+            document.querySelector("header").style.position = "relative";
+            document.querySelector("header").style.paddingTop = "0";
+            
+        } else{
+            document.querySelector("header").style.position = "sticky";
+        }
+
+        if(currentScrollpos <= 0){
+            document.querySelector(".customer_service_area").style.position = "relative";
+            
+            document.querySelector(".customer_service_area").style.top ="0";
+            document.querySelector(".customer_service_area").style.maxHeight ="none";
+            
+        } else{
+            document.querySelector(".customer_service_area").style.top = "-48px";
+            document.querySelector(".customer_service_area").style.maxHeight ="0";
+            document.querySelector(".customer_service_area").style.position = "absolute";
+        }
+        prevScrollpos = currentScrollpos; 
+    }
+
+
+
+});

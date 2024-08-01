@@ -16,9 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <!-- another-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.min.css" integrity="sha256-wiMI7buOV5UBzdWN4s4kXqE/LZ794hx5oJOOIQlDBaM=" crossorigin="anonymous">
+    <!-- kartik-v star rating -->
+    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css" rel="stylesheet">
     
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -72,10 +71,10 @@
                             </div>
                         </div>
                         <div class="user_box d-flex align-items-center gap-4">
-                            <div class="cart">
+                            <div class="cart" onclick="window.location.href='user_cart.html'">
                                 <img src="./assets/images/btn_header_cart@2x.png" alt="">
                             </div>
-                            <div class="user_my">
+                            <div class="user_my" onclick="window.location.href='user_account.html'">
                                 <img src="./assets/images/btn_header_my@2x.png" alt="">
                             </div>
                         </div>
@@ -231,11 +230,11 @@
                             </div>
                         </div>
                         <div class="prod_about">
-                            <div class="prod_about_head">
+                            <div class="prod_about_head d-flex flex-column gap-2 mb-3">
                                 <p class="box_title"><b>책 소개</b></p>
                                 <p>이 책이 속한 분야</p>
                                 <div>
-
+                                    국내도서 > 소설 > 한국소설
                                 </div>
                             </div>
                             <div>
@@ -243,7 +242,7 @@
                                     <strong>
                                         “나쁜 것과 나쁜 게 아닌 것의 구분은 우리 검찰이 한다.”<br><br>휘몰아치는 전개! 압도적 몰입감! K-스토리 수상작가 이중세 신작 장편소설<br>대한민국 최고 권력 검찰을 향한 칼끝은 범죄인가, 개혁인가?
                                     </strong>
-                                    <br>
+                                    <br><br>
                                     K-스토리 최우수상 수상, 교보문고 스토리 공모전 수상, SF 오디오 스토리 어워즈 수상 등 화려한 수상 경력으로 수많은 독자들에게 눈도장을 찍은 이중세 작가가 신작 장편소설 『나쁜 검사들』을 출간했다. 한때는 세상을 뒤엎고 싶었던 반부패수사부 검사 출신의 변호사가 뜻밖의 범죄 사건에 휘말리게 되면서 결국 검찰을 향해 칼끝을 겨누게 되는 이 소설은, 대한민국 권력의 지도를 적나라하게 보여주는 웰메이드 누아르 수사 활극이다.<br>
                                     실제로 작가는 이 소설을 쓰기 위해 수년에 걸쳐 관계자들을 조사하고 인터뷰했으며 그 노력은 고스란히 작품에 녹아들었다. 부패한 조직과 반부패를 부르짖는 이들의 팽팽한 긴장감은 현실보다 더 현실 같은 에피소드로 마지막까지 이 책을 손에서 놓지 못하게 만든다. 작가는 “부당한 처사를 당연하게 받아들이지 않는 선한 자들의 작은 목소리가 결국 큰 세상을 바꿀 것”이라며, 이 책이 독자들의 답답한 가슴을 시원하게 뚫어줄 소화제가 되기를 바랐다.<br>
                                     휘몰아치는 전개와 생생한 묘사, 압도적 몰입감으로 마치 한 편의 영화를 보듯 단숨에 읽어내려갈 수 있는 소설 『나쁜 검사들』과 함께 무더운 여름을 시원하게 날려보자.
@@ -305,12 +304,8 @@
                             </div>
                         </div>
                         <div class="book_review" id="book_review">
-                            <div class="box_title_area d-flex justify-content-between">
+                            <div class="box_title_area">
                                 <p class="box_title"><b>Klover 리뷰 (<span>0</span>)</b></p>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <p>구매 후 리뷰 작성 시, e교환권 200원 적립</p>
-                                    <button class="btn btn-blue">리뷰작성</button>
-                                </div>
                             </div>
                             <div class="review_box">
                                 <div class="d-flex justify-content-between">
@@ -416,10 +411,57 @@
                                             평가된 감성태그가<br>
                                             없습니다
                                         </p>
-                                        <div>
+                                        <div class="review_tags_box">
 
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="review_write_box d-flex flex-column gap-4 align-items-strat">
+                                <div class="review_head d-flex align-items-center gap-4 ">
+                                    <div class="img-box">
+                                        <img src="./assets/images/prod/9791193289273.jpg" alt="">
+                                    </div>
+                                    <div class="user_rating_star_box">
+                                        <strong class="rating_prod_title">나쁜검사들</strong>
+                                        <div class="user_rating_star">
+                                            <input id="rating-input" name="rating" class="custom-star" value="10" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user_select_tags_box">
+                                    <p class="box_title">감성 태그</p>
+                                    <p class="mb-5">가장 와 닿는 하나의 키워드를 선택해주세요.</p>
+                                    <ul class="user_select_tags d-flex justify-content-between mt-3">
+                                        <li>
+                                            <input type="radio" name="select_tags" id="select_tag1">
+                                            <label for="select_tag1">고마워요</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="select_tags" id="select_tag2">
+                                            <label for="select_tag2">최고예요</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="select_tags" id="select_tag3">
+                                            <label for="select_tag3">공감돼요</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="select_tags" id="select_tag4">
+                                            <label for="select_tag4">재밌어요</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="select_tags" id="select_tag5">
+                                            <label for="select_tag5">힐링돼요</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="review_text_box">
+                                    <p class="box_title">리뷰 작성</p>
+                                    <textarea name="" class="form-control" id="review_text" rows="3" placeholder="내용을 50자 이상 입력해 주세요. 주제와 무관한 댓글, 악플, 배송문의 등의 글은 임의 삭제될 수 있습니다."></textarea>
+                                </div>
+                                <div class="review_btn_box d-flex gap-2 align-items-center justify-content-end">
+                                    <p>구매 후 리뷰 작성 시, e교환권 200원 적립</p>
+                                    <button class="btn btn-blue">리뷰작성</button>
                                 </div>
                             </div>
                         </div>
@@ -517,7 +559,7 @@
                 </div>
             </div>
         </main>
-        <div class="top_btn"><i class="fa-solid fa-2xl fa-chevron-up"></i></div>
+        <div class="top_btn"><i class="fa-solid fa-xl fa-chevron-up"></i></div>
         <footer>
             <div class="notice">
                 <div class="d-flex justify-content-between">
@@ -673,9 +715,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Bootstrap Select JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/js/bootstrap-select.min.js"></script>
+    <!-- another JS -->
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/rating.js"></script>
     <script src="./assets/js/custom.js"></script>
 </body>
 </html>
