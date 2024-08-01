@@ -229,6 +229,10 @@ a.img-box{
     margin-bottom: 30px;
     font-weight: bolder;
 }
+.content_title{
+    font-size: 25px;
+
+}
 /**/
 .customer_service_area{
     background-color: #ddd;

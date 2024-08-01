@@ -32,10 +32,28 @@
 }
 
 .aside_box{
+    border-right: 1px solid #ccc;
     padding-right: 30px;
+    margin-right: 30px;
 }
 .aside_box *{
     white-space: nowrap;
+}
+.aside_box ul li{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.aside_box ul li.active::before{
+    content: "▶";
+    font-size: 10px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+}
+.aside_box ul li:hover span{
+    text-decoration: underline;
 }
 .user_body .content_area{
     width: 100%;
@@ -44,10 +62,10 @@
 .content_box table tr>*{
     padding: 20px;
 }
-.content_box table tr:nth-child(4){
+.content_box table tr:nth-child(4),.content_box table tr:last-child{
     border-bottom: 1px solid #ccc;
 }
-.content_box table tr:nth-child(4)>*{
+.content_box table tr:nth-child(4)>*,.content_box table tr:last-child>*{
     padding-bottom: 40px;
 }
 .content_box table tr:nth-child(5)>*{

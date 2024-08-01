@@ -149,10 +149,11 @@
             </div>
             <div class="user_body d-flex justify-content-between">
                 <div class="aside_box">
-                    <ul class="d-flex flex-column gap-3">
-                        <li>주문/배송목록</li>
-                        <li>배송주소록</li>
-                        <li>회원정보 수정</li>
+                    <ul class="d-flex flex-column gap-4">
+                        <!-- <li onclick="window.location.href='user_account.html'">▶ 유저룸</li> -->
+                        <li><span>주문 / 배송목록</span></li>
+                        <li><span>배송주소록</span></li>
+                        <li class="active" onclick="window.location.href='user_account.html'"><span>회원정보 수정</span></li>
                     </ul>
                 </div>
                 <div class="content_area">
@@ -195,6 +196,9 @@
                                         <td><input class="form-control" type="text" name="" id="" value="010-2539-7660"></td>
                                     </tr>
                                 </table>
+                                <div class="btn-box mt-5">
+                                    <button class="btn">정보 수정</button>
+                                </div>
                             </form>
                         </div>
                     </div>
