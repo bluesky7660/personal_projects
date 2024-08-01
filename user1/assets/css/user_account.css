@@ -1,0 +1,55 @@
+
+.user_header_box{
+    background-image: url(../images/bg_myroom_main@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:100px 150px;
+}
+.user_imgbox .img-box{
+    width:80px;
+    height:80px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    margin-bottom: 30px;
+}
+.user_name{
+    color:#fff;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.user_name::after{
+    content: "프렌즈";
+    font-size: 13px;
+    padding:5px 10px;
+    border-radius: 40px;
+    margin-left: 10px;
+    background-color: #4dac27;
+}
+
+.user_body{
+    padding:100px 150px;
+}
+
+.aside_box{
+    padding-right: 30px;
+}
+.aside_box *{
+    white-space: nowrap;
+}
+.user_body .content_area{
+    width: 100%;
+}
+
+.content_box table tr>*{
+    padding: 20px;
+}
+.content_box table tr:nth-child(4){
+    border-bottom: 1px solid #ccc;
+}
+.content_box table tr:nth-child(4)>*{
+    padding-bottom: 40px;
+}
+.content_box table tr:nth-child(5)>*{
+    padding-top: 40px;
+}

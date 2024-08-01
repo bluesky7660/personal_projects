@@ -224,9 +224,10 @@ a.img-box{
 .prod_title{
     margin-bottom: 20px;
 }
-.box_title{
+.box_title,.content_title{
     font-size: 20px;
     margin-bottom: 30px;
+    font-weight: bolder;
 }
 /**/
 .customer_service_area{
@@ -252,6 +253,10 @@ header{
 }
 main{
     /* padding-top: 225px; */
+}
+main>*{
+    padding-left:150px;
+    padding-right:150px;
 }
 .navbar_pc{
     position: relative;

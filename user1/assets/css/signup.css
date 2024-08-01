@@ -1,6 +1,9 @@
 *{
     text-align: left;
 }
+body{
+    overflow-y: scroll;
+}
 
 .contentArea{
     max-width: 340px;
@@ -54,7 +57,7 @@ form>*{
 }
 
 .tab_contents>*>*{
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .simple_Signup li{
