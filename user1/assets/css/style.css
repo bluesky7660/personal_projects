@@ -185,12 +185,12 @@ a.img-box{
     border-color: #545bb3;
     color: #fff;
 }
-.btn-blue:hover,.btn:first-child:active{
+.btn-blue:hover,.btn.btn-blue:first-child:active{
     background-color: #313364;
     border-color: #313364;
     color: #fff;
 }
-.btn-gray:hover{
+.btn.btn-gray:hover,.btn.btn-gray:active{
     background-color: #555;
     border-color: #555;
     color: #fff;

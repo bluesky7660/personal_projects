@@ -1,32 +1,14 @@
-*{
-    text-align: left;
-}
+/* 
 
-.contentArea{
-    max-width: 340px;
-    margin:  auto;
-    padding: 3rem 0 150px;
-    /* text-align: center; */
-    /* background-color: blue; */
-    
-}
 
-.logo{
-    margin: 0 auto 50px;
-    cursor: pointer;
-}
+
+
 footer{
     border-top: 1px solid #eee;
     padding:20px 150px;
 
 }
-.btn{
-    font-weight: bold;
-    padding-top:15px;
-    padding-bottom:15px;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-}
+
 .btn:hover {
 
     background-color: #555;
@@ -61,8 +43,29 @@ li a img{
     background: #f2f2f2;
     color: #212529;
 
+} */
+
+/*콘텐츠*/
+*{
+    text-align: left;
+}
+.logo{
+    margin: 0 auto 50px;
+    cursor: pointer;
 }
 
+.contentArea{
+    max-width: 340px;
+    margin:  auto;
+    padding: 3rem 0 150px;
+}
+.btn{
+    font-weight: bold;
+    padding-top:15px;
+    padding-bottom:15px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
 
 /*로그인 input*/
 .user-login{

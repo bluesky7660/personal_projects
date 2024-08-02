@@ -25,7 +25,7 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/product_list.css">
+    <link rel="stylesheet" href="assets/css/user_cart.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
@@ -140,39 +140,44 @@
         </header>
         <main>
             <div>
-                <p class="content_title">장바구니(<span class="prod_num">0</span>)</p>
-                <div class="cart_box">
-                    <table>
-                        <tr>
-                            <td>
-                                <input type="checkbox" name="" id="">
-                                <div class="img-box">
-                                    <img src="./assets/images/prod/200/9791193289273.jpg" alt="">
-                                </div>
-                                <div class="prod_text_box">
-                                    <p class="prod_title"><span class="preorder"></span><span class="prod_type">국내도서</span> <span>나쁜 검사들</span></p>
-                                    <p class="prod_price d-flex gap-1"><strong class="saleP">10%</strong><span class="sale_price"><strong>15,750</strong>원</span><span class="regular_price">17,500원</span> <span class="point">870p</span> </p>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <p class="total_price"><strong>15,750</strong>원</p>
-                                    <div class="prod_quantity">
-                                        <div class="number-input">
-                                            <button class="decrease-button">-</button>
-                                            <input type="number" min="1" value="1">
-                                            <button class="increase-button">+</button>
+                <div class="cart_wrapper">
+                    <p class="content_title">장바구니(<span class="prod_num">0</span>)</p>
+                    <div class="cart_box">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="d-flex">
+                                        <input type="checkbox" name="" id="">
+                                        <div class="img-box">
+                                            <img src="./assets/images/prod/200/9791193289273.jpg" alt="">
+                                        </div>
+                                        <div class="prod_text_box">
+                                            <p class="prod_title"><span class="preorder"></span><span class="prod_type">국내도서</span> <span>나쁜 검사들</span></p>
+                                            <p class="prod_price d-flex gap-1"><strong class="saleP">10%</strong><span class="sale_price"><strong>15,750</strong>원</span><span class="regular_price">17,500원</span> <span class="point">870p</span> </p>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <p class="shipping_date"><span>8/3(토)</span> <span>출고예정</span></p>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+                                    
+                                </td>
+                                <td>
+                                    <div>
+                                        <p class="total_price"><strong>15,750</strong>원</p>
+                                        <div class="prod_quantity">
+                                            <div class="number-input">
+                                                <button class="decrease-button">-</button>
+                                                <input type="number" min="1" max="999" value="1">
+                                                <button class="increase-button">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <p class="shipping_date"><span>8/3(토)</span> <span>출고예정</span></p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </main>

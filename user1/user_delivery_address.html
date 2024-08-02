@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/user_account.css">
+    <link rel="stylesheet" href="assets/css/user_delivery_address.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
@@ -151,7 +152,7 @@
                 <div class="aside_box">
                     <ul class="d-flex flex-column gap-4">
                         <!-- <li onclick="window.location.href='user_account.html'">▶ 유저룸</li> -->
-                        <li><span>주문 / 배송목록</span></li>
+                        <li onclick="window.location.href='user_order_list.html'"><span>주문 / 배송목록</span></li>
                         <li class="active" onclick="window.location.href='user_delivery_address.html'"><span>배송주소록</span></li>
                         <li onclick="window.location.href='user_account.html'"><span>회원정보 수정</span></li>
                     </ul>
@@ -160,46 +161,134 @@
                     <div>
                         <p class="content_title">배송주소록</p>
                         <div class="content_box">
-                            <form>
-                                <p class="box_title">기본정보</p>
-                                <table class="">
-                                    <colgroup>
-                                        <col style="width: 264px;">
-                                        <col style="width: auto;">
-                                    </colgroup>
+                            <div class="content_top">
+                                <div class="def_ship_addr_box">
+                                    <ul class="def_ship_addr">
+                                        <li>
+                                            <span class="address_name">집</span>
+                                        </li>
+                                        <li>
+                                            <span class="rec_name">홍길동</span>
+                                            <span> / </span>
+                                            <span class="rec_phone">010-1234-5678</span>
+                                        </li>
+                                        <li>
+                                            <p class="ship_address_box"><span class="post_number">[01717]</span> <span class="ship_address">서울특별시 노원구 한글비석로14길 42 (중계동, 중앙하이츠아파트)</span> <span class="detail_address">101동101호</span></p>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-box">
+                                        <button class="btn" type="button">수정하기</button>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>기본배송지 기준으로 배송일자가 안내됩니다.</li>
+                                    <li>기본배송지는 삭제 불가합니다.</li>
+                                </ul>
+                            </div>
+                            <div class="address_list_box">
+                                <div class="address_list_box_top">
+                                    <p class="address_count"><span class="green_color">4</span>개</p>
+                                    <div>
+                                        <span>배송지는 최대 100개까지 등록 가능합니다.</span>
+                                        <button class="btn" onclick="window.location.href='user_delivery_address_add.html'">+ 새 배송지 등록</button>
+                                    </div>
+                                </div>
+                                <table class="address_list">
                                     <tr>
-                                        <th><label for="">아이디</label></th>
-                                        <td><p class="user_id">abcd1234</p></td>
+                                        <td>
+                                            <input type="radio" class="form-check-input" name="def_ship_addr_chk" id="" checked>
+                                        </td>
+                                        <td>
+                                            <ul class="ship_addr">
+                                                <li>
+                                                    <span class="address_name">집</span>
+                                                </li>
+                                                <li>
+                                                    <span class="rec_name">홍길동</span>
+                                                    <span> / </span>
+                                                    <span class="rec_phone">010-1234-5678</span>
+                                                </li>
+                                                <li>
+                                                    <p class="ship_address_box"><span class="post_number">[01717]</span> <span class="ship_address">서울특별시 노원구 한글비석로14길 42 (중계동, 중앙하이츠아파트)</span> <span class="detail_address">101동101호</span></p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="btn-box">
+                                            <button class="btn" type="button">수정하기</button>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <th><label for="">새 비밀번호</label></th>
-                                        <td><input class="form-control" type="password" name="" id=""></td>
+                                        <td>
+                                            <input type="radio" class="form-check-input" name="def_ship_addr_chk" id="" >
+                                        </td>
+                                        <td>
+                                            <ul class="ship_addr">
+                                                <li>
+                                                    <span class="address_name">집1</span>
+                                                </li>
+                                                <li>
+                                                    <span class="rec_name">홍길동</span>
+                                                    <span> / </span>
+                                                    <span class="rec_phone">010-1234-5678</span>
+                                                </li>
+                                                <li>
+                                                    <p class="ship_address_box"><span class="post_number">[01717]</span> <span class="ship_address">서울특별시 노원구 한글비석로14길 42 (중계동, 중앙하이츠아파트)</span> <span class="detail_address">101동101호</span></p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="btn-box">
+                                            <button class="btn" type="button">수정하기</button>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <th><label for="">새 비밀번호 확인</label></th>
-                                        <td><input class="form-control" type="password" name="" id=""></td>
+                                        <td>
+                                            <input type="radio" class="form-check-input" name="def_ship_addr_chk" id="">
+                                        </td>
+                                        <td>
+                                            <ul class="ship_addr">
+                                                <li>
+                                                    <span class="address_name">집2</span>
+                                                </li>
+                                                <li>
+                                                    <span class="rec_name">홍길동</span>
+                                                    <span> / </span>
+                                                    <span class="rec_phone">010-1234-5678</span>
+                                                </li>
+                                                <li>
+                                                    <p class="ship_address_box"><span class="post_number">[01717]</span> <span class="ship_address">서울특별시 노원구 한글비석로14길 42 (중계동, 중앙하이츠아파트)</span> <span class="detail_address">101동101호</span></p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="btn-box">
+                                            <button class="btn" type="button">수정하기</button>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <th><label for="">이름</label></th>
-                                        <td><input class="form-control" type="text" name="" id=""></td>
-                                    </tr>
-                                    <tr>
-                                        <th><label for="">생년월일/성별</label></th>
-                                        <td><p class="user_brdyGndr">1998.11.04 / 남</p></td>
-                                    </tr>
-                                    <tr>
-                                        <th><label for="">이메일</label></th>
-                                        <td><input class="form-control" type="email" name="" id="" value="abcd1234@gamil.com"></td>
-                                    </tr>
-                                    <tr>
-                                        <th><label for="">휴대폰</label></th>
-                                        <td><input class="form-control" type="text" name="" id="" value="010-2539-7660"></td>
+                                        <td>
+                                            <input type="radio" class="form-check-input" name="def_ship_addr_chk" id="">
+                                        </td>
+                                        <td>
+                                            <ul class="ship_addr">
+                                                <li>
+                                                    <span class="address_name">집3</span>
+                                                </li>
+                                                <li>
+                                                    <span class="rec_name">홍길동</span>
+                                                    <span> / </span>
+                                                    <span class="rec_phone">010-1234-5678</span>
+                                                </li>
+                                                <li>
+                                                    <p class="ship_address_box"><span class="post_number">[01717]</span> <span class="ship_address">서울특별시 노원구 한글비석로14길 42 (중계동, 중앙하이츠아파트)</span> <span class="detail_address">101동101호</span></p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="btn-box">
+                                            <button class="btn" type="button">수정하기</button>
+                                        </td>
                                     </tr>
                                 </table>
-                                <div class="btn-box mt-5">
-                                    <button class="btn">정보 수정</button>
-                                </div>
-                            </form>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
