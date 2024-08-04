@@ -1,0 +1,55 @@
+table{
+    width: 100%;
+    border-top: 2px solid #777;
+}
+
+tr.order_head{
+    border-bottom: 1px solid #ccc;
+}
+.order_head th{
+    padding: 20px;
+    padding-top: 20px !important;
+}
+
+th span:nth-child(2){
+    font-size: 14px;
+    margin-left: 20px;
+    font-weight: 400;
+}
+th span:nth-child(2)::after{
+    content: " 〉";
+}
+tr td{
+    align-content: center;
+}
+tr td:first-child{
+    width: 120px;
+}
+tr td:nth-child(2) *{
+    line-height: 30px;
+}
+.prod_title_box>*{
+    font-size: 15px;
+    font-weight: bolder;
+}
+tr td:nth-child(4){
+    text-align: center;
+}
+tr td *{
+    font-size: 14px;
+    line-height: 20px;
+}
+.prod_price,.prod_price span{
+    font-size: 16px;
+}
+.prod_price span{
+    font-weight: bolder;
+}
+
+tr td:nth-child(4) .blue_color{
+    font-weight: bolder;
+}
+
+.order_delete_btn{
+    cursor: pointer;
+}
