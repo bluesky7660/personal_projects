@@ -235,6 +235,11 @@ a.img-box{
 .prod_title{
     margin-bottom: 20px;
 }
+.content_title_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .box_title,.content_title{
     font-size: 20px;
     margin-bottom: 30px;
