@@ -16,6 +16,8 @@
 }
 .prod_detail_head_bottom .img-box{
     width: 380px;
+    height: fit-content;
+    margin: 0;
 }
 .prod_detail_head_bottom .rating_box{
     border: 1px solid #ddd;
@@ -34,7 +36,10 @@
     
 }
 
-
+.prod_detail_info{
+    display: flex;
+    flex-direction: column;
+}
 
 .prod_detail_info>*{
     margin-bottom: 30px;
@@ -48,6 +53,23 @@
 .delivery_info p{
     text-align: right;
     margin-bottom: 10px;
+}
+
+.prod_detail_info_etc{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: auto;
+    margin-bottom:0;
+    gap: 20px;
+}
+.buy_btn_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.buy_btn_box button{
+    width: calc((100%/2) - 5px);
 }
 
 

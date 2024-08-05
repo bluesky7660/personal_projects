@@ -15,20 +15,3 @@
     display: flex;
     align-items: center;
 }
-
-.number-input{
-    display: flex;
-    align-items: center;
-}
-.number-input>*{
-    height: 30px;
-}
-
-.number-input input{
-    text-align: center;
-    width: 50px;
-}
-.number-input input[type="number"]::-webkit-outer-spin-button,
-.number-input input[type="number"]::-webkit-inner-spin-button{
-    -webkit-appearance: none;
-}

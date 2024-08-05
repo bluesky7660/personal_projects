@@ -13,12 +13,12 @@
     border: 1px solid #aaa;
     margin-bottom: 30px;
 }
-.user_name{
+.user_header_box .user_name{
     color:#fff;
     font-size: 20px;
     font-weight: bolder;
 }
-.user_name::after{
+.user_header_box .user_name::after{
     content: "프렌즈";
     font-size: 13px;
     padding:5px 10px;
