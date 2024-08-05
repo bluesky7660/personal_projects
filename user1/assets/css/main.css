@@ -15,6 +15,9 @@
 
 
 /* styles.css */
+.main-slider-wrapper{
+    overflow: hidden;
+}
 
 .main-slider-wrapper .slider-container {
     width: 100vw;
