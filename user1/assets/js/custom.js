@@ -153,4 +153,71 @@ document.addEventListener('DOMContentLoaded', function () {
         });   
     }
 
+    /*range출력 */
+    const rangeInputs = document.querySelectorAll('input[type="range"].value-range');
+    const numberInputs = document.querySelectorAll('input[type="number"].value-display');
+
+    // rangeInputs.forEach((input, index) => {
+    //     input.addEventListener('input', function() {
+    //         rangeValues[index].textContent = input.value;
+    //     });
+    // });
+
+    // rangeInputs.forEach((rangeInput, index) => {
+    //     const numberInput = numberInputs[index];
+        
+    //     rangeInput.addEventListener('input', function() {
+    //         numberInput.value = rangeInput.value;
+    //     });
+
+    //     numberInput.addEventListener('input', function() {
+    //         if (numberInput.value === '') {
+    //             numberInput.value = 0;
+    //         }
+    //         rangeInput.value = numberInput.value;
+    //     });
+    // });
+
+    //양방향 range
+    const inputLeft = document.getElementById("price_range1");
+    const inputRight = document.getElementById("price_range2");
+
+    const thumbLeft = document.querySelector(".thumb.left");
+    const thumbRight = document.querySelector(".thumb.right");
+
+    const range = document.querySelector(".range");
+
+    const setLeftValue = e => {
+    const _this = e.target;
+    const { value, min, max } = _this;
+
+    if (+inputRight.value - +value < 10) {
+        _this.value = +inputRight.value - 10;
+    }
+
+    const percent = ((+_this.value - +min) / (+max - +min)) * 100;
+
+    thumbLeft.style.left = `${percent}%`;
+    range.style.left = `${percent}%`;
+    };
+
+    const setRightValue = e => {
+    const _this = e.target;
+    const { value, min, max } = _this;
+
+    if (+value - +inputLeft.value < 10) {
+        _this.value = +inputLeft.value + 10;
+    }
+
+    const percent = ((+_this.value - +min) / (+max - +min)) * 100;
+
+    thumbRight.style.right = `${100 - percent}%`;
+    range.style.right = `${100 - percent}%`;
+    };
+
+    if (inputLeft && inputRight) {
+    inputLeft.addEventListener("input", setLeftValue);
+    inputRight.addEventListener("input", setRightValue);
+    }
+
 });

@@ -83,11 +83,9 @@
                         <div class="gnb_wrapper d-flex align-items-center gap-5">
                             <button class="circle_btn"><i class="fa-solid fa-bars"></i></button>
                             <ul class="gnb_link d-flex gap-5">
-                                <li onclick="window.location.href='product_list.html'">베스트</li>  
-                                <li>신상품</li>
-                                <li>이벤트</li>
+                                <li onclick="window.location.href='product_list.html'">국내도서</li>  
                             </ul>
-                            <div class="wrap_area">
+                            <!-- <div class="wrap_area">
                                 <div class="gnbtab-list">
                                     <ul>
                                         <li>
@@ -132,7 +130,7 @@
                                 <div class="tabgnbService">
                                     <ul></ul>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </nav>
                 </div>
@@ -157,8 +155,11 @@
                         <div>
                             <div class="mb-4"><h3>국내도서</h3></div>
                             <div class="mb-4 d-flex gap-1">
-                                <i class="fa-solid fa-chevron-left"></i>
-                                <h4>한국소설</h4>
+                                <i class="fa-solid fa-caret-right"></i>
+                                <h5>한국소설</h5>
+                            </div>
+                            <div class="mb-4 d-flex gap-1">
+                                <h5>시/에세이</h5>
                             </div>
                             <!-- <ul class="d-flex flex-column gap-3">
                                 <li>
@@ -205,9 +206,26 @@
                                 <li>전체보기</li>
                                 <li>베스트셀러</li>
                                 <li>신상품</li>
-                                <li>회원리뷰</li>
-                                <li>CASTing</li>
                             </ul>
+                            <div class="price_range_box">
+                                <label for="price_range">가격별</label>
+                                <div class="range_box">
+                                    <input type="range" id="price_range1" class="min-range value-range" min="0" max="100" value="0">
+                                    <input type="range" id="price_range2" class="max-range value-range" min="0" max="100" value="100">
+                                    <div class="track">
+                                        <div class="range"></div>
+                                        <div class="thumb left"></div>
+                                        <div class="thumb right"></div>
+                                    </div>
+                                </div>
+                                <input type="number" class="value-display" value="0">
+                                <input type="number" class="value-display" value="100   ">
+                            </div>
+                            <div>
+                                <label for="review_range">리뷰별</label>
+                                <input type="range" id="review_range" class="value-range" min="0" max="10" value="0">
+                                
+                            </div>
                         </div>
                     </div>
                     <div class="right-box">
