@@ -213,7 +213,7 @@
                         <ul class="slick-dots swiper-pagination"></ul>
                         <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
                         <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
-                        <button class="auto-toggle">Pause</button>
+                        <button class="auto-toggle"><i class="fa-solid fa-stop"></i></button>
                     </div>
                 </div>
             </div>
@@ -1124,7 +1124,7 @@
                     </div>
             
                     <div class="swiper-container slider-nav-container">
-                        <div class="contentArea">
+                        <div class="contentArea" style="z-index: 2;">
                             <div class="textArea">
                                 <p class="title">얼미부부, 재밌기 행복하기 사랑하기 <br>사랑하기</p>
                                 <p class="made_by"><span>by</span> 교보문고</p>
@@ -1568,14 +1568,14 @@
 
             toggleButton1.addEventListener('click', () => {
                 if (isAutoplaying1) {
-                    swiper9.autoplay.stop();
+                    swiper1.autoplay.stop();
                     toggleIcon1.classList.remove('fa-stop');
                     toggleIcon1.classList.add('fa-play');
                     toggleButton1.innerHTML = '<i class="fa-solid fa-play"></i>';
                 } else {
-                    swiper9.autoplay.start();
+                    swiper1.autoplay.start();
                     toggleIcon1.classList.add('fa-stop');
-                    toggleIcon.classList.remove('fa-play');
+                    toggleIcon1.classList.remove('fa-play');
                     toggleButton1.innerHTML = '<i class="fa-solid fa-stop"></i>';
                 }
                 isAutoplaying1 = !isAutoplaying1; // 자동 재생 상태 토글

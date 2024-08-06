@@ -18,6 +18,9 @@
 .main-slider-wrapper{
     overflow: hidden;
 }
+.main-slider-wrapper *{
+    transition: all .5s ease-in-out;
+}
 
 .main-slider-wrapper .slider-container {
     width: 100vw;
