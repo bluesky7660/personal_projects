@@ -1,117 +1,162 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>커스텀 별점 평가 시스템</title>
-    
-    <!-- Bootstrap 5.x CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi Range Control</title>
+  <style>
+    .multi-range-control{
+    margin-bottom:50px;
+    position:relative;
+    }
 
-    <!-- Krajee Star Rating CSS -->
-    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css" rel="stylesheet">
-    
-    <style>
-        .rating-stars .empty-stars .krajee-icon::before{
-            background: url('./assets/images/ico_klover_sm@2x.png') no-repeat;
-            background-size: contain;
-            content: "";
-            display: inline-block;
-            width: 28px;
-            height: 28px;
-            opacity: 0.3;
+    .range-control {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 0 15px;
+    }
 
-        }
-        .rating-stars .filled-stars .krajee-icon::before {
-            background: url('./assets/images/ico_klover_sm@2x.png') no-repeat;
-            background-size: contain;
-            content: "";
-            display: inline-block;
-            width: 28px;
-            height: 28px;
-            opacity: 1;
+    .range-control > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #c6aee7;
+    }
 
-        }
-        /*.rating-container .filled-stars .star .glyphicon-star:before{
-            background: url('./assets/images/ico_klover_sm@2x.png') no-repeat;
-            background-size: contain;
-            width: 28px;
-            height: 28px;
-        }
-        .rating-container.rating-lg .empty-stars .star .glyphicon-star-empty:before{
-            background: url('./assets/images/ico_klover_sm@2x.png') no-repeat;
-            background-size: contain;
-            width: 28px;
-            height: 28px;
-        }*/
-    </style>
+    .range-control > .range {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #6200ee;
+    }
+
+    .range-control > .thumb {
+    position: absolute;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    background-color: #6200ee;
+    border-radius: 50%;
+    }
+
+    .range-control > .thumb.left {
+    left: 0;
+    transform: translate(-5px, -10px);
+    }
+    .range-control > .thumb.right {
+    right: 0;
+    transform: translate(-10px, -10px);
+    }
+
+    input[type="range"] {
+    position: absolute;
+    /* opacity로 가린 것을 이벤트도 비활성화하기 위해 */
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 100%;
+    opacity: 0;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+    /* 겹쳐진 두 thumb를 모두 활성화 */
+    pointer-events: all;
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    cursor: pointer;
+    /* appearance를 해야 위의 스타일들을 볼 수 있음 */
+    -webkit-appearance: none;
+    }
+
+  </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h2>별점 평가</h2>
-        <input id="rating-input" name="rating" class="custom-star" value="3" />
-    </div>
+    <input type="range" id="min-input1" min="0" max="100" value="25" class="min-range">
+    <div class="centered">
+        <div class="multi-range-control" id="control1">
+          <!-- Actual range inputs -->
+          <input type="range" id="min-input1" step="100" min="100" max="100000" value="0" class="min-range">
+          <input type="range" id="max-input1" step="100" min="100" max="100000" value="100000" class="max-range">
+      
+          <!-- Custom range control -->
+          <div class="range-control">
+            <div class="track"></div>
+            <div class="range"></div>
+            <div class="thumb left"></div>
+            <div class="thumb right"></div>
+          </div>
+        </div>
+        <!-- Another example of range control -->
+        <div class="multi-range-control" id="control2">
+          <input type="range" id="min-input2" min="0" max="100" value="0" class="min-range">
+          <input type="range" id="max-input2" min="0" max="100" value="100" class="max-range">
+          <div class="range-control">
+            <div class="track"></div>
+            <div class="range"></div>
+            <div class="thumb left"></div>
+            <div class="thumb right"></div>
+          </div>
+        </div>
+      </div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <!-- Bootstrap 5.x JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Krajee Star Rating JS -->
-    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.js"></script>
+  <script>
+    // 각 범위 제어 요소를 업데이트하는 함수
+    const updateRangeControls = (controlId) => {
+      const minInput = document.querySelector(`#${controlId} .min-range`);
+      const maxInput = document.querySelector(`#${controlId} .max-range`);
+      const leftHandle = document.querySelector(`#${controlId} .thumb.left`);
+      const rightHandle = document.querySelector(`#${controlId} .thumb.right`);
+      const rangeBar = document.querySelector(`#${controlId} .range`);
 
-    <script>
-        // if ($('.form_rating').length <= 0) return false;
+      const setMinValue = () => {
+        const [min, max] = [parseInt(minInput.min), parseInt(minInput.max)];
+        minInput.value = Math.min(parseInt(minInput.value), parseInt(maxInput.value) - 10);
+        const percent = ((minInput.value - min) / (max - min)) * 100;
+        leftHandle.style.left = percent + "%";
+        rangeBar.style.left = percent + "%";
+        
+        rangeBar.style.width = (100 - (percent +  (100 - parseInt(maxInput.value)))) + "%";
+      };
 
-        // $('.form_rating').each(function(){
-            /*var that = $("#rating-input");
+      const setMaxValue = () => {
+        const [min, max] = [parseInt(maxInput.min), parseInt(maxInput.max)];
+        maxInput.value = Math.max(parseInt(maxInput.value), parseInt(minInput.value) + 10);
+        const percent = ((maxInput.value - min) / (max - min)) * 100;
+        rightHandle.style.left = percent + "%";
+        // rangeBar.style.width = percent + "%";
+        console.log((parseInt(minInput.value)));
+        console.log(percent);
+        console.log(100 - percent);
+        console.log(percent + ( parseInt(minInput.value)));
+        rangeBar.style.width = (100 - ((100 - percent)+  (parseInt(minInput.value)))) + "%";
+      };
 
-            that.rating({
-                language: 'ko',
-                theme: 'krajee-gly',
-                clearCaption: '10점 중 0점<span class="val" aria-hidden="true">0</span><span class="total" aria-hidden="true">10</span></span>',
-                stars: 4,
-                min: 0,
-                max: 10,
-                step: 2.5,
-                starCaptions: function (rating) {
-                    var strCaption;
-                    strCaption = '10점 중 ' + rating + '점';
-                    if(that.data('caption') !== undefined) {
-                        strCaption += '<span class="val" aria-hidden="true">' + rating + '</span>' + '<span class="total" aria-hidden="true">' + 10 + '</span>';
-                    }else{
-                        // return rating + ' / 10';
-                    }
-                    return strCaption;
-                }
-            });*/
-            // that.on('rating:change', function(event, value, caption) {
-            // 	console.log(`${value}/10`);
-            // });
+      minInput.addEventListener("input", setMinValue);
+      maxInput.addEventListener("input", setMaxValue);
+      
+      // 초기 값 설정
+      setMinValue();
+      setMaxValue();
+    };
 
-            // if(that.data('caption') !== undefined) {
-            //     that.prev('.rating-container').addClass('has_caption');
-            // }
-        // });
-        $(document).ready(function () {
-            $("#rating-input").rating({
-                min: 0,
-                max: 5,
-                step: 1,
-                size: 'md',
-                showClear: false,
-                showCaption: false,
-                stars: 5,
-                hoverEnabled: true,
-                hoverOnClear: true,
-                theme: 'krajee-gly',
-                // filledStar: '<span></span>', // 커스텀 아이콘 사용
-                // emptyStar: '<span></span>'   // 커스텀 아이콘 사용
-            });
-        });
-    </script>
+    // 모든 범위 제어 요소에 대해 초기화
+    document.querySelectorAll('.multi-range-control').forEach((control) => {
+      const controlId = control.id;
+      updateRangeControls(controlId);
+    });
+  </script>
 </body>
 </html>

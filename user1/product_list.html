@@ -207,24 +207,42 @@
                                 <li>베스트셀러</li>
                                 <li>신상품</li>
                             </ul>
-                            <div class="price_range_box">
-                                <label for="price_range">가격별</label>
-                                <div class="range_box">
-                                    <input type="range" id="price_range1" class="min-range value-range" min="0" max="100" value="0">
-                                    <input type="range" id="price_range2" class="max-range value-range" min="0" max="100" value="100">
-                                    <div class="track">
-                                        <div class="range"></div>
-                                        <div class="thumb left"></div>
-                                        <div class="thumb right"></div>
+                            <div class="search_ranges_box">
+                                <div class="price_range_box">
+                                    <label for="price_range">가격별</label>
+                                    <div class="range_box">
+                                        <input type="range" id="price_range1" class="min-range value-range" step="500" min="500" max="50000" value="500">
+                                        <input type="range" id="price_range2" class="max-range value-range" step="500" min="500" max="50000" value="50000">
+                                        <div class="range-control">
+                                            <div class="track"></div>
+                                            <div class="range"></div>
+                                            <div class="thumb left"></div>
+                                            <div class="thumb right"></div>
+                                        </div>
+                                    </div>
+                                    <div class="value_display_box">
+                                        <input type="number" class="value_display left"  min="500" max="50000" value="500">
+                                        <input type="number" class="value_display right"  min="500" max="50000" value="50000">
                                     </div>
                                 </div>
-                                <input type="number" class="value-display" value="0">
-                                <input type="number" class="value-display" value="100   ">
-                            </div>
-                            <div>
-                                <label for="review_range">리뷰별</label>
-                                <input type="range" id="review_range" class="value-range" min="0" max="10" value="0">
-                                
+                                <div class="review_range_box">
+                                    <label for="review_range">리뷰별</label>
+                                    <div class="range_box">
+                                        <input type="range" id="price_range1" class="min-range value-range" step="1" min="0" max="10" value="0">
+                                        <input type="range" id="price_range2" class="max-range value-range" step="1" min="1" max="10" value="10">
+                                        <div class="range-control">
+                                            <div class="track"></div>
+                                            <div class="range"></div>
+                                            <div class="thumb left"></div>
+                                            <div class="thumb right"></div>
+                                        </div>
+                                    </div>
+                                    <div class="value_display_box">
+                                        <input type="number" class="value_display left" value="1">
+                                        <input type="number" class="value_display right" value="10">
+                                    </div>
+                                    <input type="range" id="review_range" class="value-range2" min="0" max="10" value="0">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -244,18 +262,18 @@
                                     <option value="50">50개씩 보기</option>
                                 </select>
                             </div>
-                            <div class="view_type d-flex gap-1">
+                            <!-- <div class="view_type d-flex gap-1">
                                 <button class="list_type btn active">
                                     <img src="./assets/images/ico_view_list_active@2x.png" alt="">
                                 </button>
                                 <button class="grid-type btn">
                                     <img src="./assets/images/ico_view_img_active@2x.png" alt="">
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="contentArea">
                             <div class="list_result mt-5 mb-3 d-flex justify-content-end">
-                                <div class="d-flex gap-3">
+                                <!-- <div class="d-flex gap-3">
                                     <div class="d-flex align-items-center gap-1">
                                         <input class="form-check-input" type="checkbox" name="" id="select_all">
                                         <label class="form-check-label" for="select_all">전체선택</label>
@@ -269,7 +287,7 @@
                                     <div>
                                         <button class="btn">Excel다운로드</button>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <ul class="contents">
                                 <li class="contents_items d-flex justify-content-between gap-3">

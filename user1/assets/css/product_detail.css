@@ -264,6 +264,89 @@
     margin: 0 12px;
 }
 
+.review_tab_box{
+    padding: 30px 0;
+    /* margin-bottom:30px;
+    padding-bottom: 30px; */
+    border-bottom: 1px solid #aaa;
+    display: flex;
+    justify-content: space-between;
+}
+.review_tab_box .sort_box{
+    width: 110px;
+}
+/*리뷰리스트*/
+.review_list{
+    padding: 50px 0;
+}
+/* .review_list>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} */
+.review_list>ul>li{
+    margin-bottom:30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #aaa;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding:0 20px 30px;
+}
+
+.review_list .review_head{
+    display: flex;
+    justify-content: space-between;
+}
+.review_list .review_head span{
+    font-size: 14px;
+    color: #aaa;
+}
+.review_list .review_head .line_space{
+    font-size: 12px;
+    margin:0;
+}
+.review_head>div{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+.user_select_tag{
+    padding-left:20px ;
+    position: relative;
+    color:#0d1357;
+}
+.user_select_tag::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 13px;
+    height: 13px;
+    background: url(../images/ico_quotes@2x.png) center no-repeat;
+    background-size: 13px 13px;
+}
+
+.btn_like::before{
+    content: "좋아요 ";
+}
+.review_footer{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+.review_footer *{
+    font-size: 14px;
+    color:#777;
+}
+
+.review_list .clover_box{
+    gap: 3px;
+}
+.review_list .clover_box li{
+    width: 15px;
+    
+}
 /*리뷰작성박스*/
 .review_write_box{
     padding: 30px;

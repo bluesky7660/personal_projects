@@ -71,9 +71,15 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <label for="">성별</label>
+                                    <label for="user_gender">성별</label>
                                     <div>
-                                        <span>
+                                        <select class="form-select" name="" id="user_gender" >
+                                            <option value="0" disabled selected>선택해주세요</option>
+                                            <option value="1">남자</option>
+                                            <option value="2">여자</option>
+                                            <option value="3">기타</option>
+                                        </select>
+                                        <!-- <span>
                                             <input class="form-check-input" type="radio" name="user_gender" id="user_gender_man">
                                             <label class="form-check-label" for="user_gender_man">남자</label>
                                         </span>
@@ -84,7 +90,7 @@
                                         <span>
                                             <input class="form-check-input" type="radio" name="user_gender" id="user_gender_etc">
                                             <label class="form-check-label" for="user_gender_etc">기타</label>
-                                        </span>
+                                        </span> -->
                                     </div>
                                 </li>
                                 <li>
