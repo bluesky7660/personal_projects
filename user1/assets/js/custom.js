@@ -156,6 +156,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
     //양방향 range
+
+    
+    
     // 슬라이더와 출력 입력 필드를 참조하는 변수들
     // const inputLeft = document.getElementById("price_range1"); // 왼쪽 슬라이더
     // const inputRight = document.getElementById("price_range2"); // 오른쪽 슬라이더
@@ -253,65 +256,99 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 왼쪽 슬라이더의 값을 설정하고 관련된 Thumb와 범위를 업데이트합니다.
     const updateLeftValue = () => {
-    const _this = leftInput; // 현재 왼쪽 입력 요소를 참조합니다.
-    const [min, max] = [parseInt(_this.min), parseInt(_this.max)]; // 입력 범위의 최소값과 최대값을 파싱합니다.
-    
-    // 오른쪽 슬라이더의 값보다 10 작은 값으로 설정하여 교차되지 않도록 합니다.
-    _this.value = Math.min(parseInt(_this.value), parseInt(rightInput.value) - 9500);
-    
-    // 입력 값의 퍼센트를 계산하여 Thumb와 범위의 위치를 설정합니다.
-    const percent = ((_this.value - min) / (max - min)) * 100;
-    leftThumb.style.left = percent + "%"; // 왼쪽 Thumb의 위치를 퍼센트로 설정합니다.
-    rangeFill.style.left = percent + "%"; // 왼쪽 범위의 위치를 퍼센트로 설정합니다.
+        const _this = leftInput; // 현재 왼쪽 입력 요소를 참조합니다.
+        const [min, max] = [parseInt(_this.min), parseInt(_this.max)]; // 입력 범위의 최소값과 최대값을 파싱합니다.
+        
+        // 오른쪽 슬라이더의 값보다 10 작은 값으로 설정하여 교차되지 않도록 합니다.
+        _this.value = Math.min(parseInt(_this.value), parseInt(rightInput.value) - 9500);
+        
+        // 입력 값의 퍼센트를 계산하여 Thumb와 범위의 위치를 설정합니다.
+        const percent = ((_this.value - min) / (max - min)) * 100;
+        leftThumb.style.left = percent + "%"; // 왼쪽 Thumb의 위치를 퍼센트로 설정합니다.
+        rangeFill.style.left = percent + "%"; // 왼쪽 범위의 위치를 퍼센트로 설정합니다.
     };
 
     // 오른쪽 슬라이더의 값을 설정하고 관련된 Thumb와 범위를 업데이트합니다.
     const updateRightValue = () => {
-    const _this = rightInput; // 현재 오른쪽 입력 요소를 참조합니다.
-    const [min, max] = [parseInt(_this.min), parseInt(_this.max)]; // 입력 범위의 최소값과 최대값을 파싱합니다.
-    
-    // 왼쪽 슬라이더의 값보다 1 큰 값으로 설정하여 교차되지 않도록 합니다.
-    _this.value = Math.max(parseInt(_this.value), parseInt(leftInput.value) + 9500);
-    
-    // 입력 값의 퍼센트를 계산하여 Thumb와 범위의 위치를 설정합니다.
-    const percent = ((_this.value - min) / (max - min)) * 100;
-    console.log(percent);
-    rightThumb.style.right = 100 - percent + "%"; // 오른쪽 Thumb의 위치를 퍼센트로 설정합니다.
-    rangeFill.style.right = 100 - percent + "%"; // 오른쪽 범위의 위치를 퍼센트로 설정합니다.
+        const _this = rightInput; // 현재 오른쪽 입력 요소를 참조합니다.
+        const [min, max] = [parseInt(_this.min), parseInt(_this.max)]; // 입력 범위의 최소값과 최대값을 파싱합니다.
+        
+        // 왼쪽 슬라이더의 값보다 1 큰 값으로 설정하여 교차되지 않도록 합니다.
+        _this.value = Math.max(parseInt(_this.value), parseInt(leftInput.value) + 9500);
+        
+        // 입력 값의 퍼센트를 계산하여 Thumb와 범위의 위치를 설정합니다.
+        const percent = ((_this.value - min) / (max - min)) * 100;
+        console.log(percent);
+        console.log(_this.value);
+        rightThumb.style.right = 100 - percent + "%"; // 오른쪽 Thumb의 위치를 퍼센트로 설정합니다.
+        rangeFill.style.right = 100 - percent + "%"; // 오른쪽 범위의 위치를 퍼센트로 설정합니다.
     };
-
     // 왼쪽 입력 요소와 오른쪽 입력 요소에 입력 이벤트 리스너를 추가합니다.
     leftInput.addEventListener("input", updateLeftValue);
     rightInput.addEventListener("input", updateRightValue);
 
+    
 
-    /*range출력 */
-    const rangeInputs = document.querySelectorAll('input[type="range"].value-range');
-    const numberInputs = document.querySelectorAll('input[type="number"].value_display');
-
-    rangeInputs.forEach((input, index) => {
-        input.addEventListener('input', function() {
-            numberInputs[index].textContent = input.value;
-        });
-    });
-
-    rangeInputs.forEach((rangeInput, index) => {
-        const numberInput = numberInputs[index];
-        
-        rangeInput.addEventListener('input', function() {
-            numberInput.value = rangeInput.value;
-        });
-        
-        numberInput.addEventListener('input', function() {
-            console.log(numberInput.value);
-            console.log(rangeInput.value);
-            // if (numberInput.value === '') {
-            //     numberInput.value = 0;
-            // }
-            rangeInput.value = numberInput.value;
-        });
-        console.log(rangeInput.value);
-        
-    });
-    console.log(rangeInputs[0].value);
+     /*range출력 */
+    //  const rangeInputs = document.querySelectorAll('input[type="range"].value-range');
+    //  const numberInputs = document.querySelectorAll('input[type="number"].value_display');
+    //  const numberLeft = document.querySelector(".price_range1");
+    //  const numberRight = document.querySelector(".price_range2");
+ 
+    // //  rangeInputs.forEach((input, index) => {
+    // //      input.addEventListener('input', function() {
+    // //          numberInputs[index].textContent = input.value;
+    // //      });
+    // //  });
+ 
+    //  rangeInputs.forEach((rangeInput, index) => {
+    //      const numberInput = numberInputs[index];
+         
+    //      rangeInput.addEventListener('input', function() {
+    //          numberInput.value = rangeInput.value;
+    //      });
+    //      numberInput.addEventListener('input', function() {
+    //         //  console.log(numberInput[1].value);
+    //         //  console.log(numberInput[2].value);
+    //          console.log(numberInput.value);
+    //          console.log(rangeInput.value);
+    //          console.log("최소: "+numberLeft.value);
+    //          console.log("최대: "+ numberRight.value );
+    //          if(numberInput === numberLeft){
+    //             if(parseInt(numberInput.value) >= (parseInt(numberRight.value)- 5500)){
+    //                 console.log("최소값이 너무커");
+    //                 numberInput.value = (parseInt(numberRight.value) - 5500);
+                    
+    //             }else if(parseInt(numberInput.value) < 500){
+                    
+    //                 console.log("최소값이 낫음")
+    //                 numberInput.value = 500;
+    //             }
+    //             // updateLeftValue();
+    //             // updateRightValue(); 
+    //             console.log("오른쪽: "+rightThumb.style.right);
+                
+    //          }else if(numberInput === numberRight){
+    //             if(parseInt(numberInput.value) <= (parseInt(numberLeft.value)+ 5500)){
+                    
+    //                 console.log("최대값이 너무작아")
+    //                 numberInput.value = (parseInt(numberLeft.value) + 5500);
+                    
+    //             }else if(parseInt(numberInput.value) > 50000){
+                    
+    //                 console.log("최대값이 초과")
+    //                 numberInput.value = 50000;
+    //             }
+    //             // updateLeftValue();
+    //             // updateRightValue(); 
+    //             console.log("왼쪽: "+leftThumb.style.left);
+    //          }
+    //          rangeInput.value = numberInput.value;
+    //          console.log(typeof(rangeInput.value));
+    //          console.log(numberInput + " | " + rangeInput.value);
+    //      });
+         
+    //  });
+     
+   
 });
