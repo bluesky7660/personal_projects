@@ -293,16 +293,43 @@
     grid-template-rows: repeat(2, 1fr); //2개의 행 */
     width: 100%;
     height: 100%;
+    counter-reset: item-counter; /* 카운터 초기화 */
 }
 .best-content li {
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    background: #ddd;
-    border: 1px solid #ccc;
+    /* background: #ddd; */
+    /* border: 1px solid #ccc; */
     height: fit-content; /* 아이템 높이 */
     width: 100%; /* 아이템 너비 (그리드의 열 너비와 같음) */
+    counter-increment: item-counter; /* 각 항목마다 카운터 증가 */
     /* box-sizing: border-box; */
+}
+
+
+.best-content li::before {
+    content: counter(item-counter); /* 카운터 값을 출력 */
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-radius: 10px 0 10px 0;
+    display: inline-block;
+    width: fit-content;
+    padding: 8px;
+    font-size: 13px;
+    background-color: #555;
+    color: #fff;
+}
+.best-content li:first-child{
+
+}
+.best-content li:first-child::before {
+    content: "♛ 교보문고 Best 1";
+    background: linear-gradient(45deg, rgb(77, 127, 226), rgb(0, 179, 0),rgb(0, 92, 0));
+
+}
+.best-content li .img-box{
+    border: 1px solid #ccc;
 }
 
 
