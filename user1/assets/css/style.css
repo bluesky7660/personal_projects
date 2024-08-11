@@ -292,6 +292,7 @@ section{
 }
 .logo{
     width: 200px;
+    cursor: pointer;
 }
 .navbar_pc{
     padding:0 150px;
