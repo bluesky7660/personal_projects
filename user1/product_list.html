@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="assets/css/tiny-slider.css">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- nouislider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.min.js" integrity="sha512-g/feAizmeiVKSwvfW0Xk3ZHZqv5Zs8PEXEBKzL15pM0SevEvoX8eJ4yFWbqakvRj7vtw1Q97bLzEpG2IVWX0Mg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/nouislider.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.css" integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/nouislider.min.css">
     <!-- another-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.min.css">
@@ -221,13 +226,18 @@
                                         </div>
                                     </div>
                                     <div class="value_display_box">
-                                        <input type="number" class="value_display left price_range1" step="500" min="500" max="50000" value="500">
-                                        <input type="number" class="value_display right price_range2" step="500" min="500" max="50000" value="50000">
+                                        <input type="number"  class="value_display left price_range1" step="500" min="500" max="50000" value="500">
+                                        <span>~</span>
+                                        <input type="number"  class="value_display right price_range2" step="500" min="500" max="50000" value="50000">
                                     </div>
                                 </div>
                                 <div class="review_range_box">
                                     <label for="review_range">리뷰별</label>
+                                    <div id="review-slider">
+                                            
+                                    </div>
                                     <div class="range_box">
+                                        
                                         <input type="range" id="price_range3" class="min-range value-range" step="1" min="0" max="10" value="0">
                                         <input type="range" id="price_range4" class="max-range value-range" step="1" min="0" max="10" value="10">
                                         <div class="range-control">
@@ -238,10 +248,11 @@
                                         </div>
                                     </div>
                                     <div class="value_display_box">
-                                        <input type="number" class="value_display left price_range3" min="0" max="10" value="1">
-                                        <input type="number" class="value_display right price_range4" min="0" max="10" value="10">
+                                        <input type="number" id="min-price" class="value_display left price_range3" min="0" max="10" value="0">
+                                        <span>~</span>
+                                        <input type="number" id="max-price" class="value_display right price_range4" min="0" max="10" value="10">
                                     </div>
-                                    <input type="range" id="review_range" class="value-range2" min="0" max="10" value="0">
+                                    <!-- <input type="range" id="review_range" class="value-range2" min="0" max="10" value="0"> -->
                                 </div>
                             </div>
                         </div>
@@ -680,6 +691,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./assets/js/custom.js"></script>
     <script src="./assets/js/header.js"></script>
-
+    <script>
+    </script>
 </body>
 </html>

@@ -137,11 +137,20 @@ textarea.form-control{
 }
 .range_box{
     margin-top: 20px;
+    height: 25px;
+    display: flex;
+    align-items: center;
 }
+/* .review_range_box .range_box{
+    height: 25px;
+    display: flex;
+    align-items: center;
+} */
 .range-control {
+    width: 100%;
     position: relative;
     z-index: 1;
-    height: 10px;
+    height: 5px;
     /* margin: 0 15px; */
   }
   
@@ -170,8 +179,8 @@ textarea.form-control{
   .range-control > .thumb {
     position: absolute;
     z-index: 3;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: #6200ee;
     border-radius: 50%;
   }

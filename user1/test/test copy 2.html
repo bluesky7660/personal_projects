@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Filter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.min.js" integrity="sha512-g/feAizmeiVKSwvfW0Xk3ZHZqv5Zs8PEXEBKzL15pM0SevEvoX8eJ4yFWbqakvRj7vtw1Q97bLzEpG2IVWX0Mg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://unpkg.com/wnumb@1.1.0"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.css" integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .slider-container{
+            width:600px;
+        }
+        .number-box{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div id="price-slider"></div>
+        <div class="number-box">
+            <p><input type="number" id="min-price" min="0" max="50000" step="500">원</p>
+            <p><input type="number" id="max-price" min="0" max="50000" step="500">원</p> 
+        </div>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.6/nouislider.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var slider = document.getElementById('price-slider');
+            var minPriceInput = document.getElementById('min-price');
+            var maxPriceInput = document.getElementById('max-price');
+            var margin = 500;
+
+            noUiSlider.create(slider, {
+                start: [1000, 50000], // 초기값
+                connect: true,
+                range: {
+                    'min': 0,
+                    'max': 50000
+                },
+                step: 500, // 스텝 간격
+                margin: margin, // 두 핸들 간의 간격을 300으로 설정
+                format: {
+                    to: function (value) {
+                        return value.toFixed(0); // 소수점 없이 정수로 표시
+                    },
+                    from: function (value) {
+                        return Number(value); // 문자열을 숫자로 변환
+                    }
+                }
+            });
+
+            // 슬라이더의 값을 input 필드에 반영
+            slider.noUiSlider.on('update', function (values) {
+                minPriceInput.value = values[0];
+                maxPriceInput.value = values[1];
+            });
+
+            // input 필드의 값을 슬라이더에 반영
+            minPriceInput.addEventListener('change', function () {
+                var minValue = parseFloat(this.value);
+                var maxValue = parseFloat(maxPriceInput.value);
+                if (maxValue - minValue < margin) {
+                    console.log(minValue);
+                    console.log(maxPriceInput.max - margin);
+                    if(minValue == maxPriceInput.max){
+                        minPriceInput.value = maxPriceInput.max - margin;
+                    }else {
+                        maxValue = minValue + margin;
+                        maxPriceInput.value = maxValue;
+                        console.log("1");
+                    }  
+                    console.log(minValue); 
+                }
+                
+                slider.noUiSlider.set([this.value, null]);
+                console.log("마지막:"+minValue);
+            });
+
+            maxPriceInput.addEventListener('change', function () {
+                var maxValue = parseFloat(this.value);
+                var minValue = parseFloat(minPriceInput.value);
+                if (maxValue - minValue < margin) {
+                    minValue = maxValue - margin;
+                    minPriceInput.value = minValue;
+                    console.log("2");
+                }
+                slider.noUiSlider.set([null, this.value]);
+            });
+        });
+
+    </script>
+</body>
+</html>
