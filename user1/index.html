@@ -196,9 +196,9 @@
         </header>
         <main>
             <div class="main-slider-wrapper">
-                <div class="slider-container swiper-container" id="slider1">
+                <div class="slider-container swiper-container swiper-container-h" id="slider1">
                     <div class="your-slider swiper-wrapper" >
-                        <div>
+                        <div class="group-1">
                             <div class="img-box">
                                 <img src="./assets/images/mainSlider/slider01.jpg" alt="Image 1"/>
                             </div>
@@ -209,7 +209,7 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- <div>
+                        <div class="group-2">
                             <div class="img-box">
                                 <img src="./assets/images/mainSlider/newbookchange.jpg" alt="Image 1"/>
                             </div>
@@ -219,8 +219,18 @@
                                     100배 주식, 떡잎부터 알아보는 법
                                 </p>
                             </div>
+                        </div>
+                        <!-- <div class="swiper-container swiper-container-v">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Vertical Slide 1</div>
+                                <div class="swiper-slide">Vertical Slide 2</div>
+                                <div class="swiper-slide">Vertical Slide 3</div>
+                                <div class="swiper-slide">Vertical Slide 4</div>
+                                <div class="swiper-slide">Vertical Slide 5</div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-v"></div>
                         </div> -->
-                        <div>
+                        <div class="group-2">
                             <div class="img-box">
                                 <img src="./assets/images/mainSlider/20240715_093914811.jpg" alt="Image 1"/>
                             </div>
@@ -231,7 +241,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div>
+                        <div class="group-3">
                             <div class="img-box">
                                 <img src="./assets/images/mainSlider/9c6ac11d679e4a44b6f6f60903cc089b.jpg" alt="Image 1"/>
                             </div>
@@ -242,7 +252,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div>
+                        <div class="group-3">
                             <div class="img-box">
                                 <img src="./assets/images/mainSlider/bnG_01_261d4d7d9d9b4890b06527f069647e1b.jpg" alt="Image 1"/>
                             </div>
@@ -253,7 +263,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div>
+                        <div class="group-4">
                             <div class="img-box">
                                 <img src="./assets/images/mainSlider/i_1624_450_89bef945de3b4f169a88c3f37d3673e6.jpg" alt="Image 1"/>
                             </div>
@@ -264,7 +274,18 @@
                                 </p>
                             </div>
                         </div>
-                        <div>
+                        <div class="group-5">
+                            <div class="img-box">
+                                <img src="./assets/images/mainSlider/75b1314eb88b4d4abaa27010bb12baba.jpg" alt="Image 1"/>
+                            </div>
+                            <div class="item_text_box">
+                                <p>
+                                    8월 북메이트 모집 중🌊<br>
+                                    이달의 책 독서 지원금&애슝 유리컵
+                                </p>
+                            </div>
+                        </div>
+                        <div class="group-6">
                             <div class="img-box">
                                 <img src="./assets/images/mainSlider/i_1624_450_5eb0927b569444c4a5ec92342047f38c.jpg" alt="Image 1"/>
                             </div>
@@ -275,7 +296,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div>
+                        <div class="group-7">
                             <div class="img-box">
                                 <img src="./assets/images/mainSlider/i_1624_450_1e8517dd08074efca142057b5465d502.jpg" alt="Image 1"/>
                             </div>
@@ -1586,26 +1607,138 @@
             //첫번째슬라이드 설정 - 메인
             var customTexts1 = ["핫 이슈", "발견의 기쁨", "기획전", "eBook", "sam", "핫트랙스", "웹소설"];
 
+            // var swiper1 = new Swiper('.swiper-container#slider1', {
+            //     loop: true,
+            //     fadeEffect: { crossFade: true },
+            //     effect: 'fade',
+            //     autoplay: {
+            //         delay: 3000,
+            //         disableOnInteraction: false,
+            //     },
+            //     pagination: {
+            //         el: '.main-slider-wrapper .swiper-pagination',
+            //         clickable: true,
+            //         renderBullet: function (index, className) {
+            //             return '<li class="' + className + '"> ' + customTexts1[index] + '</li>';
+            //         },
+            //     },
+            //     navigation: {
+            //         nextEl: '.main-slider-wrapper .next',
+            //         prevEl: '.main-slider-wrapper .prev',
+            //     },
+            // });
+
+            // const createdGroups = new Set();
+            // // Swiper 초기화
+            const createdGroups = new Set();
+            var swiperInstance_swiper_slide = document.querySelectorAll(".main-slider-wrapper .swiper-slide") ;
             var swiper1 = new Swiper('.swiper-container#slider1', {
-                loop: true,
+                slidesPerView: 1, // 한 번에 보이는 슬라이드 수
+                slidesPerGroup: 1, // 슬라이드 이동 시 그룹 크기
                 fadeEffect: { crossFade: true },
-                effect: 'fade',
+                loop: true, // 루프 모드 활성화
                 autoplay: {
                     delay: 3000,
                     disableOnInteraction: false,
                 },
                 pagination: {
-                    el: '.main-slider-wrapper .swiper-pagination',
-                    clickable: true,
+                    el: '.main-slider-wrapper .swiper-pagination', // 페이지네이션 요소
+                    clickable: true, // 페이지네이션 클릭 가능 설정
                     renderBullet: function (index, className) {
-                        return '<li class="' + className + '"> ' + customTexts1[index] + '</li>';
+                        const groupClass = getGroupClass(index);
+                        console.log(index);
+                        console.log(groupClass);
+                        const groupIndex = parseInt(groupClass.replace('group-', '')) - 1; // 'group1', 'group2'에서 숫자만 추출
+                        const text = customTexts1[groupIndex];
+                        
+                        console.log(groupIndex);
+                        console.log(text);
+                        console.log(createdGroups);
+                        
+                        // Set을 사용해 중복된 그룹 불릿 방지
+                        if (groupClass && !createdGroups.has(groupClass)) {
+                            createdGroups.add(groupClass); // 그룹 추가하여 중복 방지
+                            return `<span class="${className} ${groupClass}">${text}</span>`;
+                        }
+                        return ''; // 중복된 불릿은 생성하지 않음
+                        // else if (!existingBullet) {
+                        //     return `<span class="${className} ${groupClass}"></span>`;
+                        // }else{
+                        //     return '';
+                        // }
+                        
                     },
                 },
                 navigation: {
                     nextEl: '.main-slider-wrapper .next',
                     prevEl: '.main-slider-wrapper .prev',
                 },
+                on: {
+                    init: function () {
+                         updatePagination(this); // 초기화 후 페이지네이션 상태 설정
+                    },
+                    slideChange: function () {
+                         updatePagination(this); // 현재 Swiper 인스턴스 참조
+                    },
+                }
             });
+
+            //페이지네이션 불릿 클릭 이벤트 처리
+            document.querySelector('.main-slider-wrapper .swiper-pagination').addEventListener('click', function(event) {
+                const clickedBullet = event.target; // 클릭된 불릿 요소
+                const groupClass = Array.from(clickedBullet.classList).find(cls => cls.startsWith('group')); // 클릭된 불릿의 그룹 클래스 찾기
+                
+                if (groupClass) {
+                    // 해당 그룹의 첫 슬라이드 인덱스 찾기
+                    const firstSlideIndex = findFirstSlideIndex(groupClass);
+                    if (firstSlideIndex !== null) {
+                        swiper1.slideToLoop(firstSlideIndex); // 첫 슬라이드로 이동
+                    }
+                }
+            });
+            
+            
+            //현재 슬라이드의 그룹 클래스를 반환하는 함수
+            function getGroupClass(index) {
+                console.log(swiperInstance_swiper_slide[index]);
+                const slide = swiperInstance_swiper_slide[index]; // 현재 슬라이드 요소
+                console.log(Array.from(slide.classList).find(cls => cls.startsWith('group')));
+                return slide ? Array.from(slide.classList).find(cls => cls.startsWith('group')) : null; // 그룹 클래스 반환
+            }
+
+            // 특정 그룹의 첫 슬라이드 인덱스를 찾는 함수
+            function findFirstSlideIndex(groupClass) {
+                for (let i = 0; i < swiper1.slides.length; i++) {
+                    const slide = swiper1.slides[i];
+                    if (Array.from(slide.classList).includes(groupClass)) {
+                        return i; // 첫 번째 슬라이드 인덱스 반환
+                    }
+                }
+                return null; // 그룹에 해당하는 슬라이드가 없는 경우
+            }
+            
+
+            //페이지네이션 상태를 업데이트하는 함수
+            function updatePagination(swiper) {
+                const activeIndex = swiper.realIndex; // 현재 활성화된 슬라이드 인덱스
+                const bullets = document.querySelectorAll('.main-slider-wrapper .swiper-pagination-bullet'); // 모든 페이지네이션 불릿 요소
+                const activeGroupClass = getGroupClass(activeIndex); // 현재 활성화된 슬라이드의 그룹 클래스
+                
+                // 모든 불릿 요소를 순회하며 활성화된 그룹에 맞게 스타일 설정
+                bullets.forEach(bullet => {
+                    const bulletGroupClass = Array.from(bullet.classList).find(cls => cls.startsWith('group')); // 불릿의 그룹 클래스
+                    if (bulletGroupClass === activeGroupClass) {
+                        bullet.classList.add('swiper-pagination-bullet-active'); // 활성화된 그룹의 불릿에 스타일 추가
+                    } else {
+                        bullet.classList.remove('swiper-pagination-bullet-active'); // 비활성화된 그룹의 불릿에서 스타일 제거
+                    }
+                });
+            }
+
+            // var swiper1V = new Swiper('#slider1 .swiper-container-v',{
+            //     direction: 'horizontal',
+            //     nested: true
+            // });
             // var autoToggleButton = document.querySelector('.main-slider-wrapper .auto-toggle');
             // var autoplayEnabled = true;
 
@@ -1899,25 +2032,25 @@
                     prevEl: '.kyobo_event .swiper-button-prev', // 이전 버튼
                 },
             });
-            //auto토글버튼
-            const toggleButton2 = document.querySelector('.kyobo_event #toggle-autoplay');
-            const toggleIcon2 = toggleButton2.querySelector('i');
-            let isAutoplaying2 = true; // 현재 자동 재생 상태를 추적
+            // //auto토글버튼
+            // const toggleButton2 = document.querySelector('.kyobo_event #toggle-autoplay');
+            // const toggleIcon2 = toggleButton2.querySelector('i');
+            // let isAutoplaying2 = true; // 현재 자동 재생 상태를 추적
 
-            toggleButton2.addEventListener('click', () => {
-                if (isAutoplaying2) {
-                    swiper9.autoplay.stop();
-                    toggleIcon2.classList.remove('fa-stop');
-                    toggleIcon2.classList.add('fa-play');
-                    toggleButton2.innerHTML = '<i class="fa-solid fa-play"></i>';
-                } else {
-                    swiper9.autoplay.start();
-                    toggleIcon2.classList.add('fa-stop');
-                    toggleIcon2.classList.remove('fa-play');
-                    toggleButton2.innerHTML = '<i class="fa-solid fa-stop"></i>';
-                }
-                isAutoplaying2 = !isAutoplaying2; // 자동 재생 상태 토글
-            });
+            // toggleButton2.addEventListener('click', () => {
+            //     if (isAutoplaying2) {
+            //         swiper9.autoplay.stop();
+            //         toggleIcon2.classList.remove('fa-stop');
+            //         toggleIcon2.classList.add('fa-play');
+            //         toggleButton2.innerHTML = '<i class="fa-solid fa-play"></i>';
+            //     } else {
+            //         swiper9.autoplay.start();
+            //         toggleIcon2.classList.add('fa-stop');
+            //         toggleIcon2.classList.remove('fa-play');
+            //         toggleButton2.innerHTML = '<i class="fa-solid fa-stop"></i>';
+            //     }
+            //     isAutoplaying2 = !isAutoplaying2; // 자동 재생 상태 토글
+            // });
 
             //바로pod
             var swiper10 = new Swiper('.swiper-container#slider10', {
