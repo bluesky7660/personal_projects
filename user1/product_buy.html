@@ -97,52 +97,179 @@
                     <div></div>
                 </div>
                 <div class="content_wrapper">
-                    <div class="delivery_Info_area">
-                        <table>
-                            <tr>
-                                <th></th>
-                                <td></td>
-                            </tr>
-                        </table>
-                        <div>편의점 배송, 해외배송으로 받기</div>
-                    </div>
-                    <div class="order_products_area">
-                        <div class="header_box">
-                            <div>
-                                <h5>주문상품</h5>
-                                <p class="total_qty">총 <span>1</span>개</p>
+                    <div class="left-box">
+                        <div class="delivery_Info_area">
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <div>편의점 배송, 해외배송으로 받기</div>
+                        </div>
+                        <div class="order_products_area">
+                            <div class="header_box">
+                                <div>
+                                    <h5>주문상품</h5>
+                                    <p class="total_qty">총 <span>1</span>개</p>
+                                </div>
+                                <div>
+                                    <i>^</i>
+                                </div>
                             </div>
-                            <div>
-                                <i>^</i>
+                            <div class="orderList_box">
+                                <ul>
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="./assets/images/prod/200/9791193289273.jpg" alt="">
+                                        </div>
+                                        <div class="prod_title_box">
+                                            <p class="prod_title">
+                                                [<span class="prod_type">국내도서</span>]
+                                                <span >나쁜 검사들</span>
+                                            </p>
+                                        </div>
+                                        <div class="pord_quantity">
+                                            <span>1</span>개
+                                        </div>
+                                        <div class="prod_price">
+                                            <p class="disc_price"><span >15,750</span>원</p>
+                                            <p class="regular_price"><span >17,500</span>원</p>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="orderList_box">
-                            <ul>
+                        <div class="discount_coupon_area">
+                            <div class="box_label">할인쿠폰</div>
+                            <div class="coupons"></div>
+                        </div>
+                        <div class="cash_point">
+                            <div class="header_box">
+                                <div class="box_label">캐시</div>
+                                <div class="cash_point_total">
+                                    <p>보유 <span>0</span>원</p>
+                                </div>
+                            </div>
+                            <div class="cash_point_list">
+                                <table>
+                                    <tr>
+                                        <th>포인트</th>
+                                        <td>
+                                            <p class="available"><span>0</span>원</p>
+                                        </td>
+                                        <td>
+                                            <div class="use_number">
+                                                <input type="number">
+                                                <span>원</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="use_all btn">전액사용</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>교보캐시</th>
+                                        <td>
+                                            <p class="available"><span>0</span>원</p>
+                                        </td>
+                                        <td>
+                                            <div class="use_number">
+                                                <input type="number">
+                                                <span>원</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="use_all btn">전액사용</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+                        <div class="payment_type_box">
+                            <div class="quick_payment">
+                                <input type="radio" name="payment_type" id="quick_pay">
+                                <label for="quick_pay">간편결제</label>
+                            </div>
+                            <div class="other_payment">
+                                <input type="radio" name="payment_type" id="other_pay">
+                                <label for="other_pay">다른 결제 수단</label>
+                            </div>
+                            <ul class="other_payment_list">
                                 <li>
-                                    <div class="img-box">
-                                        <img src="./assets/images/prod/200/9788998441012.jpg" alt="">
+                                    <label for="payment_card">
+                                        <input type="radio" name="payment_list" id="payment_card">
+                                        신용/체크카드
+                                    </label>
+                                    <div class="payment_list_box">
+                                        <select name="" id="">
+                                            <option value="0" selected>카드를 선택해주세요</option>
+                                            <option value="1">신한카드</option>
+                                            <option value="2">KB국민카드</option>
+                                            <option value="3">BC카드(페이북)</option>
+                                            <option value="4">현대카드</option>
+                                            <option value="5">롯데카드</option>
+                                            <option value="6">하나카드</option>
+                                            <option value="7">삼성카드</option>
+                                            <option value="8">우리카드</option>
+                                            <option value="9">씨티카드</option>
+                                            <option value="10">NH카드</option>
+                                            <option value="11">카카오뱅크카드</option>
+                                            <option value="12">케이뱅크카드</option>
+                                            <option value="13">외환카드</option>
+                                            <option value="14">기타</option>
+                                        </select>
+                                        <input type="checkbox" name="" id="use_for_future">
+                                        <label for="use_for_future">이 결제수단을 다음에도 사용</label>
                                     </div>
-                                    <div class="prod_title_box">
-                                        <p class="prod_title">
-                                            [<span class="prod_type">국내도서</span>]
-                                            <span >나쁜 검사들</span>
-                                        </p>
+                                </li>
+                                <li>
+                                    <label for="payment_direct_bank_transfer">
+                                        <input type="radio" name="payment_list" id="payment_direct_bank_transfer">
+                                        무통장 결제
+                                    </label>
+                                    <div class="payment_list_box">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="0" selected>은행를 선택해주세요</option>
+                                                <option value="1">국민은행</option>
+                                                <option value="2">기업은행</option>
+                                                <option value="3">농협은행</option>
+                                                <option value="4">신한은행</option>
+                                                <option value="5">우리은행</option>
+                                                <option value="6">우체국</option>
+                                                <option value="7">하나은행</option>
+                                            </select>
+                                        </div>
+                                        <input type="checkbox" name="" id="use_for_future">
+                                        <label for="use_for_future">이 결제수단을 다음에도 사용</label>
                                     </div>
-                                    <div class="pord_quantity">
-                                        <span>1</span>개
-                                    </div>
-                                    <div class="prod_price">
-                                        <p class="disc_price"><span >15,750</span>원</p>
-                                        <p class="regular_price"><span >17,500</span>원</p>
+                                </li>
+                                <li>
+                                    <label for="payment_direct_bank_transfer">
+                                        <input type="radio" name="payment_list" id="payment_direct_bank_transfer">
+                                        휴대폰 결제
+                                    </label>
+                                    <div class="payment_list_box">
+                                        <input type="checkbox" name="" id="use_for_future">
+                                        <label for="use_for_future">이 결제수단을 다음에도 사용</label>
                                     </div>
                                 </li>
                             </ul>
                         </div>
+                        <div class="request_cash_receipt_box">
+                            <input type="checkbox" name="" id="request_cash_receipt">
+                            <label for="request_cash_receipt">현금영수증 신청</label>
+                        </div>
                     </div>
-                    <div class="discount_coupon_area">
-
+                    <div class="right-box">
+                        <div>
+                            
+                        </div>
                     </div>
                 </div>
+                
             </div>
         </main>
         <div class="top_btn"><i class="fa-solid fa-xl fa-chevron-up"></i></div>
