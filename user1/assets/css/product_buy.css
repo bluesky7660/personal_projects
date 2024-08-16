@@ -66,6 +66,7 @@ table{
 }
 
 
+/*배송정보*/
 
 .delivery_Info_area tr>*,.cash_point_list tr>*{
     padding-bottom: 30px;
@@ -81,16 +82,16 @@ table{
     line-height: 20px;
     white-space: wrap;
 }
-.delivery_Info_area>:last-child{
+/* .delivery_Info_area>:last-child{
     text-align: center;
-}
-.delivery_Info_area>:last-child span{
+} */
+/* .delivery_Info_area>:last-child span{
     display: inline-block;
     padding:10px 12px;
     border-radius: 10px ;
     border: 1px solid #aaa;
-}
-.delivery_Info_area>:first-child th{
+} */
+.delivery_Info_area tr:first-child th{
     vertical-align: top;
 }
 .address_name_box{
