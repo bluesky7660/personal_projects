@@ -1658,7 +1658,7 @@
                         // Set을 사용해 중복된 그룹 불릿 방지
                         if (groupClass && !createdGroups.has(groupClass)) {
                             createdGroups.add(groupClass); // 그룹 추가하여 중복 방지
-                            return `<span class="${className} ${groupClass}">${text}</span>`;
+                            return `<li class="${className} ${groupClass}">${text}</li>`;
                         }
                         return ''; // 중복된 불릿은 생성하지 않음
                         // else if (!existingBullet) {
