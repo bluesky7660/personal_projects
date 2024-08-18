@@ -193,6 +193,7 @@
     width: 100%;
 }
 .swiper-button{
+    top: 30%;
     width: 84px;
     height: 84px;
     padding:20px;
