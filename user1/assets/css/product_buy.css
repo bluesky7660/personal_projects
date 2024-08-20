@@ -141,6 +141,10 @@ table{
     width: 100%;
     text-align: start;
 }
+.prod_title{
+    width: fit-content;
+    cursor: pointer;
+}
 .disc_price{
     margin-bottom: 10px;
 }

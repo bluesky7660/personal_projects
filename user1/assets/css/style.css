@@ -448,13 +448,21 @@ a.img-box{
 .customer_service_area{
     background-color: #ddd;
     /* margin-bottom: 20px; */
+    top: 0;
     right: 0;
     left: 0;
+    display: flex;
     position: relative;
-    transition: all .3s;
+    /* transition: all .3s; */
+    padding:10px;
+}
+.customer_service_area.hidden{
+    position: absolute;
+    top:-48px;
+    visibility: hidden;
 }
 .customer_service_box ul li a{
-    font-size: 14px;
+    font-size: 13px;
 }
 
 header{
