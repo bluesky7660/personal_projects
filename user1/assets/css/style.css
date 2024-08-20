@@ -12,6 +12,9 @@ body{
 textarea.form-control{
     padding:10px 15px;
 }
+.progress-bar{
+    background-color: #4DAC27;
+}
 
 /*비밀번호on/off*/
 .password_box {
@@ -143,6 +146,7 @@ textarea.form-control{
     height: 25px;
     display: flex;
     align-items: center;
+    display: none;
 }
 /* .review_range_box .range_box{
     height: 25px;
@@ -210,7 +214,8 @@ textarea.form-control{
   
   .search_ranges_box input[type="range"]::-webkit-slider-thumb {
     /* 겹쳐진 두 thumb를 모두 활성화 */
-    pointer-events: all;
+    /* pointer-events: all; */
+    pointer-events: none;
     width: 20px;
     height: 20px;
     border-radius: 0;
@@ -383,7 +388,12 @@ a.img-box{
     border-color: #545bb3;
     color: #fff;
 }
-.btn-blue:hover,.btn.btn-blue:first-child:active{
+/* .btn-blue:hover,.btn.btn-blue:first-child:active{
+    background-color: #313364;
+    border-color: #313364;
+    color: #fff;
+} */
+.btn-blue:hover,.btn.btn-blue:active{
     background-color: #313364;
     border-color: #313364;
     color: #fff;

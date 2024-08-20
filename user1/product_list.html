@@ -111,15 +111,17 @@
             <div class="content_wrapper">
                 <div class="d-flex gap-5">
                     <div class="left-box">
-                        <div>
+                        <div class="list_fillter_box">
                             <div class="mb-4"><h3>국내도서</h3></div>
-                            <div class="mb-4 d-flex gap-1">
-                                <i class="fa-solid fa-caret-right"></i>
-                                <h5>한국소설</h5>
+                            <div class="prod_types_box">
+                                <div class="mb-4 d-flex gap-1 active">
+                                    <h5>한국소설</h5>
+                                </div>
+                                <div class="mb-4 d-flex gap-1">
+                                    <h5>시/에세이</h5>
+                                </div>
                             </div>
-                            <div class="mb-4 d-flex gap-1">
-                                <h5>시/에세이</h5>
-                            </div>
+                            
                             <!-- <ul class="d-flex flex-column gap-3">
                                 <li>
                                     한국소설일반
@@ -169,20 +171,23 @@
                             <div class="search_ranges_box">
                                 <div class="price_range_box">
                                     <label for="price_range">가격별</label>
+                                    <div id="price-slider">
+                                            
+                                    </div>
                                     <div class="range_box">
                                         <input type="range" id="price_range1" class="min-range value-range" step="500" min="0" max="50000" value="500">
                                         <input type="range" id="price_range2" class="max-range value-range" step="500" min="0" max="50000" value="50000">
-                                        <div class="range-control">
+                                        <!-- <div class="range-control">
                                             <div class="track"></div>
                                             <div class="range"></div>
                                             <div class="thumb left"></div>
                                             <div class="thumb right"></div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="value_display_box">
-                                        <input type="number"  class="value_display left price_range1" step="500" min="500" max="50000" value="500">
+                                        <input type="number" id="min-price" class="value_display left price_range1" step="500" min="500" max="50000" value="500">
                                         <span>~</span>
-                                        <input type="number"  class="value_display right price_range2" step="500" min="500" max="50000" value="50000">
+                                        <input type="number" id="max-price" class="value_display right price_range2" step="500" min="500" max="50000" value="50000">
                                     </div>
                                 </div>
                                 <div class="review_range_box">
@@ -191,20 +196,19 @@
                                             
                                     </div>
                                     <div class="range_box">
-                                        
                                         <input type="range" id="price_range3" class="min-range value-range" step="1" min="0" max="10" value="0">
                                         <input type="range" id="price_range4" class="max-range value-range" step="1" min="0" max="10" value="10">
-                                        <div class="range-control">
+                                        <!-- <div class="range-control">
                                             <div class="track"></div>
                                             <div class="range"></div>
                                             <div class="thumb left"></div>
                                             <div class="thumb right"></div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="value_display_box">
-                                        <input type="number" id="min-price" class="value_display left price_range3" min="0" max="10" value="0">
+                                        <input type="number" id="min-review" class="value_display left price_range3" min="0" max="10" value="0">
                                         <span>~</span>
-                                        <input type="number" id="max-price" class="value_display right price_range4" min="0" max="10" value="10">
+                                        <input type="number" id="max-review" class="value_display right price_range4" min="0" max="10" value="10">
                                     </div>
                                     <!-- <input type="range" id="review_range" class="value-range2" min="0" max="10" value="0"> -->
                                 </div>

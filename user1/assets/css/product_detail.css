@@ -242,6 +242,9 @@
 .rating_number_box .clover_box li{
     width: 20px;
 }
+.rating_total li.active{
+    opacity: 1;
+}
 .rating_total li{
     opacity: 0.3;
 }
@@ -310,6 +313,9 @@
     gap: 10px;
     display: flex;
     align-items: center;
+}
+.user_review_num{
+    display: none;
 }
 .user_select_tag{
     padding-left:20px ;

@@ -33,28 +33,27 @@
     background-color: red;
 } */
 
-#review-slider{
+
+#review-slider ,#price-slider{
+    height: 8px;
     margin-top:20px;
 }
-#review-slider {
-    height: 8px;
-}
 
-#review-slider .noUi-connect {
+#review-slider .noUi-connect ,#price-slider .noUi-connect {
     background: #6200ee;
 }
 
-#review-slider .noUi-handle {
+#review-slider .noUi-handle ,#price-slider .noUi-handle {
     height: 18px;
     width: 18px;
     top: -6px;
     right:-9px;/*half the width */
     border-radius: 9px;
 }
-#review-slider .noUi-handle::after,#review-slider .noUi-handle::before{
+#review-slider .noUi-handle::after,#review-slider .noUi-handle::before,#price-slider .noUi-handle::after,#price-slider .noUi-handle::before{
     display: none;
 }
-#review-slider .noUi-handle .noUi-touch-area {
+#review-slider .noUi-handle .noUi-touch-area, #price-slider .noUi-handle .noUi-touch-area{
     border: 1px solid transparent;
     position: absolute;
     top: -5px;
@@ -87,6 +86,17 @@
 .left-box i{
     display: flex;
     align-items: center;
+} 
+.prod_types_box>div{
+    cursor: pointer;
+}
+.prod_types_box>div.active::before{
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 
 /*오른쪽*/
@@ -148,6 +158,17 @@
     width: fit-content;
     margin-left: auto;
     cursor: pointer;
+    margin-bottom:20px;
+}
+.contents .heart_icon::before{
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    /* transition: all .5s ease-in-out; */
+}
+.contents .heart_icon.active::before{
+    color:red;
+    font-weight: 900;
 }
 .heart_icon:hover img{
     filter: invert(24%) sepia(94%) saturate(7470%) hue-rotate(-8deg) brightness(96%) contrast(104%);
