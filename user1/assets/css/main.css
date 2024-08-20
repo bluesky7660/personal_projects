@@ -19,7 +19,7 @@
     overflow: hidden;
 }
 .main-slider-wrapper *{
-    transition: all .5s ease-in-out;
+    /* transition: all .5s ease-in-out; */
 }
 
 .main-slider-wrapper .slider-container {

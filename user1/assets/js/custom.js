@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /*탑버튼 */
     var prevScrollpos = window.scrollY; 
     // console.log(window.scrollY); 
-    if(prevScrollpos >= 225){
+    if(prevScrollpos >= 50){
         document.querySelector(".top_btn").style.display = "flex";
     }else{
         document.querySelector(".top_btn").style.display = "none";
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll',  function() { 
         var currentScrollpos = window.scrollY;
         // console.log("sksksksks" + currentScrollpos);
-        if(currentScrollpos >= 225| prevScrollpos >= 225){
+        if(currentScrollpos >= 50| prevScrollpos >= 50){
             document.querySelector(".top_btn").style.display = "flex";
         }else{
             document.querySelector(".top_btn").style.display = "none";

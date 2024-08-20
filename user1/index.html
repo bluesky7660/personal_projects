@@ -1495,9 +1495,10 @@
         //         isAutoplay = !isAutoplay;
         //     });
         // }
+        $('.swiper-wrapper > div').addClass('swiper-slide');
         $(document).ready(function(){
             // $('.selectpicker').selectpicker();
-            $('.swiper-wrapper > div').addClass('swiper-slide');
+            
 
 
             //첫번째슬라이드 설정 - 메인
@@ -1531,8 +1532,10 @@
             var swiper1 = new Swiper('.swiper-container#slider1', {
                 slidesPerView: 1, // 한 번에 보이는 슬라이드 수
                 slidesPerGroup: 1, // 슬라이드 이동 시 그룹 크기
+                effect: 'fade',
                 fadeEffect: { crossFade: true },
                 loop: true, // 루프 모드 활성화
+                speed: 1000,
                 autoplay: {
                     delay: 3000,
                     disableOnInteraction: false,
