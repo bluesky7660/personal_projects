@@ -497,17 +497,17 @@ main>*{
 }
 .scrolltable>*{
     /* padding:20px 0; */
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     
 }
 .gnb_search{
     padding-top: 20px;
 }
 .gnb_search .logo{
-    width: 180px;
+    width: 160px;
     
-    max-width: 180px;
-    min-width: 180px;
+    max-width: 160px;
+    min-width: 160px;
     height:auto;
 }
 .search_wrapper{
@@ -549,18 +549,26 @@ main>*{
 }
 
 /*gnb wrap*/
+
+.gnb_link{
+    height: 100%;
+    
+}
 .gnb_wrapper .gnb_link li{
     font-size: 18px;
+    height: 100%;
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 .gnb_wrapper .circle_btn{
-    width: 50px;
-    height:50px;
+    width: 40px;
+    height:40px;
     border: 1px solid #aaa;
     background-color: transparent;
 }
 .gnb_wrapper .circle_btn i{
-    font-size: 18px;
+    font-size: 17px;
 }
 
 /*리뷰별점*/
