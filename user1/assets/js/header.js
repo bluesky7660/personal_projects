@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // 네비가 보임
             // document.querySelector("header").style.top = "0"; 
             // document.querySelector("header").style.paddingTop = "20px"; 
-            console.log(window.scrollY);
+            
         } else { 
             // 네비가 안보임
             // document.querySelector("header").style.top = "-225px"; 
@@ -49,6 +49,17 @@ document.addEventListener('DOMContentLoaded', function () {
             // document.querySelector(".customer_service_area").style.position = "absolute";
             document.querySelector(".customer_service_area").classList.add('hidden');
             // document.querySelector(".customer_service_area").style.padding ="0";
+            
+        }
+        
+        if(currentScrollpos <= 0){
+            document.querySelector(".scrolltable").classList.remove('active');
+            document.querySelector(".gnb_search").classList.remove('active');
+        } else{
+            console.log(window.scrollY);
+            console.log("currentScrollpos: " +currentScrollpos );
+            document.querySelector(".scrolltable").classList.add('active');
+            document.querySelector(".gnb_search").classList.add('active');
             
         }
         prevScrollpos = currentScrollpos; 

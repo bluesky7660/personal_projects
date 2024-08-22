@@ -421,6 +421,11 @@ a.img-box{
 }
 .circle_btn{
     border-radius: 50%;
+    transition: background-color .5s ease;
+}
+.circle_btn i{
+    color: #000;
+    transition: color .5s ease;
 }
 .line_space{
     display: inline-block;
@@ -495,20 +500,49 @@ main>*{
     position: relative;
     border-bottom: 1px solid #ccc;
 }
+.scrolltable{
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding:20px 0;
+}
+.scrolltable.active{
+    height: 100px;
+    flex-direction: row;
+    align-items: center;
+}
 .scrolltable>*{
     /* padding:20px 0; */
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     
 }
 .gnb_search{
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    position: relative;
+}
+.gnb_search.active{
+    position: absolute;
+    left:60px;
+    width: calc(100% - 60px);
+    z-index: 2;
 }
 .gnb_search .logo{
     width: 160px;
-    
     max-width: 160px;
     min-width: 160px;
     height:auto;
+}
+.scrolltable.active .gnb_search .logo{
+    width: auto;
+    max-width: none;
+    min-width: auto;
+}
+.scrolltable.active .gnb_search .logo img{
+    width: auto;
+    
+    height:50px;
 }
 .search_wrapper{
     width: calc(100% - 300px);
@@ -559,7 +593,7 @@ main>*{
 }
 .anb_wrapper{
     position: absolute;
-    top:calc(100% - 10px);
+    top:calc(100% + 10px);
     width: 100%;
     background-color: #fff;
     border: 1px solid #aaa;
@@ -569,33 +603,61 @@ main>*{
     display: none;
     
 }
+.scrolltable.active .anb_wrapper{
+    top:calc(100% + 20px);
+}
 .anb_wrapper.active{
     display: block;
     opacity: 1;
+    
 }
 
 .anb_wrapper_area{
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 30px 150px;
+    justify-content: start;
+    gap: 100px;
+    padding: 50px 50px;
 }
 .anb_category{
     margin-bottom: 20px;
-    text-align: center;
+    /* text-align: center; */
 }
 .anb_wrapper ul{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 .anb_wrapper ul li{
-    text-align: center;
+    /* text-align: center; */
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+    transition: font-weight .5s ease;
+}
+
+.anb_wrapper ul li:hover{
+    font-weight: bolder;
+}
+.anb_wrapper ul li::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 1px;
+    margin-top: 5px;
+    background-color: #000;
+    transition: width .5s ease;
+}
+.anb_wrapper ul li:hover::after{
+    width: 100%;
 }
 
 .gnb_link{
     height: 100%;
-    
+    display: flex;
+}
+.scrolltable.active .gnb_link{
+    display: none;
 }
 .gnb_link li{
     font-size: 18px;

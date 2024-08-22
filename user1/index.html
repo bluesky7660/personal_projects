@@ -79,7 +79,7 @@
                             </div>
                         </div>
                     </div>
-                    <nav class="gnb_list d-flex align-items-center gap-3">
+                    <nav class="gnb_list d-flex align-items-center gap-4">
                         <div class="gnb_wrapper d-flex align-items-center gap-5">
                             <button class="circle_btn"><i class="fa-solid fa-bars"></i></button>
                             <div class="anb_wrapper">
@@ -87,27 +87,27 @@
                                     <div class="anb_wrapper_list">
                                         <h5 class="anb_category">국내도서</h5>
                                         <ul>
-                                            <li>국내도서 - 소설</li>
-                                            <li>국내도서 - 시/에세이</li>
-                                            <li>도서 상세보기</li>
-                                            <li>도서 구매</li>
+                                            <li onclick="window.location.href='product_list.html'">국내도서 - 소설</li>
+                                            <li onclick="window.location.href='product_list.html'">국내도서 - 시/에세이</li>
+                                            <li onclick="window.location.href='product_detail.html'">도서 상세보기</li>
+                                            <li onclick="window.location.href='product_buy.html'">도서 구매</li>
                                         </ul>
                                     </div>
                                     <div class="anb_wrapper_list">
                                         <h5 class="anb_category">회원정보</h5>
                                         <ul>
-                                            <li>주문/배송목록</li>
-                                            <li>배송주소록</li>
-                                            <li>배송지추가</li>
-                                            <li>회원정보 변경</li>
-                                            <li>비밀번호 변경</li>
+                                            <li onclick="window.location.href='user_order_list.html'">주문/배송목록</li>
+                                            <li onclick="window.location.href='user_delivery_address.html'">배송주소록</li>
+                                            <li onclick="window.location.href='user_delivery_address_add.html'">배송지추가</li>
+                                            <li onclick="window.location.href='user_account.html'">회원정보 변경</li>
+                                            <li onclick="window.location.href='user_password.html'">비밀번호 변경</li>
                                         </ul>
                                     </div>
                                     <div class="anb_wrapper_list">
                                         <h5 class="anb_category">로그인</h5>
                                         <ul>
-                                            <li>로그인</li>
-                                            <li>회원가입</li>
+                                            <li onclick="window.location.href='login.html'">로그인</li>
+                                            <li onclick="window.location.href='signup.html'">회원가입</li>
                                             <li>비밀번호 찾기</li>
                                             <li>아이디 찾기</li>
                                         </ul>
@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                         </div>
-                        <ul class="gnb_link d-flex gap-5">
+                        <ul class="gnb_link gap-3">
                             <li onclick="window.location.href='product_list.html'">국내도서</li>
                         </ul>
                     </nav>
@@ -1577,14 +1577,14 @@
                     clickable: true, // 페이지네이션 클릭 가능 설정
                     renderBullet: function (index, className) {
                         const groupClass = getGroupClass(index);
-                        console.log(index);
-                        console.log(groupClass);
+                        // console.log(index);
+                        // console.log(groupClass);
                         const groupIndex = parseInt(groupClass.replace('group-', '')) - 1; // 'group1', 'group2'에서 숫자만 추출
                         const text = customTexts1[groupIndex];
                         
-                        console.log(groupIndex);
-                        console.log(text);
-                        console.log(createdGroups);
+                        // console.log(groupIndex);
+                        // console.log(text);
+                        // console.log(createdGroups);
                         
                         // Set을 사용해 중복된 그룹 불릿 방지
                         if (groupClass && !createdGroups.has(groupClass)) {
@@ -1631,9 +1631,9 @@
             
             //현재 슬라이드의 그룹 클래스를 반환하는 함수
             function getGroupClass(index) {
-                console.log(swiperInstance_swiper_slide[index]);
+                // console.log(swiperInstance_swiper_slide[index]);
                 const slide = swiperInstance_swiper_slide[index]; // 현재 슬라이드 요소
-                console.log(Array.from(slide.classList).find(cls => cls.startsWith('group')));
+                // console.log(Array.from(slide.classList).find(cls => cls.startsWith('group')));
                 return slide ? Array.from(slide.classList).find(cls => cls.startsWith('group')) : null; // 그룹 클래스 반환
             }
 

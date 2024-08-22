@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //접고 펼치키
     const toggleButtons = document.querySelectorAll('.collapse_btn');
     const contents = document.querySelectorAll('.info_text');
-    console.log(toggleButtons);
-    console.log(contents);
+    // console.log(toggleButtons);
+    // console.log(contents);
     
     contents.forEach((content) => {
         content.classList.add('hidden');
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
             switch (i) {
                 case 0:
                     scrollElementOffsetTop = information.offsetTop;
-                    console.log(this);
+                    // console.log(this);
                     // tabs[0].classList.add("active");
                     // tabs[1].classList.remove("active");
                     // tabs[2].classList.remove("active");
@@ -158,14 +158,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const anbWrapper = document.querySelector(".anb_wrapper");
 
     anbBtn.addEventListener('click',function() {
-        console.log("1");
         
         //anbWrapper.classList.toggle("active");
         if (anbWrapper.classList.contains('active')) {
             anbBtnInner.classList.remove('fa-xmark');
             anbBtnInner.classList.add('fa-bars');
-            
-            console.log(anbBtnInner.classList);
+            anbBtn.style.backgroundColor = "#fff";
+            anbBtnInner.style.color = "#000";
             anbWrapper.classList.remove('active');
             setTimeout(() => {
                 anbWrapper.style.display = 'none'; // opacity 애니메이션이 끝난 후에 display 변경
@@ -174,8 +173,8 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             
             anbWrapper.style.display = 'block'; // display를 block으로 설정한 후
-            console.log(anbBtnInner.classList);
-            
+            anbBtn.style.backgroundColor = "#000";
+            anbBtnInner.style.color = "#fff";
             
             setTimeout(() => {
                 anbWrapper.classList.add('active'); // 활성화하여 opacity를 1로
