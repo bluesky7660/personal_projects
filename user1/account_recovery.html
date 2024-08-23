@@ -36,23 +36,23 @@
             <div>
                 <form>
                     <div class="type_tab d-flex justify-content-between">
-                        <div class="individual_tab tab_button active" data-target="individual_member">
+                        <div class="findId_tab tab_button active" data-target="findId_wrapper">
                             <span>아이디 찾기</span>
                         </div>
-                        <div class="corporate_tab tab_button" data-target="corporate_member">
+                        <div class="findPassword_tab tab_button" data-target="findPassword_wrapper">
                             <span>비밀번호 찾기</span>
                         </div>
                     </div>
                     <div class="tab_contents">
-                        <div class="tab_content active" id="individual_member">
-                            <div class="accordion" id="accordionExample">
+                        <div class="tab_content active" id="findId_wrapper">
+                            <div class="accordion" id="accordionFindId">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseId1" aria-expanded="true" aria-controls="collapseId1">
                                             본인인증으로 찾기
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div id="collapseId1" class="accordion-collapse collapse show" data-bs-parent="#accordionFindId">
                                         <div class="accordion-body">
                                             <div class="accordion-body-button-box">
                                                 <button class="btn" type="button">
@@ -74,11 +74,11 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseId2" aria-expanded="false" aria-controls="collapseId2">
                                             휴대폰번호로 찾기
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div id="collapseId2" class="accordion-collapse collapse" data-bs-parent="#accordionFindId">
                                         <div class="accordion-body">
                                             <div class="accordion-body-item">
                                                 <label class="form-label" for="findId02_1">이름</label>
@@ -100,11 +100,11 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseId3" aria-expanded="false" aria-controls="collapseId3">
                                             이메일로 찾기
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div id="collapseId3" class="accordion-collapse collapse" data-bs-parent="#accordionFindId">
                                         <div class="accordion-body">
                                             <div class="accordion-body-item">
                                                 <label class="form-label" for="findId03_1">이름</label>
@@ -164,19 +164,19 @@
                                     <input type="text" class="form-control" maxlength="8" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" pattern="[0-9]+" placeholder="19991212">
                                 </li>
                             </ul> -->
-                            <div class="signup_btn">
+                            <!-- <div class="signup_btn">
                                 <button class="btn btn-blue w-100" type="button">회원가입</button>
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="tab_content find_password" id="corporate_member">
-                            <div class="accordion" id="accordionExample">
+                        <div class="tab_content find_password" id="findPassword_wrapper">
+                            <div class="accordion" id="accordionFindPassword">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePassword1" aria-expanded="true" aria-controls="collapsePassword1">
                                             본인인증으로 찾기
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div id="collapsePassword1" class="accordion-collapse collapse show" data-bs-parent="#accordionFindPassword">
                                         <div class="accordion-body">
                                             <div class="accordion-body-button-box">
                                                 <button class="btn" type="button">
@@ -198,11 +198,11 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePassword2" aria-expanded="false" aria-controls="collapsePassword2">
                                             휴대폰번호로 찾기
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div id="collapsePassword2" class="accordion-collapse collapse" data-bs-parent="#accordionFindPassword">
                                         <div class="accordion-body">
                                             <div class="accordion-body-item">
                                                 <label class="form-label" for="findId02_1">이름</label>
@@ -224,11 +224,11 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePassword3" aria-expanded="false" aria-controls="collapsePassword3">
                                             이메일로 찾기
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div id="collapsePassword3" class="accordion-collapse collapse" data-bs-parent="#accordionFindPassword">
                                         <div class="accordion-body">
                                             <div class="accordion-body-item">
                                                 <label class="form-label" for="findId03_1">이름</label>
@@ -266,9 +266,9 @@
                                     <a href="javascript:void(0);"><img src="./assets/images/ico_sns_mail@2x.png" alt=""></a>
                                 </li>
                             </ul> -->
-                            <div class="sns_btn">
+                            <!-- <div class="sns_btn">
                                 <button class="btn btn-blue w-100" type="button">간편회원 가입하기</button>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </form>

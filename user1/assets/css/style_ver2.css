@@ -40,10 +40,6 @@ textarea.form-control{
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
-
-.form-check-input{
-    border-color: #aaa;
-}
 /*비밀번호on/off*/
 .password_box {
     position: relative;
@@ -163,7 +159,7 @@ textarea.form-control{
     position: relative;
     border-radius: 10px;
 }
-.search_ranges_box>div:not(:last-child){
+.search_ranges_box>div{
     margin-bottom: 30px;
 }
 .search_ranges_box,.search_ranges_box>div {
@@ -533,7 +529,7 @@ main>*{
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0;
     padding:20px 0;
 }
 .scrolltable.active{
@@ -552,8 +548,8 @@ main>*{
 }
 .gnb_search.active{
     position: absolute;
-    left:60px;
-    width: calc(100% - 60px);
+    left:0;
+    width:100%;
     z-index: 2;
 }
 .gnb_search .logo{
@@ -572,7 +568,7 @@ main>*{
     
     height:50px;
 }
-.search_wrapper{
+.gnb_right_box{
     width: calc(100% - 300px);
     max-width: 700px;
 }
@@ -600,14 +596,22 @@ main>*{
 }
 
 /*user box*/
-.user_box>div{
+/* .gnb_search_box>div{
     width: 40px;
     cursor: pointer;
-}
+} */
 
 .user_my{
+    width: 40px;
+    max-width: 40px;
+    min-width: 40px;
     box-shadow: 0 0 10px 5px #ddd;
     border-radius: 50%;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.user_my:hover{
+    filter: sepia(1);
 }
 
 /*gnb wrap*/
@@ -632,7 +636,7 @@ main>*{
     
 }
 .scrolltable.active .anb_wrapper{
-    top:calc(100% + 20px);
+    top:calc(100% + 40px);
 }
 .anb_wrapper.active{
     display: block;
@@ -689,19 +693,49 @@ main>*{
 }
 .gnb_link li{
     font-size: 18px;
+    width: fit-content;
+    padding:20px;
     height: 100%;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-.gnb_wrapper .circle_btn{
+.gnb_link li span{
+    word-break: keep-all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: font-weight .5s ease;
+}
+.gnb_link li:hover span{
+    font-weight: bold;
+}
+.gnb_link li span::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom:-5px;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width .5s ease;
+}
+
+.gnb_link li:hover span::after{
+    width: 100%;
+}
+.anb_btn_box .circle_btn{
     width: 40px;
     height:40px;
     border: 1px solid #aaa;
     background-color: transparent;
 }
-.gnb_wrapper .circle_btn i{
+.anb_btn_box .circle_btn i{
     font-size: 17px;
+}
+.anb_btn_box .circle_btn:hover{
+    background-color: #eee;
 }
 
 /*리뷰별점*/

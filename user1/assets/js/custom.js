@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
       
-    //접고 펼치키
+    //컨텐츠접고 펼치키
     const toggleButtons = document.querySelectorAll('.collapse_btn');
     const contents = document.querySelectorAll('.info_text');
     // console.log(toggleButtons);
@@ -153,8 +153,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });   
     }
 
-    const anbBtn = document.querySelector(".gnb_wrapper .circle_btn");
-    const anbBtnInner = document.querySelector(".gnb_wrapper .circle_btn i");
+    //헤더 사이트맵?열고 닫기
+
+    // const anbBtn = document.querySelector(".gnb_wrapper .circle_btn");
+    const anbBtn = document.querySelector(".circle_btn");
+    // const anbBtnInner = document.querySelector(".gnb_wrapper .circle_btn i");
+    const anbBtnInner = document.querySelector(".circle_btn i");
     const anbWrapper = document.querySelector(".anb_wrapper");
 
     anbBtn.addEventListener('click',function() {
@@ -168,16 +172,19 @@ document.addEventListener('DOMContentLoaded', function () {
             anbWrapper.classList.remove('active');
             setTimeout(() => {
                 anbWrapper.style.display = 'none'; // opacity 애니메이션이 끝난 후에 display 변경
-            }, 500); // transition 시간이 0.5초이므로 동일한 시간으로 설정
+                console.log("none");
+            }, 100); // transition 시간이 0.5초이므로 동일한 시간으로 설정
+            
            
         } else {
-            
+            console.log("block");
             anbWrapper.style.display = 'block'; // display를 block으로 설정한 후
             anbBtn.style.backgroundColor = "#000";
             anbBtnInner.style.color = "#fff";
             
             setTimeout(() => {
                 anbWrapper.classList.add('active'); // 활성화하여 opacity를 1로
+                console.log("active");
             }, 10); // display가 적용된 후 약간의 지연을 주어 opacity 변화
             anbBtnInner.classList.remove('fa-bars');
             anbBtnInner.classList.add('fa-xmark');

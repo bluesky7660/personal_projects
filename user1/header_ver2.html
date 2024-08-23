@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style_ver2.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
@@ -42,24 +43,15 @@
                             <li class="">
                                 <a href="login.html">로그인</a>
                             </li>
-                            <!-- <li class="">
-                                <a href="javascript:void(0);">회원혜택</a>
-                            </li> -->
                             <li class="">
                                 <a href="user_order_list.html">주문배송</a>
                             </li>
-                            <!-- <li class="">
-                                <a href="javascript:void(0);">매장안내</a>
-                            </li>
-                            <li class="">
-                                <a href="javascript:void(0);">고객센터</a>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
                 <div class="scrolltable">
                     <div class="gnb_search d-flex justify-content-between gap-5">
-                        <div class="search_wrapper d-flex align-items-center  gap-5">
+                        <div class="gnb_right_box d-flex align-items-center  gap-5">
                             <div class="logo" onclick="window.location.href='index.html'">
                                 <img src="./assets/images/logo_book.svg" alt="">
                             </div>
@@ -70,18 +62,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="user_box d-flex align-items-center gap-4">
-                            <div class="cart" onclick="window.location.href='user_cart.html'">
-                                <img src="./assets/images/btn_header_cart@2x.png" alt="">
-                            </div>
+                        <div class="gnb_left_box d-flex align-items-center gap-4">
+                            <ul class="gnb_link gap-3">
+                                <li onclick="window.location.href='product_list.html'"><span>국내도서</span></li>
+                            </ul>
                             <div class="user_my" onclick="window.location.href='user_account.html'">
                                 <img src="./assets/images/btn_header_my@2x.png" alt="">
+                            </div>
+                            <div class="anb_btn_box">
+                                <button class="circle_btn"><i class="fa-solid fa-bars"></i></button>
                             </div>
                         </div>
                     </div>
                     <nav class="gnb_list d-flex align-items-center gap-4">
                         <div class="gnb_wrapper d-flex align-items-center gap-5">
-                            <button class="circle_btn"><i class="fa-solid fa-bars"></i></button>
                             <div class="anb_wrapper">
                                 <div class="anb_wrapper_area">
                                     <div class="anb_wrapper_list">
@@ -115,10 +109,40 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- <div class="anb_wrapper">
+                                <div class="anb_wrapper_area">
+                                    <div class="anb_wrapper_list">
+                                        <h5 class="anb_category">국내도서</h5>
+                                        <ul>
+                                            <li onclick="window.location.href='product_list.html'">국내도서 - 소설</li>
+                                            <li onclick="window.location.href='product_list.html'">국내도서 - 시/에세이</li>
+                                            <li onclick="window.location.href='product_detail.html'">도서 상세보기</li>
+                                            <li onclick="window.location.href='product_buy.html'">도서 구매</li>
+                                        </ul>
+                                    </div>
+                                    <div class="anb_wrapper_list">
+                                        <h5 class="anb_category">회원정보</h5>
+                                        <ul>
+                                            <li onclick="window.location.href='user_order_list.html'">주문/배송목록</li>
+                                            <li onclick="window.location.href='user_delivery_address.html'">배송주소록</li>
+                                            <li onclick="window.location.href='user_delivery_address_add.html'">배송지추가</li>
+                                            <li onclick="window.location.href='user_account.html'">회원정보 변경</li>
+                                            <li onclick="window.location.href='user_password.html'">비밀번호 변경</li>
+                                        </ul>
+                                    </div>
+                                    <div class="anb_wrapper_list">
+                                        <h5 class="anb_category">그외 기타</h5>
+                                        <ul>
+                                            <li onclick="window.location.href='login.html'">로그인</li>
+                                            <li onclick="window.location.href='signup.html'">회원가입</li>
+                                            <li onclick="window.location.href='account_recovery.html'">비밀번호 찾기</li>
+                                            <li onclick="window.location.href='account_recovery.html'">아이디 찾기</li>
+                                            <li onclick="window.location.href='header_ver2.html'">헤더 다른버전2</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> -->
                         </div>
-                        <ul class="gnb_link gap-3">
-                            <li onclick="window.location.href='product_list.html'">국내도서</li>
-                        </ul>
                     </nav>
                 </div>
             </div>
@@ -758,27 +782,27 @@
                                 </div>
                                 <div>
                                     <div class="img-box">
-                                        <img src="./assets/images/prod/300/9791192559889.jpg" alt="Image 1"/>
+                                        <img src="./assets/images/prod/300/9791191570724.jpg" alt="Image 1"/>
                                     </div>
-                                    <span class="book-type">시/에세이</span>
-                                    <p class="book-title">오케이 다시한번 해볼게요</p>
-                                    <span class="author">박여름 · 히읏</span>
+                                    <span class="book-type">경제/경영</span>
+                                    <p class="book-title">읽고 쓰고 소유하다</p>
+                                    <span class="author">크리스 딕슨 · 어크로스</span>
                                 </div>
                                 <div>
                                     <div class="img-box">
-                                        <img src="./assets/images/prod/300/9791193937198.jpg" alt="Image 1"/>
+                                        <img src="./assets/images/prod/300/9791191570724.jpg" alt="Image 1"/>
                                     </div>
-                                    <span class="book-type">소설</span>
-                                    <p class="book-title">빛이 이끄는 곳으로</p>
-                                    <span class="author">백희성 · 북로망스</span>
+                                    <span class="book-type">경제/경영</span>
+                                    <p class="book-title">읽고 쓰고 소유하다</p>
+                                    <span class="author">크리스 딕슨 · 어크로스</span>
                                 </div>
                                 <div>
                                     <div class="img-box">
-                                        <img src="./assets/images/prod/300/9791191824438.jpg" alt="Image 1"/>
+                                        <img src="./assets/images/prod/300/9791191570724.jpg" alt="Image 1"/>
                                     </div>
-                                    <span class="book-type">소설</span>
-                                    <p class="book-title">없는 사람들을 생각해</p>
-                                    <span class="author">정지혜 · 자이언트북스</span>
+                                    <span class="book-type">경제/경영</span>
+                                    <p class="book-title">읽고 쓰고 소유하다</p>
+                                    <span class="author">크리스 딕슨 · 어크로스</span>
                                 </div>
                             </div>
                         </div>
