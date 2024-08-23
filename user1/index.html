@@ -1619,12 +1619,16 @@
             document.querySelector('.main-slider-wrapper .swiper-pagination').addEventListener('click', function(event) {
                 const clickedBullet = event.target; // 클릭된 불릿 요소
                 const groupClass = Array.from(clickedBullet.classList).find(cls => cls.startsWith('group')); // 클릭된 불릿의 그룹 클래스 찾기
-                
                 if (groupClass) {
                     // 해당 그룹의 첫 슬라이드 인덱스 찾기
                     const firstSlideIndex = findFirstSlideIndex(groupClass);
                     if (firstSlideIndex !== null) {
+                        console.log(groupClass);
                         swiper1.slideToLoop(firstSlideIndex); // 첫 슬라이드로 이동
+                        console.log(firstSlideIndex);
+                    }
+                    else{
+                        console.log(3);
                     }
                 }
             });
@@ -1642,9 +1646,12 @@
             function findFirstSlideIndex(groupClass) {
                 for (let i = 0; i < swiper1.slides.length; i++) {
                     const slide = swiper1.slides[i];
+                    console.log("뭘까나:"+Array.from(slide.classList).includes(groupClass));
                     if (Array.from(slide.classList).includes(groupClass)) {
+                        console.log("findFirstSlideIndex:"+ i);
                         return i; // 첫 번째 슬라이드 인덱스 반환
                     }
+                    console.log("findFirstSlideIndex2:"+ i);
                 }
                 return null; // 그룹에 해당하는 슬라이드가 없는 경우
             }

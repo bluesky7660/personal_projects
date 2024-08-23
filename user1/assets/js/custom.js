@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /*스크롤 헤더*/
     /*탑버튼 */
+    document.querySelector(".top_btn").textContent="TOP";
     var prevScrollpos = window.scrollY; 
     // console.log(window.scrollY); 
     if(prevScrollpos >= 50){
