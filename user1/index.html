@@ -1615,6 +1615,10 @@
                     nextEl: '.main-slider-wrapper .next',
                     prevEl: '.main-slider-wrapper .prev',
                 },
+                onSlideChangeEnd : function(event){
+                    var num = getSlideDataIndex(event)
+
+                },
                 on: {
                     init: function () {
                          updatePagination(this); // 초기화 후 페이지네이션 상태 설정
@@ -1623,6 +1627,7 @@
                          updatePagination(this); // 현재 Swiper 인스턴스 참조
                     },
                 }
+                
             });
 
             //페이지네이션 불릿 클릭 이벤트 처리
@@ -1681,22 +1686,37 @@
             }
 
             // 특정 그룹의 첫 슬라이드 인덱스를 찾는 함수
-            // function findFirstSlideIndex(groupClass) {
-            //     console.log(swiper1.slides);
-            //     for (let i = 0; i < swiper1.slides.length; i++) {
-            //         const slide = swiper1.slides[i];
-            //         console.log("뭘까나:"+Array.from(slide.classList).includes(groupClass));
-            //         if (Array.from(slide.classList).includes(groupClass)) {
-            //             console.log("findFirstSlideIndex:"+ i);
-            //             console.log("##slide: "+slide.classList);
-            //             // return i; // 첫 번째 슬라이드 인덱스 반환
-            //             console.log("찾은 index: "+ i);
-            //             console.log("찾은슬라이더: "+ slide.classList);
-            //         }
-            //         // console.log("findFirstSlideIndex2:"+ i);
-            //     }
-            //     return null; // 그룹에 해당하는 슬라이드가 없는 경우
-            // }
+            function findFirstSlideIndex(groupClass) {
+                console.log(swiper1.slides);
+                // 슬라이드를 `groupSliderX` 클래스를 기준으로 정렬
+                const slides = Array.from(swiper1.slides);
+                slides.sort((a, b) => {
+                    // 슬라이드의 `groupSliderX` 클래스 추출
+                    const classA = Array.from(a.classList).find(cls => cls.startsWith('groupSlider'));
+                    const classB = Array.from(b.classList).find(cls => cls.startsWith('groupSlider'));
+
+                    // 클래스가 없는 경우 가장 큰 값을 지정
+                    const numA = classA ? parseInt(classA.replace('groupSlider', '')) : Infinity;
+                    const numB = classB ? parseInt(classB.replace('groupSlider', '')) : Infinity;
+
+                    // 숫자 순서대로 정렬
+                    return numA - numB;
+                });
+                for (let i = 0; i < swiper1.slides.length; i++) {
+                    const slide = slides[i];
+                    console.log("뭘까나:"+Array.from(slide.classList).includes(groupClass));
+                    if (Array.from(slide.classList).includes(groupClass)) {
+                        console.log("findFirstSlideIndex:"+ i);
+                        console.log("##slide: "+slide.classList);
+                        // return i; // 첫 번째 슬라이드 인덱스 반환
+                        console.log("찾은 index: "+ i);
+                        console.log("찾은슬라이더: "+ slide.classList);
+                        return i; 
+                    }
+                    // console.log("findFirstSlideIndex2:"+ i);
+                }
+                return null; // 그룹에 해당하는 슬라이드가 없는 경우
+            }
             
             // function findFirstSlideIndex(groupClass) {
             //     const slides = swiper1.slides;
@@ -1730,32 +1750,32 @@
 
             //     return firstIndex !== null ? firstIndex : null;
             // }
-            function findFirstSlideIndex(groupClass) {
-                const slides = swiper1.slides;
-                const groupSlides = [];
+            // function findFirstSlideIndex(groupClass) {
+            //     const slides = swiper1.slides;
+            //     const groupSlides = [];
 
-                // 그룹에 해당하는 슬라이드를 수집
-                slides.forEach((slide, index) => {
-                    if (Array.from(slide.classList).includes(groupClass)) {
-                        groupSlides.push({ index, classList: slide.classList });
-                    }
-                });
+            //     // 그룹에 해당하는 슬라이드를 수집
+            //     slides.forEach((slide, index) => {
+            //         if (Array.from(slide.classList).includes(groupClass)) {
+            //             groupSlides.push({ index, classList: slide.classList });
+            //         }
+            //     });
 
-                // groupSliderX 숫자를 비교하여 가장 작은 슬라이드를 선택
-                if (groupSlides.length === 0) {
-                    return null;
-                }
+            //     // groupSliderX 숫자를 비교하여 가장 작은 슬라이드를 선택
+            //     if (groupSlides.length === 0) {
+            //         return null;
+            //     }
 
-                // groupSlider 뒤의 숫자를 추출하여 비교
-                groupSlides.sort((a, b) => {
-                    const numA = parseInt(Array.from(a.classList).find(cls => cls.startsWith('groupSlider')).replace('groupSlider', ''));
-                    const numB = parseInt(Array.from(b.classList).find(cls => cls.startsWith('groupSlider')).replace('groupSlider', ''));
-                    return numA - numB;
-                });
-
-                // 가장 작은 숫자를 가진 슬라이드의 인덱스를 반환
-                return groupSlides[0].index;
-            }
+            //     // groupSlider 뒤의 숫자를 추출하여 비교
+            //     groupSlides.sort((a, b) => {
+            //         const numA = parseInt(Array.from(a.classList).find(cls => cls.startsWith('groupSlider')).replace('groupSlider', ''));
+            //         const numB = parseInt(Array.from(b.classList).find(cls => cls.startsWith('groupSlider')).replace('groupSlider', ''));
+            //         return numA - numB;
+            //     });
+            //     console.log(groupSlides[0]);
+            //     // 가장 작은 숫자를 가진 슬라이드의 인덱스를 반환
+            //     return groupSlides[0].index;
+            // }
 
 
             //페이지네이션 상태를 업데이트하는 함수
@@ -1802,7 +1822,24 @@
             //         }
             //     });
             // }
+            function getSlideDataIndex(swipe){
+                var activeIndex = swipe.activeIndex;
+                var slidesLen = swipe.slides.length;
+                if(swipe.params.loop){
+                    switch(swipe.activeIndex){
+                        case 0:
+                            activeIndex = slidesLen-3;
+                            break;
+                        case slidesLen-1:
+                            activeIndex = 0;
+                            break;
+                        default:
+                            --activeIndex;
+                    }
+                }
+                return  activeIndex;
 
+            }
 
 
             //@@

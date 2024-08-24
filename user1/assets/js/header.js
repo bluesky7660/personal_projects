@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector(".scrolltable").classList.remove('active');
             document.querySelector(".gnb_search").classList.remove('active');
         } else{
-            console.log(window.scrollY);
-            console.log("currentScrollpos: " +currentScrollpos );
+            // console.log(window.scrollY);
+            // console.log("currentScrollpos: " +currentScrollpos );
             document.querySelector(".scrolltable").classList.add('active');
             document.querySelector(".gnb_search").classList.add('active');
             
