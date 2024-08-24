@@ -1559,15 +1559,25 @@
             // });
 
             // const createdGroups = new Set();
+
             // // Swiper 초기화
             const createdGroups = new Set();
             var swiperInstance_swiper_slide = document.querySelectorAll(".main-slider-wrapper .swiper-slide") ;
+            for (let i = 0; i < swiperInstance_swiper_slide.length; i++) {
+                swiperInstance_swiper_slide[i].classList.add("groupSlider"+i);
+                
+            }
+            // 슬라이드의 수를 구합니다.
+            var slideCount = swiperInstance_swiper_slide.length;
+
             var swiper1 = new Swiper('.swiper-container#slider1', {
                 slidesPerView: 1, // 한 번에 보이는 슬라이드 수
                 slidesPerGroup: 1, // 슬라이드 이동 시 그룹 크기
                 effect: 'fade',
                 fadeEffect: { crossFade: true },
                 loop: true, // 루프 모드 활성화
+                // loopAdditionalSlides: 0, // 기본값으로 설정해 보기
+                // loopedSlides: slideCount, // 슬라이드 수에 맞춰 설정 (슬라이드 수와 동일하게 설정)
                 speed: 1000,
                 autoplay: {
                     delay: 3000,
@@ -1621,17 +1631,45 @@
                 const groupClass = Array.from(clickedBullet.classList).find(cls => cls.startsWith('group')); // 클릭된 불릿의 그룹 클래스 찾기
                 if (groupClass) {
                     // 해당 그룹의 첫 슬라이드 인덱스 찾기
+                    console.log("groupClass: "+groupClass);
                     const firstSlideIndex = findFirstSlideIndex(groupClass);
+                    console.log("firstSlideIndex: "+firstSlideIndex);
                     if (firstSlideIndex !== null) {
-                        console.log(groupClass);
+                        
                         swiper1.slideToLoop(firstSlideIndex); // 첫 슬라이드로 이동
-                        console.log(firstSlideIndex);
-                    }
-                    else{
-                        console.log(3);
+                        
                     }
                 }
             });
+            // document.querySelector('.main-slider-wrapper .swiper-pagination').addEventListener('click', function(event) {
+            //     const clickedBullet = event.target;
+            //     if (clickedBullet.classList.contains('swiper-pagination-bullet')) {
+            //         const bulletIndex = Array.from(clickedBullet.parentNode.children).indexOf(clickedBullet);
+            //         const groupClass = getGroupClass(bulletIndex);
+            //         const firstSlideIndex = findFirstSlideIndex(groupClass);
+            //         if (firstSlideIndex !== null) {
+            //             swiper1.slideToLoop(firstSlideIndex); // 선택한 그룹의 첫 번째 슬라이드로 이동
+            //             swiper1.once('slideChangeTransitionEnd', function () {
+            //                 updatePagination(swiper1); // 슬라이드 이동 후 페이지네이션 업데이트
+            //             });
+            //         }
+            //     }
+            // });
+            // document.querySelector('.main-slider-wrapper .swiper-pagination').addEventListener('click', function(event) {
+            //     const clickedBullet = event.target;
+            //     if (clickedBullet.classList.contains('swiper-pagination-bullet')) {
+            //         const groupClass = Array.from(clickedBullet.classList).find(cls => cls.startsWith('group'));
+            //         const firstSlideIndex = findFirstSlideIndex(groupClass);
+            //         if (firstSlideIndex !== null) {
+            //             // 페이지네이션 불릿 클릭 후 첫 번째 슬라이드로 이동
+            //             swiper1.slideToLoop(firstSlideIndex, 0); // 즉시 이동
+            //             swiper1.once('slideChangeTransitionEnd', function () {
+            //                 updatePagination(swiper1); // 슬라이드 이동 후 페이지네이션 업데이트
+            //             });
+            //         }
+            //     }
+            // });
+
             
             
             //현재 슬라이드의 그룹 클래스를 반환하는 함수
@@ -1643,19 +1681,82 @@
             }
 
             // 특정 그룹의 첫 슬라이드 인덱스를 찾는 함수
-            function findFirstSlideIndex(groupClass) {
-                for (let i = 0; i < swiper1.slides.length; i++) {
-                    const slide = swiper1.slides[i];
-                    console.log("뭘까나:"+Array.from(slide.classList).includes(groupClass));
-                    if (Array.from(slide.classList).includes(groupClass)) {
-                        console.log("findFirstSlideIndex:"+ i);
-                        return i; // 첫 번째 슬라이드 인덱스 반환
-                    }
-                    console.log("findFirstSlideIndex2:"+ i);
-                }
-                return null; // 그룹에 해당하는 슬라이드가 없는 경우
-            }
+            // function findFirstSlideIndex(groupClass) {
+            //     console.log(swiper1.slides);
+            //     for (let i = 0; i < swiper1.slides.length; i++) {
+            //         const slide = swiper1.slides[i];
+            //         console.log("뭘까나:"+Array.from(slide.classList).includes(groupClass));
+            //         if (Array.from(slide.classList).includes(groupClass)) {
+            //             console.log("findFirstSlideIndex:"+ i);
+            //             console.log("##slide: "+slide.classList);
+            //             // return i; // 첫 번째 슬라이드 인덱스 반환
+            //             console.log("찾은 index: "+ i);
+            //             console.log("찾은슬라이더: "+ slide.classList);
+            //         }
+            //         // console.log("findFirstSlideIndex2:"+ i);
+            //     }
+            //     return null; // 그룹에 해당하는 슬라이드가 없는 경우
+            // }
             
+            // function findFirstSlideIndex(groupClass) {
+            //     const slides = swiper1.slides;
+            //     let firstIndex = null;
+
+            //     for (let i = 0; i < slides.length; i++) {
+            //         const slide = slides[i];
+            //         if (Array.from(slide.classList).includes(groupClass)) {
+            //             // 그룹 클래스를 찾으면 해당 슬라이드의 실제 인덱스를 저장합니다.
+            //             if (firstIndex === null) {
+            //                 firstIndex = slide.swiperSlideIndex;
+            //             }
+            //         }
+            //     }
+
+            //     return firstIndex !== null ? firstIndex : null;
+            // }
+            // function findFirstSlideIndex(groupClass) {
+            //     const slides = swiper1.slides;
+            //     let firstIndex = null;
+
+            //     for (let i = 0; i < slides.length; i++) {
+            //         const slide = slides[i];
+            //         if (Array.from(slide.classList).includes(groupClass)) {
+            //             // 그룹 클래스를 가진 첫 번째 슬라이드 인덱스를 반환
+            //             if (firstIndex === null) {
+            //                 firstIndex = i; // `i`는 현재 슬라이드의 인덱스
+            //             }
+            //         }
+            //     }
+
+            //     return firstIndex !== null ? firstIndex : null;
+            // }
+            function findFirstSlideIndex(groupClass) {
+                const slides = swiper1.slides;
+                const groupSlides = [];
+
+                // 그룹에 해당하는 슬라이드를 수집
+                slides.forEach((slide, index) => {
+                    if (Array.from(slide.classList).includes(groupClass)) {
+                        groupSlides.push({ index, classList: slide.classList });
+                    }
+                });
+
+                // groupSliderX 숫자를 비교하여 가장 작은 슬라이드를 선택
+                if (groupSlides.length === 0) {
+                    return null;
+                }
+
+                // groupSlider 뒤의 숫자를 추출하여 비교
+                groupSlides.sort((a, b) => {
+                    const numA = parseInt(Array.from(a.classList).find(cls => cls.startsWith('groupSlider')).replace('groupSlider', ''));
+                    const numB = parseInt(Array.from(b.classList).find(cls => cls.startsWith('groupSlider')).replace('groupSlider', ''));
+                    return numA - numB;
+                });
+
+                // 가장 작은 숫자를 가진 슬라이드의 인덱스를 반환
+                return groupSlides[0].index;
+            }
+
 
             //페이지네이션 상태를 업데이트하는 함수
             function updatePagination(swiper) {
@@ -1673,6 +1774,75 @@
                     }
                 });
             }
+            // function updatePagination(swiper) {
+            //     const activeIndex = swiper.realIndex;
+            //     const bullets = document.querySelectorAll('.main-slider-wrapper .swiper-pagination-bullet');
+            //     const activeGroupClass = getGroupClass(activeIndex);
+
+            //     bullets.forEach(bullet => {
+            //         const bulletGroupClass = Array.from(bullet.classList).find(cls => cls.startsWith('group'));
+            //         if (bulletGroupClass === activeGroupClass) {
+            //             bullet.classList.add('swiper-pagination-bullet-active');
+            //         } else {
+            //             bullet.classList.remove('swiper-pagination-bullet-active');
+            //         }
+            //     });
+            // }
+            // function updatePagination(swiper) {
+            //     const activeIndex = swiper.realIndex;
+            //     const bullets = document.querySelectorAll('.main-slider-wrapper .swiper-pagination-bullet');
+            //     const activeGroupClass = getGroupClass(activeIndex);
+
+            //     bullets.forEach(bullet => {
+            //         const bulletGroupClass = Array.from(bullet.classList).find(cls => cls.startsWith('group'));
+            //         if (bulletGroupClass === activeGroupClass) {
+            //             bullet.classList.add('swiper-pagination-bullet-active');
+            //         } else {
+            //             bullet.classList.remove('swiper-pagination-bullet-active');
+            //         }
+            //     });
+            // }
+
+
+
+            //@@
+
+            
+
+
+            //@@
+
+
+            // // 현재 슬라이드의 그룹 클래스를 반환하는 함수
+            // function getGroupClass(index) {
+            //     const slide = swiper1.slides[index]; // 현재 슬라이드 요소
+            //     return slide ? Array.from(slide.classList).find(cls => cls.startsWith('group')) : null; // 그룹 클래스 반환
+            // }
+
+            // // 페이지네이션 상태를 업데이트하는 함수
+            // function updatePagination(swiper) {
+            //     const activeIndex = swiper.realIndex; // 현재 활성화된 슬라이드 인덱스
+            //     const bullets = document.querySelectorAll('.main-slider-wrapper .swiper-pagination-bullet'); // 모든 페이지네이션 불릿 요소
+            //     const activeGroupClass = getGroupClass(activeIndex); // 현재 활성화된 슬라이드의 그룹 클래스
+
+            //     bullets.forEach(bullet => {
+            //         const bulletGroupClass = Array.from(bullet.classList).find(cls => cls.startsWith('group')); // 불릿의 그룹 클래스
+            //         if (bulletGroupClass === activeGroupClass) {
+            //             bullet.classList.add('swiper-pagination-bullet-active'); // 활성화된 그룹의 불릿에 스타일 추가
+            //         } else {
+            //             bullet.classList.remove('swiper-pagination-bullet-active'); // 비활성화된 그룹의 불릿에서 스타일 제거
+            //         }
+            //     });
+            // }
+
+            // // 페이지네이션 불릿 클릭 시 슬라이드 이동
+            // document.querySelector('.main-slider-wrapper .swiper-pagination').addEventListener('click', function(event) {
+            //     const clickedBullet = event.target;
+            //     if (clickedBullet.classList.contains('swiper-pagination-bullet')) {
+            //         const bulletIndex = Array.from(clickedBullet.parentNode.children).indexOf(clickedBullet);
+            //         swiper1.slideToLoop(bulletIndex); // 페이지네이션 인덱스에 따라 슬라이드 이동
+            //     }
+            // });
 
             // var swiper1V = new Swiper('#slider1 .swiper-container-v',{
             //     direction: 'horizontal',
